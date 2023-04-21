@@ -161,7 +161,7 @@ For an alternative, and I think easier way to run BLAST searches using Bioconda,
 Here's the script for the nt parse (feces as example):
 
 ```
-cat Mada_Bat_Kobu_blast_fecal_nt.txt | awk -F\t '($4>99 && $5<0.00001) {print $1,$3, $4, $5, $8,$9}' > Mada_Bat_Kobu_blast_fecal_nt_results.txt
+cat Mada_Bat_Kobu_blast_fecal_nt.txt | awk -F\t '($4>99 && $6>99) {print $1,$3, $4, $5, $8,$9}' > Mada_Bat_Kobu_blast_fecal_nt_results.txt
 ```
 
 And for the protein parse (feces again):
