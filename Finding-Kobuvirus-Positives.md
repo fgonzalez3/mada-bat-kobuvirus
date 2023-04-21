@@ -1,6 +1,6 @@
 ### Finding positive Kobuvirus samples after mNGS + IDseq
 
-1.First, we downloaded all non-host contigs derived from fecal samples, mapping to ANY taxon from IDseq in the 'RR034B1_feces' project. (Note that we did not take contigs from HeLa controls or water). This is done in bulk, manually, on IDseq.net in the top right-hand corner. 
+1.First, I downloaded all non-host contigs derived from fecal samples, mapping to ANY taxon from IDseq in the 'RR034B1_feces' project. (Note that we did not take contigs from HeLa controls or water). This is done in bulk, manually, on IDseq.net in the top right-hand corner. 
 
 Note that when you download all the non-host contigs, it will produce a folder with a separate fasta file for each sample, which lists the contigs by node number but does not include the sample ID. Before joining all the contigs (nodes) together, you need to distinguish them by sample ID. Cara wrote an Rscript that parses this for each filetype (rename-fastas-feces, rename-fastas-urine, rename-fastas-throat). To rename your files and the headers within them, copy the appropriate Rscript for the tissue type into your appropriate downloads folder, cd into that folder on the command line, and simply type (example here for feces):
 
@@ -156,58 +156,81 @@ cp /scratch/Mada_Bat_Kobu_blastx_feces.txt .
 
 For an alternative, and I think easier way to run BLAST searches using Bioconda, see ___. 
 
-8. After the blast finishes, you'll want to curate a bit to the high quality hits. After Cara's lead, I went ahead and parsed for alignments that show alignment length > 100 aa and bit score > 100.
+8. Once BLAST finishes, create a broad catch-all summary file from the BLAST outputs. There are too many hits, but you'll want to keep them as references. We'll report the number of initial hits on our publication. 
 
-Here's the script for the nt parse (feces as example):
-
-```
-cat Mada_Bat_Kobu_blast_fecal_nt.txt | awk -F\t '($4>99 && $6>99) {print $1,$3, $4, $5, $8,$9}' > Mada_Bat_Kobu_blast_fecal_nt_results.txt
-```
-
-And for the protein parse (feces again):
+Contigs:
 
 ```
-cat Mada_Bat_Kobu_blast_feces_prot.txt | awk -F\t '($4>99 && $6>99) {print $1,$3, $4,$5,$8,$9}' > Mada_Bat_Kobu_blast_feces_prot_results_100len100bit.txt
+cat initial_KoV_blast_nt.txt | awk '{print $1}' | sort | uniq > KoV_unique_contigs_feces_nt.txt
 ```
 
-9.Once the blast results have beeen sub-selected a bit, you can summarize them to link back the hits to the samples of interest. Within the same folder as your output, try the following script to save the unique contig IDs which align to KobuV (example here for blastn alignment of fecal samples):
+Sample IDs:
 
 ```
-cat Mada_Bat_Kobu_blast_fecal_nt_results.txt | awk '{print $1}' | sort | uniq > Mada_Bat_Kobu_unique_contigs_feces_nt_hiqual.txt
+cat initial_KoV_blast_nt.txt | awk -F\_ '{print $1"_"$2}' | sort | uniq > KoV_unique_sampleID_feces_nt.txt
 ```
 
-And here to save the unique sample IDs for the same example (nucl):
+9. I parsed for high quality hits. After Cara's lead, I went ahead and parsed for alignments that show alignment length >100 + e-value <0.00001 and alignment length >100 + bit score >100. Scripts below:
+
+Script for nt parse using e-value:
 
 ```
-cat Mada_Bat_Kobu_unique_contigs_feces_nt_hiqual.txt | awk -F\_ '{print $1"_"$2}' | sort | uniq > Mada_Bat_CoV_unique_sampleID_feces_nt_hiqual.txt
+cat initial_KoV_blast_nt.txt | awk -F\t '($4>99 && $5<0.00001)' > KoV_blast_nt_100len5eval.txt
 ```
 
-And for the protein parse (feces again):
+
+Script for nt parse using bit score: 
 
 ```
-cat Mada_Bat_Kobu_blast_feces_prot_results_100len100bit.txt | awk '{print $1}' | sort | uniq > Mada_Bat_Kobu_unique_contigs_feces_prot_hiqual.txt
+cat initial_KoV_blast_nt.txt | awk -F\t '($4>99 && $6>99)' > KoV_blast_nt_100len100bit.txt
 ```
 
-And here to save the unique sample IDs for the same example (prot):
+
+Script for aa parse using e-value: 
 
 ```
-cat Mada_Bat_Kobu_unique_contigs_feces_prot_hiqual.txt | awk -F\_ '{print $1"_"$2}' | sort | uniq > Mada_Bat_Kobu_unique_sampleID_feces_prot_hiqual.txt
+cat initial_KoV_blast_aa.txt | awk -F\t '($4>99 && $5<0.00001)' > KoV_blast_nt_100len5eval.txt
 ```
 
-10.And do the same for the other sample types and for the blastx outputs. Load the outputs into R and determine which samples with meta-data were infected at various times/places. I put a bash script ('curate-blast-output.txt') in the 'blast-output' folder that runs through steps 6 through 8 for all of the blast output from this project. It saves summary files from both the curated sample set (those ending in "hiqual") and those from any kind of hit (lacking the suffix). You can run it with:
+Script for aa parse using bit score: 
+
+```
+cat initial_KoV_blast_aa.txt | awk -F\t '($4>99 && $6>99)' > KoV_blast_nt_100len100bit.txt
+```
+
+
+10.Once the blast results have beeen sub-selected a bit, you can summarize them to link back the hits to the samples of interest. Within the same folder as your output, try the following script to save the unique contig IDs which align to Kobuviruses.
+
+Example here shows the nt parse for e-value as query:
+
+```
+cat KoV_blast_nt_100len5eval.txt | awk '{print $1}' | sort | uniq > KoV_unique_contigs_feces_nt_hiqual.txt
+```
+
+And here to save the unique sample IDs for the same example:
+
+```
+cat KoV_unique_contigs_feces_nt_hiqual.txt | awk -F\_ '{print $1"_"$2}' | sort | uniq > KoV_unique_sampleID_feces_nt_hiqual.txt
+```
+
+I did the same for the other three parses, giving me high-quality sample IDs for:
+
+- nt parse (100 aln & 100 bit)
+- nt parse (100 aln & 5 eval)
+- aa parse (100 aln & 100 bit)
+- aa parse (100 aln & 5 eval)
+
+11. Do the same for other sample types if you are studying others. Load the outputs into R and determine which samples with meta-data were infected at various times/places. Cara wrote a bash script ('curate-blast-output.txt'), attached in the 'blast-output' folder, that runs through through some of the above steps. It saves summary files from both the curated sample set (those ending in "hiqual") and those from any kind of hit (lacking the suffix). You can run it with:
 
 ```
 sh -e curate-blast-output.txt
 ```
 
-You can see from investigating the "unique_contigs" folders that there is LOTS of cool stuff going on. We have a whole bunch of big contigs that are full genome of the virus(es):
+After investigating initial BLASTn and BLASTx results, there's some good data. Two contigs listed here are common hits across all four of the above parses. This is where we find our full genome, NODE_4_length_8263 (NCBI Accession: OP287812). I used it as a reference to run an additional offline BLAST, from which I will make Figure 1. 
 
--RR034B_010_NODE_1_length_29122 (Pteropus rufus, sample AMB130, 2/26/2018)
--RR034B_232_NODE_1_length_28926 (Rousettus madagascariensis, sample MIZ178, 4/14/2018)
--RR034B_288_NODE_2_length_28980 (Rousettus madagascariensis, sample MIZ240, 9/11/2018)
+- RR034B_052_NODE_4_length_2077_cov_943.883284
+- RR034B_145_NODE_4_length_8263_cov_106.105872
 
-There are Eidolon hits in the urine, but none at full genome. The three above are HUGE contributions.I think the paper will have two trees: one small sequence RdRp tree of our samples and closely related CoVs and one full genome phylogeny of all CoVs that includes the three megasamples above. #Cara's comment 
-
-11.Now, import the curated contigs into R and compare them against the IDseq hits for what is KobuV positive and how it maps into the meta-data. It looks like no throat samples were CoV hits, as is consistent with what is recovered from IDseq. See R script ('CoV-hits-vs-metadata.R') for further comparison of manual pipeline hits for fecal and urine samples. There are differences, so I am going through them individually IDseq to check. #Cara's comment, update later
+12. Now, import the curated contigs into R and compare them against the IDseq hits for what is KobuV positive and how it maps into the meta-data. See R script ('CoV-hits-vs-metadata.R') for further comparison of manual pipeline hits for fecal. ######LEFT OFF HERE#########
 
 12.For calling positives in cases where there was a discrepancy between this (stringent) pipeline and IDseq (see spreadsheet here), we will accept them as positive hits if (and only if!) the reads from that sample assembled into one or more contigs. In this case, contigs should only be acceptable if the average read depth at that contig is 2 or more reads (per Amy's rule). So, in manually curating any positive samples from IDseq, check the broad (not hiqual) contig summary file for that sample (for feces, "20210721_Mada_Bat_CoV_unique_contigs_feces_nt.txt") and only call it as positive if it has at least one contig with >2 reads for average coverage.
