@@ -1,4 +1,4 @@
-# mada-bat-kobuvirus
+# Madagascar Bat Kobuvirus
 This repository contains all information for generating figures related to our bat Kobuvirus paper. 
 
 This repo contains analyses for the Madagascar bat kobuvirus paper. This repo is designed to document which samples from fecal and urine datasets have detectable kobuvirus in order to build phylogenies on these kobuviruses and to assemble/characterize full/partial genomes. 
