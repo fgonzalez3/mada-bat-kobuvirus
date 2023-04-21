@@ -4,6 +4,8 @@
 
 Note that when you download all the non-host contigs, it will produce a folder with a separate fasta file for each sample, which lists the contigs by node number but does not include the sample ID. Before joining all the contigs (nodes) together, you need to distinguish them by sample ID. Cara wrote an Rscript that parses this for each filetype (rename-fastas-feces, rename-fastas-urine, rename-fastas-throat). To rename your files and the headers within them, copy the appropriate Rscript for the tissue type into your appropriate downloads folder, cd into that folder on the command line, and simply type (example here for feces):
 
+*NOTE: Rscript got hung up on contig file 193, so it was omitted. 
+
 ```
 Rscript rename-fastas-feces.R
 ```
