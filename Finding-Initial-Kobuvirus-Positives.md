@@ -1,4 +1,4 @@
-### Finding positive Kobuvirus samples after mNGS + IDseq
+### Finding initial positive Kobuvirus samples after mNGS + IDseq
 
 1.First, I downloaded all non-host contigs derived from fecal samples, mapping to ANY taxon from IDseq in the 'RR034B1_feces' project. (Note that we did not take contigs from HeLa controls or water). This is done in bulk, manually, on IDseq.net in the top right-hand corner. 
 
