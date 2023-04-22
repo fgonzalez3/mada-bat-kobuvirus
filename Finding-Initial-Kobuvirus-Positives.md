@@ -172,7 +172,7 @@ Sample IDs:
 cat initial_KoV_blast_nt.txt | awk -F\_ '{print $1"_"$2}' | sort | uniq > KoV_unique_sampleID_feces_nt.txt
 ```
 
-9. I parsed for high quality hits. After Cara's lead, I went ahead and parsed for alignments that show alignment length >100 + e-value <0.00001 and alignment length >100 + bit score >100. Scripts below:
+9. I parsed for high quality hits. I went a slightly different route from Cara's protocol here. I went ahead and parsed for alignments that show alignment length >100 + e-value <0.00001 and alignment length >100 + bit score >100. Scripts below:
 
 Script for nt parse using e-value:
 
