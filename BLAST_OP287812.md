@@ -124,5 +124,9 @@ blastx -word_size 3 -evalue 0.001 -query meta_throat_DEDUP.fasta -db KoV_aa -out
 ```
 Again, these can be run locally but I used Ruddle to speed things up. 
 
-9. From here, I followed the same protocol outline in my initial BLAST search pipeline ___. 
+9. From here, I followed the same protocol outlined in my initial BLAST search pipeline ___.
 
+10. This second BLAST analysis, using OP287812 as a reference, further confirmed that our initial Kobuvirus positives are true positives. Using my prior consensus-based method, outlined in this protocol __ , the below contigs were the only true hits. This second analysis helped clarify any incongruencies that may have led to false-positives, resulting in an ultimate true positive Kobuvirus count of 2 among Malagasy fruit bats. I used this to make my prevalence map, influencing the rest of the paper.
+
+RR034B_052_NODE_4_length_2077_cov_943.883284
+RR034B_145_NODE_4_length_8263_cov_106.105872
