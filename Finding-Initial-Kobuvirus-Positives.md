@@ -228,11 +228,11 @@ I did the same for the other three parses, giving me high-quality sample IDs for
 sh -e curate-blast-output.txt
 ```
 
-After investigating initial BLASTn and BLASTx results, there's some good data. Two contigs listed here are common hits across all four of the above parses. This is where we find our full genome, NODE_4_length_8263 (NCBI Accession: OP287812). I used it as a reference to run an additional offline BLAST, from which I will make Figure 1 and determine true positives. 
+After investigating initial BLASTn and BLASTx results, there's some good data. Two contigs listed here are common hits across all four of the above parses. This is where we find our full genome, NODE_4_length_8263 (NCBI Accession: OP287812). I used it as a reference to run an additional offline BLAST upon its acceptance into NCBI, from which I made Figure 1 and determined true positives. 
 
 - RR034B_052_NODE_4_length_2077_cov_943.883284
 - RR034B_145_NODE_4_length_8263_cov_106.105872
 
 Since these contigs are the only two that appeared in all four of my BLAST analyses, listed at the end of step 10, I did not choose to look at any other contigs further. I considered the two above contigs as my "initial positives". You can find a summary of this analysis in Supplementary Figure __. 
 
-12. My consensus-based method differs from Cara's positive calling, but is a bit more stringent. Considering there are few Kobuviruses on NCBI, I did not want to risk calling false-positives. 
+12. My consensus-based method differs from Cara's positive calling. Considering there are few Kobuviruses on NCBI, I did not want to risk calling false-positives. 
