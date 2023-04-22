@@ -228,11 +228,11 @@ I did the same for the other three parses, giving me high-quality sample IDs for
 sh -e curate-blast-output.txt
 ```
 
-After investigating initial BLASTn and BLASTx results, there's some good data. Two contigs listed here are common hits across all four of the above parses. This is where we find our full genome, NODE_4_length_8263 (NCBI Accession: OP287812). I used it as a reference to run an additional offline BLAST, from which I will make Figure 1. 
+After investigating initial BLASTn and BLASTx results, there's some good data. Two contigs listed here are common hits across all four of the above parses. This is where we find our full genome, NODE_4_length_8263 (NCBI Accession: OP287812). I used it as a reference to run an additional offline BLAST, from which I will make Figure 1 and determine true positives. 
 
 - RR034B_052_NODE_4_length_2077_cov_943.883284
 - RR034B_145_NODE_4_length_8263_cov_106.105872
 
-12. Now, import the curated contigs into R and compare them against the IDseq hits for what is KobuV positive and how it maps into the meta-data. See R script ('CoV-hits-vs-metadata.R') for further comparison of manual pipeline hits for fecal. ######LEFT OFF HERE#########
+Since these contigs are the only two that appeared in all four of my BLAST analyses, listed at the end of step 10, I did not choose to look at any other contigs further. I considered the two above contigs as my "initial positives". You can find a summary of this analysis in Supplementary Figure __. 
 
-12.For calling positives in cases where there was a discrepancy between this (stringent) pipeline and IDseq (see spreadsheet here), we will accept them as positive hits if (and only if!) the reads from that sample assembled into one or more contigs. In this case, contigs should only be acceptable if the average read depth at that contig is 2 or more reads (per Amy's rule). So, in manually curating any positive samples from IDseq, check the broad (not hiqual) contig summary file for that sample (for feces, "20210721_Mada_Bat_CoV_unique_contigs_feces_nt.txt") and only call it as positive if it has at least one contig with >2 reads for average coverage.
+12. My consensus-based method differs from Cara's positive calling, but is a bit more stringent. Considering there are few Kobuviruses on NCBI, I did not want to risk calling false-positives. 
