@@ -118,9 +118,9 @@ The commands above should generate a suite of files in the same folder that you 
 You will run two BLASTs total: 1 nucleotide and 1 protein BLAST on each of the deduplicated contig samples above. First, run a BLASTn alignment of deduplicated set of contigs with the KoV-nt database, then run a BLASTx aligment of the deduplicated set of contigs with the KoV_aa database. Scripts for both are listed below:
 
 ```
-blastn -word_size 10 -evalue 0.001 -query meta_throat_DEDUP.fasta -db KoV_nt -outfmt '6 qseqid nident pident length evalue bitscore sgi sacc stitle'  -max_target_seqs 10 -out Mada_Bat_KoV_blast_nt.txt
+blastn -word_size 10 -evalue 0.001 -query meta_fec_DEDUP.fasta -db KoV_nt -outfmt '6 qseqid nident pident length evalue bitscore sgi sacc stitle'  -max_target_seqs 10 -out Mada_Bat_KoV_blast_nt.txt
 
-blastx -word_size 3 -evalue 0.001 -query meta_throat_DEDUP.fasta -db KoV_aa -outfmt '6 qseqid nident pident length evalue bitscore sgi sacc stitle' -max_target_seqs 10 -out Mada_Bat_KoV_blast_aa.txt
+blastx -word_size 3 -evalue 0.001 -query meta_fec_DEDUP.fasta -db KoV_aa -outfmt '6 qseqid nident pident length evalue bitscore sgi sacc stitle' -max_target_seqs 10 -out Mada_Bat_KoV_blast_aa.txt
 ```
 Again, these can be run locally but I used Ruddle to speed things up. 
 
