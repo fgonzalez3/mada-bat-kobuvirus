@@ -1,0 +1,349 @@
+                             _      _ _            _      _   _  _____ 
+                            | |    | | |          | |    | \ | |/ ____|
+         _ __ ___   ___   __| | ___| | |_ ___  ___| |_   |  \| | |  __ 
+        | '_ ` _ \ / _ \ / _` |/ _ \ | __/ _ \/ __| __|  | . ` | | |_ |
+        | | | | | | (_) | (_| |  __/ | ||  __/\__ \ |_   | |\  | |__| |
+        |_| |_| |_|\___/ \__,_|\___|_|\__\___||___/\__|  |_| \_|\_____|
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7 released on 17.03.2021 by The Exelixis Lab.
+Written by Diego Darriba.
+Contributors: Tomas Flouri, Alexey Kozlov, Benoit Morel, David Posada, 
+              Alexandros Stamatakis.
+Latest version: https://github.com/ddarriba/modeltest
+--------------------------------------------------------------------------------
+
+Physical cores: 18
+Logical cores:  36
+Memory:         252GB
+Extensions:     AVX
+
+WARNING: MSA has not enough sites to infer reliable results
+Creating new checkpoint file: picorna_alignment.fasta.ckp
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        picorna_alignment.fasta
+  Tree:       Maximum likelihood
+    file:           -
+  #taxa:            142
+  #sites:           32848
+  #patterns:        14473
+  Max. thread mem:  1010 MB
+
+Output:
+  Log:           picorna_alignment.fasta.log
+  Starting tree: picorna_alignment.fasta.tree
+  Results:       picorna_alignment.fasta.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          8/18
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+modeltest-ng was called as follows: 
+>> modeltest-ng -d nt -i picorna_alignment.fasta -t ml -p 8 
+
+
+Partition 1/1
+
+    8/88   TrN+I+G4       0h:35:55   0h:35:56         -943003.8018  1.4172  0.0219
+    4/88   TIM3+I+G4      0h:36:54   0h:36:55         -942487.3124  1.4116  0.0219
+    2/88   GTR+I+G4       0h:37:05   0h:37:06         -941967.7998  1.4122  0.0219
+    3/88   TVM+I+G4       0h:37:51   0h:37:52         -941967.8396  1.4201  0.0219
+    5/88   TIM2+I+G4      0h:39:09   0h:39:10         -942481.4966  1.4204  0.0219
+    9/88   TPM1uf+I+G4    0h:42:15   0h:42:16         -943005.3406  1.4292  0.0219
+    7/88   TPM3uf+I+G4    0h:44:20   0h:44:21         -942487.8249  1.4223  0.0219
+    6/88   TIM1+I+G4      0h:47:18   0h:47:19         -943003.3277  1.4170  0.0219
+   14/88   TIM2ef+I+G4    0h:33:07   1h:12:17         -943234.9886  1.5030  0.0219
+   10/88   TPM2uf+I+G4    0h:39:08   1h:15:04         -942483.1139  1.4310  0.0219
+   11/88   SYM+I+G4       0h:38:55   1h:15:50         -943135.1062  1.5033  0.0219
+   13/88   HKY+I+G4       0h:42:39   1h:20:31         -943005.7938  1.4291  0.0219
+   12/88   TVMef+I+G4     0h:47:48   1h:24:54         -943216.3086  1.5008  0.0219
+   15/88   TIM1ef+I+G4    0h:43:46   1h:26:02         -944596.7395  1.4873  0.0219
+   16/88   TIM3ef+I+G4    0h:44:03   1h:28:24         -944506.2508  1.4813  0.0219
+   17/88   F81+I+G4       1h:02:10   1h:49:29         -952800.2881  1.4715  0.0222
+   23/88   JC+I+G4        0h:28:18   1h:54:20         -954077.5238  1.5742  0.0221
+   19/88   TPM2+I+G4      0h:42:58   1h:58:02         -943312.7256  1.5020  0.0219
+   18/88   TPM3+I+G4      0h:45:53   1h:58:10         -944609.7660  1.4835  0.0219
+   20/88   TPM1+I+G4      0h:49:26   2h:05:16         -944696.5217  1.4909  0.0219
+   21/88   TrNef+I+G4     0h:45:55   2h:06:26         -944602.4327  1.4863  0.0219
+   22/88   K80+I+G4       0h:49:30   2h:14:24         -944702.2650  1.4899  0.0219
+   29/88   TPM3uf+G4      0h:34:30   2h:39:46         -942813.2764  1.3408       -
+   25/88   TVM+G4         0h:55:26   2h:44:55         -942299.8511  1.3543       -
+   31/88   TPM1uf+G4      0h:41:33   2h:55:57         -943334.2872  1.3378       -
+   27/88   TIM2+G4        1h:06:56   3h:04:58         -942818.9674  1.3043       -
+   24/88   GTR+G4         1h:38:05   3h:06:29         -942299.7523  1.3534       -
+   30/88   TrN+G4         1h:01:58   3h:08:24         -943334.0025  1.3360       -
+   26/88   TIM3+G4        1h:24:21   3h:18:41         -942813.1796  1.3398       -
+   32/88   TPM2uf+G4      0h:42:33   3h:22:19         -942820.6471  1.3541       -
+   28/88   TIM1+G4        1h:24:23   3h:22:33         -943333.5144  1.3359       -
+   33/88   SYM+G4         0h:38:24   3h:23:19         -943472.3207  1.3529       -
+   34/88   TVMef+G4       0h:35:24   3h:31:21         -943563.2432  1.3581       -
+   36/88   TIM2ef+G4      0h:26:24   3h:32:53         -943571.9068  1.3387       -
+   37/88   TIM1ef+G4      0h:31:17   3h:39:41         -944928.1127  1.3180       -
+   35/88   HKY+G4         0h:37:15   3h:42:13         -943334.7817  1.3380       -
+   38/88   TIM3ef+G4      0h:29:00   3h:47:41         -944838.1770  1.3284       -
+   40/88   TPM3+G4        0h:30:33   3h:53:06         -944952.8076  1.3392       -
+   41/88   TPM2+G4        0h:33:17   3h:56:36         -943658.3997  1.3408       -
+   42/88   TPM1+G4        0h:36:08   4h:07:29         -945037.8417  1.3294       -
+   39/88   F81+G4         0h:45:58   4h:08:17         -953136.6100  1.3329       -
+   43/88   TrNef+G4       0h:35:29   4h:08:22         -944933.7981  1.3165       -
+   44/88   K80+G4         0h:28:47   4h:08:28         -945043.8041  1.3278       -
+   45/88   JC+G4          0h:33:55   4h:16:08         -954418.3026  1.4055       -
+   48/88   TIM3+I         0h:27:19   4h:23:55         -973504.6934       -  0.0215
+   52/88   TrN+I          0h:18:07   4h:26:35         -973779.7805       -  0.0215
+   50/88   TIM1+I         0h:19:25   4h:27:42         -973779.6537       -  0.0215
+   46/88   GTR+I          0h:41:33   4h:29:14         -972822.5231       -  0.0214
+   49/88   TIM2+I         0h:25:36   4h:33:05         -973071.1342       -  0.0214
+   53/88   TPM1uf+I       0h:19:57   4h:36:05         -973803.5544       -  0.0215
+   47/88   TVM+I          0h:44:44   4h:37:50         -972854.0146       -  0.0215
+   54/88   TPM2uf+I       0h:16:09   4h:40:04         -973096.4659       -  0.0222
+   55/88   SYM+I          0h:17:04   4h:43:39         -973296.5066       -  0.0215
+   51/88   TPM3uf+I       0h:39:17   4h:47:39         -973540.3410       -  0.0215
+   56/88   TVMef+I        0h:20:02   4h:47:44         -973370.6448       -  0.0215
+   57/88   HKY+I          0h:18:45   4h:47:59         -973803.7273       -  0.0215
+   58/88   TIM2ef+I       0h:17:05   4h:50:10         -973312.7834       -  0.0215
+   60/88   TIM3ef+I       0h:14:38   4h:52:28         -974724.0501       -  0.0216
+   59/88   TIM1ef+I       0h:16:56   4h:53:01         -974719.5798       -  0.0216
+   62/88   TPM3+I         0h:16:26   5h:00:05         -974814.4777       -  0.0216
+   61/88   F81+I          0h:21:50   5h:01:54         -982481.6069       -  0.0218
+   65/88   TrNef+I        0h:16:42   5h:04:41         -974737.5449       -  0.0216
+   69/88   TVM            0h:05:09   5h:05:14         -975182.5397       -       -
+   63/88   TPM2+I         0h:19:08   5h:06:47         -973385.0409       -  0.0215
+   71/88   TIM2           0h:04:53   5h:09:34         -975440.5245       -       -
+   73/88   TPM3uf         0h:03:54   5h:10:41         -975854.7192       -       -
+   67/88   JC+I           0h:18:27   5h:10:55         -983174.8319       -  0.0217
+   64/88   TPM1+I         0h:24:38   5h:12:22         -974799.8653       -  0.0216
+   76/88   TPM2uf         0h:04:17   5h:15:12         -975485.8793       -       -
+   66/88   K80+I          0h:25:03   5h:15:13         -974817.6265       -  0.0216
+   78/88   TVMef          0h:05:48   5h:21:00         -975697.9648       -       -
+   70/88   TIM3           0h:19:45   5h:21:39         -975643.6365       -       -
+   72/88   TIM1           0h:16:39   5h:21:53         -975947.0569       -       -
+   80/88   TIM2ef         0h:05:13   5h:26:13         -975627.4805       -       -
+   74/88   TrN            0h:17:01   5h:26:35         -975947.1212       -       -
+   75/88   TPM1uf         0h:16:12   5h:26:53         -975987.9478       -       -
+   81/88   TIM1ef         0h:05:23   5h:27:02         -977067.7921       -       -
+   68/88   GTR            0h:36:14   5h:29:15         -974958.6478       -       -
+   77/88   SYM            0h:17:13   5h:29:35         -975464.9358       -       -
+   83/88   F81            0h:04:30   5h:30:43         -984815.5860       -       -
+   84/88   TPM3           0h:04:49   5h:31:24         -977178.0377       -       -
+   85/88   TPM2           0h:04:46   5h:31:39         -975722.3334       -       -
+   79/88   HKY            0h:16:32   5h:31:45         -975988.0496       -       -
+   86/88   TPM1           0h:04:52   5h:31:54         -977176.0739       -       -
+   87/88   TrNef          0h:04:40   5h:33:55         -977085.6760       -       -
+   89/88   JC             0h:03:36   5h:34:19         -985513.5672       -       -
+   88/88   K80            0h:04:44   5h:34:19         -977194.1605       -       -
+   82/88   TIM3ef         0h:14:57   5h:36:50         -976880.7489       -       -
+ ----ID---  ----MODEL---- ---Time--- -Elapsed--- -------LnL------- -Alpha- -P-inv-
+
+Computation of likelihood scores completed. It took 5h:36:50
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TVM+I+G4           9   -941967.8396   1886951.5765         0.0000    0.9943
+       2  GTR+I+G4          10   -941967.7998   1886961.8966        10.3201    0.0057
+       3  TVM+G4             8   -942299.8511   1887605.2000       653.6235    0.0000
+       4  GTR+G4             9   -942299.7523   1887615.4020       663.8255    0.0000
+       5  TPM2uf+I+G4        7   -942483.1139   1887961.3259      1009.7494    0.0000
+       6  TIM2+I+G4          8   -942481.4966   1887968.4910      1016.9145    0.0000
+       7  TPM3uf+I+G4        7   -942487.8249   1887970.7478      1019.1713    0.0000
+       8  TIM3+I+G4          8   -942487.3124   1887980.1225      1028.5459    0.0000
+       9  TPM3uf+G4          6   -942813.2764   1888611.2513      1659.6747    0.0000
+      10  TIM3+G4            7   -942813.1796   1888621.4573      1669.8808    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              TVM+I+G4
+lnL:                -941967.8396
+Frequencies:        0.2545 0.2312 0.2222 0.2922
+Subst. Rates:       2.0475 3.4144 1.4739 1.4807 3.4144 1.0000 
+Inv. sites prop:    0.0219
+Gamma shape:        1.4201
+Score:              1886951.5765
+Weight:             0.9943
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              1.3543
+Alpha-P.Inv:        1.4200
+P.Inv-Alpha:        0.0219
+Frequencies:        0.2545 0.2312 0.2222 0.2922 
+
+Commands:
+  > phyml  -i picorna_alignment.fasta -m 012314 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s picorna_alignment.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa picorna_alignment.fasta --model TVM+I+G4
+  > paup -s picorna_alignment.fasta
+  > iqtree -s picorna_alignment.fasta -m TVM+I+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TVM+I+G4           9   -941967.8396   1884515.6791         0.0000    0.7232
+       2  GTR+I+G4          10   -941967.7998   1884517.5995         1.9204    0.2768
+       3  TVM+G4             8   -942299.8511   1885177.7023       662.0232    0.0000
+       4  GTR+G4             9   -942299.7523   1885179.5046       663.8255    0.0000
+       5  TIM2+I+G4          8   -942481.4966   1885540.9933      1025.3141    0.0000
+       6  TPM2uf+I+G4        7   -942483.1139   1885542.2278      1026.5486    0.0000
+       7  TPM3uf+I+G4        7   -942487.8249   1885551.6497      1035.9706    0.0000
+       8  TIM3+I+G4          8   -942487.3124   1885552.6247      1036.9456    0.0000
+       9  TPM3uf+G4          6   -942813.2764   1886200.5528      1684.8737    0.0000
+      10  TIM3+G4            7   -942813.1796   1886202.3592      1686.6801    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              TVM+I+G4
+lnL:                -941967.8396
+Frequencies:        0.2545 0.2312 0.2222 0.2922
+Subst. Rates:       2.0475 3.4144 1.4739 1.4807 3.4144 1.0000 
+Inv. sites prop:    0.0219
+Gamma shape:        1.4201
+Score:              1884515.6791
+Weight:             0.7232
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              1.3540
+Alpha-P.Inv:        1.4179
+P.Inv-Alpha:        0.0219
+Frequencies:        0.2543 0.2313 0.2220 0.2923 
+
+Commands:
+  > phyml  -i picorna_alignment.fasta -m 012314 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s picorna_alignment.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa picorna_alignment.fasta --model TVM+I+G4
+  > paup -s picorna_alignment.fasta
+  > iqtree -s picorna_alignment.fasta -m TVM+I+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TVM+I+G4           9   -941967.8396   1884520.6791         0.0000    0.7232
+       2  GTR+I+G4          10   -941967.7998   1884522.5995         1.9204    0.2768
+       3  TVM+G4             8   -942299.8511   1885182.7023       662.0232    0.0000
+       4  GTR+G4             9   -942299.7523   1885184.5046       663.8255    0.0000
+       5  TIM2+I+G4          8   -942481.4966   1885545.9933      1025.3141    0.0000
+       6  TPM2uf+I+G4        7   -942483.1139   1885547.2278      1026.5486    0.0000
+       7  TPM3uf+I+G4        7   -942487.8249   1885556.6497      1035.9706    0.0000
+       8  TIM3+I+G4          8   -942487.3124   1885557.6247      1036.9456    0.0000
+       9  TPM3uf+G4          6   -942813.2764   1886205.5528      1684.8737    0.0000
+      10  TIM3+G4            7   -942813.1796   1886207.3592      1686.6801    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              TVM+I+G4
+lnL:                -941967.8396
+Frequencies:        0.2545 0.2312 0.2222 0.2922
+Subst. Rates:       2.0475 3.4144 1.4739 1.4807 3.4144 1.0000 
+Inv. sites prop:    0.0219
+Gamma shape:        1.4201
+Score:              1884520.6791
+Weight:             0.7232
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              1.3540
+Alpha-P.Inv:        1.4179
+P.Inv-Alpha:        0.0219
+Frequencies:        0.2543 0.2313 0.2220 0.2923 
+
+Commands:
+  > phyml  -i picorna_alignment.fasta -m 012314 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s picorna_alignment.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa picorna_alignment.fasta --model TVM+I+G4
+  > paup -s picorna_alignment.fasta
+  > iqtree -s picorna_alignment.fasta -m TVM+I+G4
+
+There are 31 different topologies
+Topologies written to picorna_alignment.fasta.topos
+
+topo_id   models_count   bic_support   aic_support   aicc_support
+-----------------------------------------------------------------
+      1              6       1.00000       1.00000       1.00000
+      2             17       0.00000       0.00000       0.00000
+     31              1       0.00000       0.00000       0.00000
+     30              1       0.00000       0.00000       0.00000
+     29              1       0.00000       0.00000       0.00000
+     28              1       0.00000       0.00000       0.00000
+     27              5       0.00000       0.00000       0.00000
+     26              2       0.00000       0.00000       0.00000
+     25              1       0.00000       0.00000       0.00000
+     24              1       0.00000       0.00000       0.00000
+     23              1       0.00000       0.00000       0.00000
+     22              1       0.00000       0.00000       0.00000
+     21              1       0.00000       0.00000       0.00000
+     20              1       0.00000       0.00000       0.00000
+     19              1       0.00000       0.00000       0.00000
+     18              2       0.00000       0.00000       0.00000
+     17              1       0.00000       0.00000       0.00000
+     16              1       0.00000       0.00000       0.00000
+     15              1       0.00000       0.00000       0.00000
+     14              3       0.00000       0.00000       0.00000
+     13              4       0.00000       0.00000       0.00000
+     12              8       0.00000       0.00000       0.00000
+     11              2       0.00000       0.00000       0.00000
+     10              2       0.00000       0.00000       0.00000
+      9              1       0.00000       0.00000       0.00000
+      8              1       0.00000       0.00000       0.00000
+      7              2       0.00000       0.00000       0.00000
+      6              2       0.00000       0.00000       0.00000
+      5              2       0.00000       0.00000       0.00000
+      4             10       0.00000       0.00000       0.00000
+      3              5       0.00000       0.00000       0.00000
+
+extended majority-rule consensus: ((((NC_026470.1 |African bat icavirus A isolate PREDICT-06105, complete genome,NC_034381.1 |Miniopterus schreibersii picornavirus 1, complete genome)[1.00000],(NC_035198.1 |Aimelvirus 2 strain gpai002, complete genome,NC_055161.1 |Aimelvirus 1 strain gpai001, complete genome)[1.00000])[1.00000],((NC_001479.1 |Encephalomyocarditis virus, complete genome,(NC_009448.2 |Saffold virus, complete genome,NC_010810.1 |Human TMEV-like cardiovirus, complete genome)[1.00000])[1.00000],(NC_001366.1 |Theilovirus, complete genome,(NC_011349.1 |Seneca valley virus, complete genome,NC_038305.1 |Boone cardiovirus 1 isolate BCV-1 polyprotein gene, complete cds)[1.00000])[1.00000])[1.00000])[1.00000],(NC_023987.1 |Mosavirus A2 strain SZAL6-MoV/2011/HUN, complete genome,((((NC_034245.1 |Bovine rhinovirus 1 strain SD-1, complete genome,NC_038303.1 |Bovine rhinitis A virus strain Sd-1 polyprotein gene, complete cds)[1.00000],(NC_010354.1 |Bovine rhinitis B virus 1, complete genome,NC_039210.1 |Foot-and-mouth disease virus O isolate o6pirbright iso58, complete genome)[1.00000])[1.00000],(NC_003983.1 |Equine rhinitis B virus 1, complete genome,NC_039209.1 |Equine rhinitis A virus strain PERV-1, complete genome)[1.00000])[1.00000],(((NC_026315.1 |Lesavirus 1 isolate Mis101308/2012, complete genome,NC_026316.1 |Lesavirus 2 isolate Nai108015/2012, complete genome)[1.00000],(NC_018668.1 |Bovine hungarovirus 1 strain BHUV1/2008/HUN, complete genome,NC_025675.1 |Norway rat hunnivirus isolate NrHuV/NYC-E21 polyprotein gene, complete cds)[1.00000])[1.00000],(((((((((KJ641693.1 |Bat picornavirus isolate BtRh-PicoV/SC2013 polyprotein gene, complete cds,(HQ595345.1 |Bat picornavirus 3 strain TLC21F, complete genome,NC_015934.1 |Bat picornavirus 3, complete genome)[1.00000])[1.00000],((KJ641694.1 |Bat picornavirus isolate BtRs-PicoV/YN2010 polyprotein gene, complete cds,NC_016964.1 |Canine picornavirus, complete genome)[1.00000],((HQ595343.1 |Bat picornavirus 2 strain SK17F, complete genome,NC_015941.1 |Bat picornavirus 2, complete genome)[1.00000],(HQ595341.1 |Bat picornavirus 1 strain LMH22A, complete genome,NC_015940.1 |Bat picornavirus 1, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(NC_016156.1 |Feline picornavirus, complete genome,(MF352423.1 |Miniopterus picornavirus 1 strain Henan-Ms61 polyprotein gene, complete cds,(MF352419.1 |Miniopterus picornavirus 1 strain Henan-Ms56-1 polyprotein gene, complete cds,KJ641687.1 |Bat picornavirus isolate BtMf-PicoV/FJ2012 polyprotein gene, complete cds)[1.00000])[1.00000])[1.00000])[1.00000],(NC_026314.1 |Rabbit kobuvirus isolate Berlin/Jan2011/0572, complete genome,(NC_040605.1 |Marmot sapelovirus 1 strain HT5, complete genome,NC_055156.1 |Rabovirus B1 isolate RtMp-PicoV/YN2014, partial genome)[1.00000])[1.00000])[1.00000],(KJ641696.1 |Bat picornavirus isolate BtVs-PicoV/SC2013 polyprotein gene, complete cds,(NC_033820.1 |Bat sapelovirus clone Bat/CAM/Sap-P24/2013 polyprotein gene, complete cds,(NC_004451.1 |Simian sapelovirus 1, complete genome,(NC_003987.1 |Porcine sapelovirus 1, complete genome,NC_048212.1 Bat coronavirus, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(NC_006553.1 |Anativirus A1 isolate TW90A, complete genome,(NC_015626.1 |Pigeon picornavirus B, complete genome,NC_016403.1 |Quail picornavirus QPV1/HUN/2010, complete genome)[1.00000])[1.00000])[1.00000],(NC_038989.1 |Picornaviridae sp. rodent/Ee/PicoV/NX2015 polyprotein gene, complete cds,(NC_029905.1 |Enterovirus SEV-gx, complete genome,(((NC_001430.1 |Human enterovirus D, complete genome,NC_038308.1 |Human enterovirus 68 strain Fermon, complete genome)[1.00000],((NC_003988.1 |Simian enterovirus A, complete genome,NC_038309.1 |Simian enterovirus SV4 strain 1715 UWB, complete genome)[1.00000],(((((NC_001859.1 |Bovine enterovirus, complete genome,(NC_038310.1 |Dromedary camel enterovirus strain 19CC, complete genome,((NC_008714.1 |Possum enterovirus W1, complete genome,NC_029854.1 |Yak enterovirus strain SWUN-AB001, complete genome)[1.00000],(NC_021220.1 |Enterovirus F strain BEV-261 polyprotein gene, complete cds,NC_033695.1 |Enterovirus AN12 genomic RNA, complete genome, strain: AN12)[1.00000])[1.00000])[1.00000])[1.00000],(NC_004441.1 |Porcine enterovirus 9 strain UKG/410/73 polyprotein gene, complete cds,NC_034267.1 |Enterovirus goat/JL14, complete genome)[1.00000])[1.00000],(NC_038306.1 |Human coxsackievirus A2 strain Fleetwood, complete genome,(NC_001612.1 |Human enterovirus A, complete genome,NC_030454.1 |Enterovirus A114 strain V13-0285, partial genome)[1.00000])[1.00000])[1.00000],(NC_024073.1 |Enterovirus sp. isolate CPML_8109/08, complete genome,(NC_013695.1 |Enterovirus J strain N203, complete genome,NC_010415.1 |Enterovirus J strain 1631, complete genome)[1.00000])[1.00000])[1.00000],(NC_002058.3 |Poliovirus, complete genome,(NC_001472.1 |Human enterovirus B, complete genome,NC_038307.1 |Coxsackievirus B3 mRNA, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(NC_001490.1 |Rhinovirus B14, complete sequence,NC_038312.1 |Human rhinovirus 3, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],((NC_030843.1 |Washington bat picornavirus polyprotein gene, complete cds,(NC_040673.1 |Pelodiscus sinensis picornavirus 1 strain CNSR2011, complete genome,(((NC_028364.1 |Shrew hepatovirus KS121232Sorara2012 polyprotein gene, complete cds,(NC_001489.1 |Hepatitis A virus, complete genome,(NC_028363.1 |Rodent hepatovirus RMU101637Micarv2010 polyprotein gene, complete cds,NC_038315.1 |Rodent hepatovirus KEF121Sigmas2012 polyprotein gene, complete cds)[1.00000])[1.00000])[1.00000],(NC_027818.1 |Phopivirus strain NewEngland_USA/2011, complete genome,(NC_038316.1 |Bat hepatovirus BUO2BF86Colafr2010 polyprotein gene, complete cds,(NC_028366.1 |Hepatovirus H2 isolate M32Eidhel2010 genomic sequence,NC_028981.1 |Tupaia hepatovirus A isolate TN1, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(NC_038314.1 |Rodent hepatovirus CIV459Lopsik2004 polyprotein gene, complete cds,NC_038313.1 |Bat hepatovirus SMG18520Minmav2014 polyprotein gene, complete cds)[1.00000])[1.00000])[1.00000])[1.00000],((NC_038961.1 |Shanbavirus A isolate BtMf-PicoV-1/SAX2011 polyprotein gene, complete cds,(NC_025474.1 |Crohivirus A gene for polyprotein, complete cds, strain: ZM54,(NC_003976.2 |Ljungan virus, complete genome,NC_038319.1 |polyprotein [echovirus 22 EV22, Harris, Genomic RNA Complete, 7339 nt])[1.00000])[1.00000])[1.00000],((NC_018506.1 |Bluegill picornavirus isolate 04-032, complete genome,(NC_022332.1 |Eel picornavirus 1 strain F15/05, complete genome,(NC_023162.1 |Carp picornavirus 1 isolate F37/06, complete genome,NC_039212.1 |Fathead minnow picornavirus isolate FHMPV-1, complete genome)[1.00000])[1.00000])[1.00000],(NC_024766.1 |Chicken picornavirus 2 isolate 44C, complete genome,(NC_008250.2 |Duck hepatitis A virus 1 strain R85952, complete genome,(NC_023985.1 |Duck picornavirus GL/12, complete genome,(NC_028970.1 |Avisivirus Pf-CHK1/AsV, complete genome,NC_038304.1 |Turkey avisivirus isolate USA-IN1, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(NC_055108.1 |Poecivirus BCCH-449 polyprotein gene, complete cds,(((NC_023988.1 |Tortoise Rafivirus A isolate UF4, complete genome,NC_043544.1 |Hainan gekko similignum picornavirus strain LPXYC222841 polyprotein gene, complete cds)[1.00000],(NC_040611.1 |Hedgehog dicipivirus strain hedgehog/H14/2015/HUN, complete genome,(NC_035779.1 |Falcon picornavirus, complete genome,(NC_021178.1 |Canine picodicistrovirus strain 209, complete genome,NC_040642.1 |Rhimavirus A, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(((NC_040684.1 |Goose picornavirus 1 strain goose/NLSZK2/HUN/2013, complete genome,((NC_014412.1 |Turdivirus 2, complete genome,NC_014413.1 |Turdivirus 3, complete genome)[1.00000],(NC_021482.1 |Sebokele virus 1 ORF1 gene for polyprotein, genomic RNA, strain 1,NC_034617.1 |Harrier picornavirus 1 strain harrier/MR-01/HUN/2014, complete genome)[1.00000])[1.00000])[1.00000],(NC_032126.1 |Livupivirus A1 strain newt/II-5-Pilis/2014/HUN, complete genome,((((NC_027918.1 |Kobuvirus cattle/Kagoshima-2-24-KoV/2015/JPN genomic RNA, complete genome, strain: Kagoshima-2-24-KoV/2015/JPN,NC_027919.1 |Kobuvirus cattle/Kagoshima-1-22-KoV/2014/JPN genomic RNA, nearly complete genome, strain: Kagoshima-1-22-KoV/2014/JPN)[1.00000],((NODE_4,(NC_001918.1 |Aichi virus, complete genome,(NC_015936.1 |Mouse kobuvirus M-5/USA/2010, complete genome,NC_034971.1 |Canine kobuvirus isolate SMCD-59, complete genome)[1.00000])[1.00000])[1.00000],(NC_004421.1 |Aichivirus B genomic RNA, complete genome, strain:U-1,(NC_023422.1 |Caprine kobuvirus isolate 12Q108, complete genome,(NC_011829.1 |Porcine kobuvirus swine/S-1-HUN/2007/Hungary, complete genome,(NC_016769.1 |Porcine kobuvirus SH-W-CHN/2010/China, complete genome,NC_027054.1 |Porcine kobuvirus isolate JS-02a-CHN/2014/China, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],((KJ641686 |Bat kobuvirus 1 isolate BtMr-PicoV/JX2010 polyprotein gene, partial cds,(MN602325 Bat picornavirus strain ITA/2017/189/18-155, complete genome,(KJ641691 |Aichivirus F2 isolate BtMf-PicoV-2/GD2012 polyprotein gene, partial cds,MF352427.1 |Miniopterus picornavirus 2 strain Henan-Ms56-2 polyprotein gene, complete cds)[1.00000])[1.00000])[1.00000],(NC_022802.1 |Feline sakobuvirus A isolate FFUP1, complete genome,(NC_025114.1 |Salivirus FHB, complete genome,(NC_012957.1 |Salivirus NG-J1, complete genome,NC_012986.1 |Salivirus A isolate 02394-01, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(NC_014411.1 |Turdivirus 1, complete genome,(NC_024765.1 |Chicken picornavirus 1 isolate 55C, complete genome,(NC_018400.1 |Gallivirus A1 strain turkey/M176/2011/HUN, complete genome,(NC_024770.1 |Gallivirus A1 isolate 518C, complete genome,NC_028964.1 |Gallivirus Pf-CHK1/GV, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],((NC_038317.1 |Kunsagivirus 1 strain roller/SZAL6-KuV/2011/HUN, complete genome,NC_034206.1 |Bakunsa virus, complete genome)[1.00000],(NC_031105.1 |Rosavirus B strain RNCW0602091R polyprotein gene, complete cds,(NC_024070.1 |Rosavirus 2 strain GA7403, complete genome,NC_038880.1 |Rosavirus M-7 polyprotein gene, complete cds)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],((NC_012800.1 |Cosavirus A strain HCoSV-A1 polyprotein gene, complete cds,(NC_012801.1 |Human cosavirus B1, complete genome,NC_025961.1 |Cosavirus JMY-2014 isolate Cosa-CHN, complete genome)[1.00000])[1.00000],(NC_012802.1 |Human cosavirus D1, complete genome,NC_023984.1 |Human cosavirus isolate Cosavirus_Amsterdam_1994, complete genome)[1.00000])[1.00000]);
+strict consensus: ((((NC_026470.1 |African bat icavirus A isolate PREDICT-06105, complete genome,NC_034381.1 |Miniopterus schreibersii picornavirus 1, complete genome)[1.00000],(NC_035198.1 |Aimelvirus 2 strain gpai002, complete genome,NC_055161.1 |Aimelvirus 1 strain gpai001, complete genome)[1.00000])[1.00000],((NC_001479.1 |Encephalomyocarditis virus, complete genome,(NC_009448.2 |Saffold virus, complete genome,NC_010810.1 |Human TMEV-like cardiovirus, complete genome)[1.00000])[1.00000],(NC_001366.1 |Theilovirus, complete genome,(NC_011349.1 |Seneca valley virus, complete genome,NC_038305.1 |Boone cardiovirus 1 isolate BCV-1 polyprotein gene, complete cds)[1.00000])[1.00000])[1.00000])[1.00000],(NC_023987.1 |Mosavirus A2 strain SZAL6-MoV/2011/HUN, complete genome,((((NC_034245.1 |Bovine rhinovirus 1 strain SD-1, complete genome,NC_038303.1 |Bovine rhinitis A virus strain Sd-1 polyprotein gene, complete cds)[1.00000],(NC_010354.1 |Bovine rhinitis B virus 1, complete genome,NC_039210.1 |Foot-and-mouth disease virus O isolate o6pirbright iso58, complete genome)[1.00000])[1.00000],(NC_003983.1 |Equine rhinitis B virus 1, complete genome,NC_039209.1 |Equine rhinitis A virus strain PERV-1, complete genome)[1.00000])[1.00000],(((NC_026315.1 |Lesavirus 1 isolate Mis101308/2012, complete genome,NC_026316.1 |Lesavirus 2 isolate Nai108015/2012, complete genome)[1.00000],(NC_018668.1 |Bovine hungarovirus 1 strain BHUV1/2008/HUN, complete genome,NC_025675.1 |Norway rat hunnivirus isolate NrHuV/NYC-E21 polyprotein gene, complete cds)[1.00000])[1.00000],(((((((((KJ641693.1 |Bat picornavirus isolate BtRh-PicoV/SC2013 polyprotein gene, complete cds,(HQ595345.1 |Bat picornavirus 3 strain TLC21F, complete genome,NC_015934.1 |Bat picornavirus 3, complete genome)[1.00000])[1.00000],((KJ641694.1 |Bat picornavirus isolate BtRs-PicoV/YN2010 polyprotein gene, complete cds,NC_016964.1 |Canine picornavirus, complete genome)[1.00000],((HQ595343.1 |Bat picornavirus 2 strain SK17F, complete genome,NC_015941.1 |Bat picornavirus 2, complete genome)[1.00000],(HQ595341.1 |Bat picornavirus 1 strain LMH22A, complete genome,NC_015940.1 |Bat picornavirus 1, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(NC_016156.1 |Feline picornavirus, complete genome,(MF352423.1 |Miniopterus picornavirus 1 strain Henan-Ms61 polyprotein gene, complete cds,(MF352419.1 |Miniopterus picornavirus 1 strain Henan-Ms56-1 polyprotein gene, complete cds,KJ641687.1 |Bat picornavirus isolate BtMf-PicoV/FJ2012 polyprotein gene, complete cds)[1.00000])[1.00000])[1.00000])[1.00000],(NC_026314.1 |Rabbit kobuvirus isolate Berlin/Jan2011/0572, complete genome,(NC_040605.1 |Marmot sapelovirus 1 strain HT5, complete genome,NC_055156.1 |Rabovirus B1 isolate RtMp-PicoV/YN2014, partial genome)[1.00000])[1.00000])[1.00000],(KJ641696.1 |Bat picornavirus isolate BtVs-PicoV/SC2013 polyprotein gene, complete cds,(NC_033820.1 |Bat sapelovirus clone Bat/CAM/Sap-P24/2013 polyprotein gene, complete cds,(NC_004451.1 |Simian sapelovirus 1, complete genome,(NC_003987.1 |Porcine sapelovirus 1, complete genome,NC_048212.1 Bat coronavirus, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(NC_006553.1 |Anativirus A1 isolate TW90A, complete genome,(NC_015626.1 |Pigeon picornavirus B, complete genome,NC_016403.1 |Quail picornavirus QPV1/HUN/2010, complete genome)[1.00000])[1.00000])[1.00000],(NC_038989.1 |Picornaviridae sp. rodent/Ee/PicoV/NX2015 polyprotein gene, complete cds,(NC_029905.1 |Enterovirus SEV-gx, complete genome,(((NC_001430.1 |Human enterovirus D, complete genome,NC_038308.1 |Human enterovirus 68 strain Fermon, complete genome)[1.00000],((NC_003988.1 |Simian enterovirus A, complete genome,NC_038309.1 |Simian enterovirus SV4 strain 1715 UWB, complete genome)[1.00000],(((((NC_001859.1 |Bovine enterovirus, complete genome,(NC_038310.1 |Dromedary camel enterovirus strain 19CC, complete genome,((NC_008714.1 |Possum enterovirus W1, complete genome,NC_029854.1 |Yak enterovirus strain SWUN-AB001, complete genome)[1.00000],(NC_021220.1 |Enterovirus F strain BEV-261 polyprotein gene, complete cds,NC_033695.1 |Enterovirus AN12 genomic RNA, complete genome, strain: AN12)[1.00000])[1.00000])[1.00000])[1.00000],(NC_004441.1 |Porcine enterovirus 9 strain UKG/410/73 polyprotein gene, complete cds,NC_034267.1 |Enterovirus goat/JL14, complete genome)[1.00000])[1.00000],(NC_038306.1 |Human coxsackievirus A2 strain Fleetwood, complete genome,(NC_001612.1 |Human enterovirus A, complete genome,NC_030454.1 |Enterovirus A114 strain V13-0285, partial genome)[1.00000])[1.00000])[1.00000],(NC_024073.1 |Enterovirus sp. isolate CPML_8109/08, complete genome,(NC_013695.1 |Enterovirus J strain N203, complete genome,NC_010415.1 |Enterovirus J strain 1631, complete genome)[1.00000])[1.00000])[1.00000],(NC_002058.3 |Poliovirus, complete genome,(NC_001472.1 |Human enterovirus B, complete genome,NC_038307.1 |Coxsackievirus B3 mRNA, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(NC_001490.1 |Rhinovirus B14, complete sequence,NC_038312.1 |Human rhinovirus 3, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],((NC_030843.1 |Washington bat picornavirus polyprotein gene, complete cds,(NC_040673.1 |Pelodiscus sinensis picornavirus 1 strain CNSR2011, complete genome,(((NC_028364.1 |Shrew hepatovirus KS121232Sorara2012 polyprotein gene, complete cds,(NC_001489.1 |Hepatitis A virus, complete genome,(NC_028363.1 |Rodent hepatovirus RMU101637Micarv2010 polyprotein gene, complete cds,NC_038315.1 |Rodent hepatovirus KEF121Sigmas2012 polyprotein gene, complete cds)[1.00000])[1.00000])[1.00000],(NC_027818.1 |Phopivirus strain NewEngland_USA/2011, complete genome,(NC_038316.1 |Bat hepatovirus BUO2BF86Colafr2010 polyprotein gene, complete cds,(NC_028366.1 |Hepatovirus H2 isolate M32Eidhel2010 genomic sequence,NC_028981.1 |Tupaia hepatovirus A isolate TN1, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(NC_038314.1 |Rodent hepatovirus CIV459Lopsik2004 polyprotein gene, complete cds,NC_038313.1 |Bat hepatovirus SMG18520Minmav2014 polyprotein gene, complete cds)[1.00000])[1.00000])[1.00000])[1.00000],((NC_038961.1 |Shanbavirus A isolate BtMf-PicoV-1/SAX2011 polyprotein gene, complete cds,(NC_025474.1 |Crohivirus A gene for polyprotein, complete cds, strain: ZM54,(NC_003976.2 |Ljungan virus, complete genome,NC_038319.1 |polyprotein [echovirus 22 EV22, Harris, Genomic RNA Complete, 7339 nt])[1.00000])[1.00000])[1.00000],((NC_018506.1 |Bluegill picornavirus isolate 04-032, complete genome,(NC_022332.1 |Eel picornavirus 1 strain F15/05, complete genome,(NC_023162.1 |Carp picornavirus 1 isolate F37/06, complete genome,NC_039212.1 |Fathead minnow picornavirus isolate FHMPV-1, complete genome)[1.00000])[1.00000])[1.00000],(NC_024766.1 |Chicken picornavirus 2 isolate 44C, complete genome,(NC_008250.2 |Duck hepatitis A virus 1 strain R85952, complete genome,(NC_023985.1 |Duck picornavirus GL/12, complete genome,(NC_028970.1 |Avisivirus Pf-CHK1/AsV, complete genome,NC_038304.1 |Turkey avisivirus isolate USA-IN1, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(NC_055108.1 |Poecivirus BCCH-449 polyprotein gene, complete cds,(((NC_023988.1 |Tortoise Rafivirus A isolate UF4, complete genome,NC_043544.1 |Hainan gekko similignum picornavirus strain LPXYC222841 polyprotein gene, complete cds)[1.00000],(NC_040611.1 |Hedgehog dicipivirus strain hedgehog/H14/2015/HUN, complete genome,(NC_035779.1 |Falcon picornavirus, complete genome,(NC_021178.1 |Canine picodicistrovirus strain 209, complete genome,NC_040642.1 |Rhimavirus A, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(((NC_040684.1 |Goose picornavirus 1 strain goose/NLSZK2/HUN/2013, complete genome,((NC_014412.1 |Turdivirus 2, complete genome,NC_014413.1 |Turdivirus 3, complete genome)[1.00000],(NC_021482.1 |Sebokele virus 1 ORF1 gene for polyprotein, genomic RNA, strain 1,NC_034617.1 |Harrier picornavirus 1 strain harrier/MR-01/HUN/2014, complete genome)[1.00000])[1.00000])[1.00000],(NC_032126.1 |Livupivirus A1 strain newt/II-5-Pilis/2014/HUN, complete genome,((((NC_027918.1 |Kobuvirus cattle/Kagoshima-2-24-KoV/2015/JPN genomic RNA, complete genome, strain: Kagoshima-2-24-KoV/2015/JPN,NC_027919.1 |Kobuvirus cattle/Kagoshima-1-22-KoV/2014/JPN genomic RNA, nearly complete genome, strain: Kagoshima-1-22-KoV/2014/JPN)[1.00000],((NODE_4,(NC_001918.1 |Aichi virus, complete genome,(NC_015936.1 |Mouse kobuvirus M-5/USA/2010, complete genome,NC_034971.1 |Canine kobuvirus isolate SMCD-59, complete genome)[1.00000])[1.00000])[1.00000],(NC_004421.1 |Aichivirus B genomic RNA, complete genome, strain:U-1,(NC_023422.1 |Caprine kobuvirus isolate 12Q108, complete genome,(NC_011829.1 |Porcine kobuvirus swine/S-1-HUN/2007/Hungary, complete genome,(NC_016769.1 |Porcine kobuvirus SH-W-CHN/2010/China, complete genome,NC_027054.1 |Porcine kobuvirus isolate JS-02a-CHN/2014/China, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],((KJ641686 |Bat kobuvirus 1 isolate BtMr-PicoV/JX2010 polyprotein gene, partial cds,(MN602325 Bat picornavirus strain ITA/2017/189/18-155, complete genome,(KJ641691 |Aichivirus F2 isolate BtMf-PicoV-2/GD2012 polyprotein gene, partial cds,MF352427.1 |Miniopterus picornavirus 2 strain Henan-Ms56-2 polyprotein gene, complete cds)[1.00000])[1.00000])[1.00000],(NC_022802.1 |Feline sakobuvirus A isolate FFUP1, complete genome,(NC_025114.1 |Salivirus FHB, complete genome,(NC_012957.1 |Salivirus NG-J1, complete genome,NC_012986.1 |Salivirus A isolate 02394-01, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(NC_014411.1 |Turdivirus 1, complete genome,(NC_024765.1 |Chicken picornavirus 1 isolate 55C, complete genome,(NC_018400.1 |Gallivirus A1 strain turkey/M176/2011/HUN, complete genome,(NC_024770.1 |Gallivirus A1 isolate 518C, complete genome,NC_028964.1 |Gallivirus Pf-CHK1/GV, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],((NC_038317.1 |Kunsagivirus 1 strain roller/SZAL6-KuV/2011/HUN, complete genome,NC_034206.1 |Bakunsa virus, complete genome)[1.00000],(NC_031105.1 |Rosavirus B strain RNCW0602091R polyprotein gene, complete cds,(NC_024070.1 |Rosavirus 2 strain GA7403, complete genome,NC_038880.1 |Rosavirus M-7 polyprotein gene, complete cds)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],((NC_012800.1 |Cosavirus A strain HCoSV-A1 polyprotein gene, complete cds,(NC_012801.1 |Human cosavirus B1, complete genome,NC_025961.1 |Cosavirus JMY-2014 isolate Cosa-CHN, complete genome)[1.00000])[1.00000],(NC_012802.1 |Human cosavirus D1, complete genome,NC_023984.1 |Human cosavirus isolate Cosavirus_Amsterdam_1994, complete genome)[1.00000])[1.00000]);
+
+Summary:
+
+Partition 1/1:
+                         Model         Score        Weight
+----------------------------------------------------------
+       BIC            TVM+I+G4  1886951.5765        0.9943
+       AIC            TVM+I+G4  1884515.6791        0.7232
+      AICc            TVM+I+G4  1884520.6791        0.7232
+
+Execution results written to picorna_alignment.fasta.out
+Starting tree written to picorna_alignment.fasta.tree

@@ -1,0 +1,56 @@
+
+RAxML-NG v. 1.1 released on 29.11.2021 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz, 16 cores, 62 GB RAM
+
+RAxML-NG was called at 20-Jul-2022 11:45:38 as follows:
+
+raxml-ng-mpi --parse --msa picorna_raxml.fasta --model TVM+I+G4 --prefix T2
+
+Analysis options:
+  run mode: Alignment parsing and compression
+  start tree(s): 
+  random seed: 1658335538
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+[00:00:00] Reading alignment from file: picorna_raxml.fasta
+[00:00:00] Loaded alignment with 142 taxa and 32848 sites
+
+Alignment comprises 1 partitions and 14473 patterns
+
+Partition 0: noname
+Model: TVM+FO+I+G4m
+Alignment sites / patterns: 32848 / 14473
+Gaps: 78.89 %
+Invariant sites: 55.81 %
+
+
+NOTE: Binary MSA file created: T2.raxml.rba
+
+
+* Estimated memory requirements                : 499 MB
+
+* Recommended number of threads / MPI processes: 8
+
+Please note that numbers given above are rough estimates only. 
+Actual memory consumption and parallel performance on your system may differ!
+
+Alignment can be successfully read by RAxML-NG.
+
+
+Execution log saved to: /lustre/work/cresslerlab/fgonzalez3/BrookLab/picorna_tree/modeltest_cov/raxml_parse/T2.raxml.log
+
+Analysis started: 20-Jul-2022 11:45:38 / finished: 20-Jul-2022 11:45:39
+
+Elapsed time: 1.012 seconds
+

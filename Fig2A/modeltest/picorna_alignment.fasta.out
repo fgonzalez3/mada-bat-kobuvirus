@@ -1,0 +1,180 @@
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        picorna_alignment.fasta
+  Tree:       Maximum likelihood
+    file:           -
+  #taxa:            142
+  #sites:           32848
+  #patterns:        14473
+  Max. thread mem:  1010 MB
+
+Output:
+  Log:           picorna_alignment.fasta.log
+  Starting tree: picorna_alignment.fasta.tree
+  Results:       picorna_alignment.fasta.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          8/18
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TVM+I+G4           9   -941967.8396   1886951.5765         0.0000    0.9943
+       2  GTR+I+G4          10   -941967.7998   1886961.8966        10.3201    0.0057
+       3  TVM+G4             8   -942299.8511   1887605.2000       653.6235    0.0000
+       4  GTR+G4             9   -942299.7523   1887615.4020       663.8255    0.0000
+       5  TPM2uf+I+G4        7   -942483.1139   1887961.3259      1009.7494    0.0000
+       6  TIM2+I+G4          8   -942481.4966   1887968.4910      1016.9145    0.0000
+       7  TPM3uf+I+G4        7   -942487.8249   1887970.7478      1019.1713    0.0000
+       8  TIM3+I+G4          8   -942487.3124   1887980.1225      1028.5459    0.0000
+       9  TPM3uf+G4          6   -942813.2764   1888611.2513      1659.6747    0.0000
+      10  TIM3+G4            7   -942813.1796   1888621.4573      1669.8808    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              TVM+I+G4
+lnL:                -941967.8396
+Frequencies:        0.2545 0.2312 0.2222 0.2922
+Subst. Rates:       2.0475 3.4144 1.4739 1.4807 3.4144 1.0000 
+Inv. sites prop:    0.0219
+Gamma shape:        1.4201
+Score:              1886951.5765
+Weight:             0.9943
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              1.3543
+Alpha-P.Inv:        1.4200
+P.Inv-Alpha:        0.0219
+Frequencies:        0.2545 0.2312 0.2222 0.2922 
+
+Commands:
+  > phyml  -i picorna_alignment.fasta -m 012314 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s picorna_alignment.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa picorna_alignment.fasta --model TVM+I+G4
+  > paup -s picorna_alignment.fasta
+  > iqtree -s picorna_alignment.fasta -m TVM+I+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TVM+I+G4           9   -941967.8396   1884515.6791         0.0000    0.7232
+       2  GTR+I+G4          10   -941967.7998   1884517.5995         1.9204    0.2768
+       3  TVM+G4             8   -942299.8511   1885177.7023       662.0232    0.0000
+       4  GTR+G4             9   -942299.7523   1885179.5046       663.8255    0.0000
+       5  TIM2+I+G4          8   -942481.4966   1885540.9933      1025.3141    0.0000
+       6  TPM2uf+I+G4        7   -942483.1139   1885542.2278      1026.5486    0.0000
+       7  TPM3uf+I+G4        7   -942487.8249   1885551.6497      1035.9706    0.0000
+       8  TIM3+I+G4          8   -942487.3124   1885552.6247      1036.9456    0.0000
+       9  TPM3uf+G4          6   -942813.2764   1886200.5528      1684.8737    0.0000
+      10  TIM3+G4            7   -942813.1796   1886202.3592      1686.6801    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              TVM+I+G4
+lnL:                -941967.8396
+Frequencies:        0.2545 0.2312 0.2222 0.2922
+Subst. Rates:       2.0475 3.4144 1.4739 1.4807 3.4144 1.0000 
+Inv. sites prop:    0.0219
+Gamma shape:        1.4201
+Score:              1884515.6791
+Weight:             0.7232
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              1.3540
+Alpha-P.Inv:        1.4179
+P.Inv-Alpha:        0.0219
+Frequencies:        0.2543 0.2313 0.2220 0.2923 
+
+Commands:
+  > phyml  -i picorna_alignment.fasta -m 012314 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s picorna_alignment.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa picorna_alignment.fasta --model TVM+I+G4
+  > paup -s picorna_alignment.fasta
+  > iqtree -s picorna_alignment.fasta -m TVM+I+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TVM+I+G4           9   -941967.8396   1884520.6791         0.0000    0.7232
+       2  GTR+I+G4          10   -941967.7998   1884522.5995         1.9204    0.2768
+       3  TVM+G4             8   -942299.8511   1885182.7023       662.0232    0.0000
+       4  GTR+G4             9   -942299.7523   1885184.5046       663.8255    0.0000
+       5  TIM2+I+G4          8   -942481.4966   1885545.9933      1025.3141    0.0000
+       6  TPM2uf+I+G4        7   -942483.1139   1885547.2278      1026.5486    0.0000
+       7  TPM3uf+I+G4        7   -942487.8249   1885556.6497      1035.9706    0.0000
+       8  TIM3+I+G4          8   -942487.3124   1885557.6247      1036.9456    0.0000
+       9  TPM3uf+G4          6   -942813.2764   1886205.5528      1684.8737    0.0000
+      10  TIM3+G4            7   -942813.1796   1886207.3592      1686.6801    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              TVM+I+G4
+lnL:                -941967.8396
+Frequencies:        0.2545 0.2312 0.2222 0.2922
+Subst. Rates:       2.0475 3.4144 1.4739 1.4807 3.4144 1.0000 
+Inv. sites prop:    0.0219
+Gamma shape:        1.4201
+Score:              1884520.6791
+Weight:             0.7232
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              1.3540
+Alpha-P.Inv:        1.4179
+P.Inv-Alpha:        0.0219
+Frequencies:        0.2543 0.2313 0.2220 0.2923 
+
+Commands:
+  > phyml  -i picorna_alignment.fasta -m 012314 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s picorna_alignment.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa picorna_alignment.fasta --model TVM+I+G4
+  > paup -s picorna_alignment.fasta
+  > iqtree -s picorna_alignment.fasta -m TVM+I+G4
+Done

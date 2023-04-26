@@ -1,0 +1,42 @@
+
+RAxML-NG v. 1.1 released on 29.11.2021 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz, 16 cores, 62 GB RAM
+
+RAxML-NG was called at 20-Jul-2022 11:39:31 as follows:
+
+raxml-ng-mpi --check --msa picorna_raxml.fasta --model TVM+I+G4 --prefix T1
+
+Analysis options:
+  run mode: Alignment validation
+  start tree(s): 
+  random seed: 1658335172
+  SIMD kernels: AVX
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+[00:00:00] Reading alignment from file: picorna_raxml.fasta
+[00:00:00] Loaded alignment with 142 taxa and 32848 sites
+
+Alignment comprises 1 partitions and 32848 sites
+
+Partition 0: noname
+Model: TVM+FO+I+G4m
+Alignment sites: 32848
+Gaps: 78.89 %
+Invariant sites: 55.81 %
+
+
+
+Alignment can be successfully read by RAxML-NG.
+
+
+Execution log saved to: /lustre/work/cresslerlab/fgonzalez3/BrookLab/picorna_tree/modeltest_cov/raxml_picorna/T1.raxml.log
+
+Analysis started: 20-Jul-2022 11:39:31 / finished: 20-Jul-2022 11:39:32
+
+Elapsed time: 1.058 seconds
+
