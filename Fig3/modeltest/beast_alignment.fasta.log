@@ -1,0 +1,219 @@
+Physical cores: 18
+Logical cores:  36
+Memory:         504GB
+Extensions:     AVX
+
+WARNING: MSA has not enough sites to infer reliable results
+Creating new checkpoint file: beast_alignment.fasta.ckp
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        beast_alignment.fasta
+  Tree:       Maximum likelihood
+    file:           -
+  #taxa:            14
+  #sites:           9023
+  #patterns:        5870
+  Max. thread mem:  37 MB
+
+Output:
+  Log:           beast_alignment.fasta.log
+  Starting tree: beast_alignment.fasta.tree
+  Results:       beast_alignment.fasta.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          8/18
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+modeltest-ng was called as follows: 
+>> modeltest-ng -d nt -i beast_alignment.fasta -t ml -p 8 
+
+
+Partition 1/1
+
+ ----ID---  ----MODEL---- ---Time--- -Elapsed--- -------LnL------- -Alpha- -P-inv-
+
+Computation of likelihood scores completed. It took 0h:02:39
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TPM2uf+I+G4        7    -95445.6939    191182.8289         0.0000    0.9828
+       2  TIM2+I+G4          8    -95445.6899    191191.9284         9.0995    0.0104
+       3  TVM+I+G4           9    -95441.5746    191192.8052         9.9763    0.0067
+       4  GTR+I+G4          10    -95441.5413    191201.8462        19.0173    0.0001
+       5  TPM1uf+I+G4        7    -95495.7117    191282.8645       100.0356    0.0000
+       6  HKY+I+G4           6    -95500.6528    191283.6390       100.8101    0.0000
+       7  TPM3uf+I+G4        7    -95497.5867    191286.6144       103.7855    0.0000
+       8  TIM1+I+G4          8    -95495.4441    191291.4367       108.6078    0.0000
+       9  TrN+I+G4           7    -95500.3671    191292.1753       109.3464    0.0000
+      10  TIM3+I+G4          8    -95497.3815    191295.3117       112.4827    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              TPM2uf+I+G4
+lnL:                -95445.6939
+Frequencies:        0.1922 0.3317 0.2219 0.2541
+Subst. Rates:       1.5069 2.9322 1.5069 1.0000 2.9322 1.0000 
+Inv. sites prop:    0.1198
+Gamma shape:        1.2100
+Score:              191182.8289
+Weight:             0.9828
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.7155
+Alpha-P.Inv:        1.2100
+P.Inv-Alpha:        0.1198
+Frequencies:        0.1922 0.3317 0.2219 0.2542 
+
+Commands:
+  > phyml  -i beast_alignment.fasta -m 010212 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s beast_alignment.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa beast_alignment.fasta --model TPM2uf+I+G4
+  > paup -s beast_alignment.fasta
+  > iqtree -s beast_alignment.fasta -m TPM2uf+I+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TVM+I+G4           9    -95441.5746    190951.1491         0.0000    0.6473
+       2  GTR+I+G4          10    -95441.5413    190953.0826         1.9335    0.2462
+       3  TPM2uf+I+G4        7    -95445.6939    190955.3879         4.2388    0.0777
+       4  TIM2+I+G4          8    -95445.6899    190957.3799         6.2307    0.0287
+       5  TPM1uf+I+G4        7    -95495.7117    191055.4235       104.2744    0.0000
+       6  TIM1+I+G4          8    -95495.4441    191056.8881       105.7390    0.0000
+       7  TPM3uf+I+G4        7    -95497.5867    191059.1733       108.0242    0.0000
+       8  TIM3+I+G4          8    -95497.3815    191060.7631       109.6140    0.0000
+       9  HKY+I+G4           6    -95500.6528    191063.3055       112.1564    0.0000
+      10  TrN+I+G4           7    -95500.3671    191064.7343       113.5851    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              TVM+I+G4
+lnL:                -95441.5746
+Frequencies:        0.1920 0.3292 0.2221 0.2567
+Subst. Rates:       1.6465 3.0184 1.4342 1.0537 3.0184 1.0000 
+Inv. sites prop:    0.1192
+Gamma shape:        1.2100
+Score:              190951.1491
+Weight:             0.6473
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.7194
+Alpha-P.Inv:        1.2100
+P.Inv-Alpha:        0.1193
+Frequencies:        0.1920 0.3295 0.2220 0.2565 
+
+Commands:
+  > phyml  -i beast_alignment.fasta -m 012314 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s beast_alignment.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa beast_alignment.fasta --model TVM+I+G4
+  > paup -s beast_alignment.fasta
+  > iqtree -s beast_alignment.fasta -m TVM+I+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TVM+I+G4           9    -95441.5746    190951.1491         0.0000    0.6473
+       2  GTR+I+G4          10    -95441.5413    190953.0826         1.9335    0.2462
+       3  TPM2uf+I+G4        7    -95445.6939    190955.3879         4.2388    0.0777
+       4  TIM2+I+G4          8    -95445.6899    190957.3799         6.2307    0.0287
+       5  TPM1uf+I+G4        7    -95495.7117    191055.4235       104.2744    0.0000
+       6  TIM1+I+G4          8    -95495.4441    191056.8881       105.7390    0.0000
+       7  TPM3uf+I+G4        7    -95497.5867    191059.1733       108.0242    0.0000
+       8  TIM3+I+G4          8    -95497.3815    191060.7631       109.6140    0.0000
+       9  HKY+I+G4           6    -95500.6528    191063.3055       112.1564    0.0000
+      10  TrN+I+G4           7    -95500.3671    191064.7343       113.5851    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              TVM+I+G4
+lnL:                -95441.5746
+Frequencies:        0.1920 0.3292 0.2221 0.2567
+Subst. Rates:       1.6465 3.0184 1.4342 1.0537 3.0184 1.0000 
+Inv. sites prop:    0.1192
+Gamma shape:        1.2100
+Score:              190951.1491
+Weight:             0.6473
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.7194
+Alpha-P.Inv:        1.2100
+P.Inv-Alpha:        0.1193
+Frequencies:        0.1920 0.3295 0.2220 0.2565 
+
+Commands:
+  > phyml  -i beast_alignment.fasta -m 012314 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s beast_alignment.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa beast_alignment.fasta --model TVM+I+G4
+  > paup -s beast_alignment.fasta
+  > iqtree -s beast_alignment.fasta -m TVM+I+G4
+
+There are 3 different topologies
+Topologies written to beast_alignment.fasta.topos
+
+topo_id   models_count   bic_support   aic_support   aicc_support
+-----------------------------------------------------------------
+      1             43       1.00000       1.00000       1.00000
+      2             26       0.00000       0.00000       0.00000
+      3             19       0.00000       0.00000       0.00000
+
+extended majority-rule consensus: (((NC_023422 Caprine kobuvirus isolate 12Q108, complete genome,NC_011829 |Porcine kobuvirus swine/S-1-HUN/2007/Hungary, complete genome)[1.00000],(MN336260 |Bovine kobuvirus strain IL35164, complete genome,GU245693 Aichivirus B3 strain sheep/TB3/HUN/2009, complete genome)[1.00000])[1.00000],NC_027919 |Kobuvirus cattle/Kagoshima-1-22-KoV/2014/JPN genomic RNA, nearly complete genome, strain: Kagoshima-1-22-KoV/2014/JPN,((KT325852 Rabbit picornavirus strain Rabbit01/2013/HUN, complete genome,(MN602325 Bat picornavirus strain ITA/2017/189/18-155, complete genome,MF352427 |Miniopterus picornavirus 2 strain Henan-Ms56-2 polyprotein gene, complete cds)[1.00000])[1.00000],(KJ934637 Kobuvirus SZAL6-KoV/2011/HUN, complete genome,(OP287812 Madagascar Bat Kobuvirus,((KM068048 Canine kobuvirus 1 isolate DD2 polyprotein mRNA, complete cds,KF831027 Feline kobuvirus strain FK-13, complete genome)[1.00000],(NC_001918 |Aichi virus, complete genome,MF352432 Aichivirus A strain Wencheng-Rt386-2 polyprotein gene, complete cds)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000]);
+strict consensus: (NC_027919 |Kobuvirus cattle/Kagoshima-1-22-KoV/2014/JPN genomic RNA, nearly complete genome, strain: Kagoshima-1-22-KoV/2014/JPN,MN602325 Bat picornavirus strain ITA/2017/189/18-155, complete genome,MF352427 |Miniopterus picornavirus 2 strain Henan-Ms56-2 polyprotein gene, complete cds,KT325852 Rabbit picornavirus strain Rabbit01/2013/HUN, complete genome,OP287812 Madagascar Bat Kobuvirus,NC_001918 |Aichi virus, complete genome,MF352432 Aichivirus A strain Wencheng-Rt386-2 polyprotein gene, complete cds,KM068048 Canine kobuvirus 1 isolate DD2 polyprotein mRNA, complete cds,KF831027 Feline kobuvirus strain FK-13, complete genome,NC_023422 Caprine kobuvirus isolate 12Q108, complete genome,NC_011829 |Porcine kobuvirus swine/S-1-HUN/2007/Hungary, complete genome,MN336260 |Bovine kobuvirus strain IL35164, complete genome,GU245693 Aichivirus B3 strain sheep/TB3/HUN/2009, complete genome,KJ934637 Kobuvirus SZAL6-KoV/2011/HUN, complete genome);
+
+Summary:
+
+Partition 1/1:
+                         Model         Score        Weight
+----------------------------------------------------------
+       BIC         TPM2uf+I+G4   191182.8289        0.9828
+       AIC            TVM+I+G4   190951.1491        0.6473
+      AICc            TVM+I+G4   190951.1491        0.6473
+
+Execution results written to beast_alignment.fasta.out
+Starting tree written to beast_alignment.fasta.tree

@@ -1,0 +1,46 @@
+
+The following have been reloaded with a version change:
+  1) python/3.8 => python/3.9
+
+
+The following have been reloaded with a version change:
+  1) openmpi/4.0 => openmpi/4.1
+
+-------------------------| Help message for Beagle module
+|------------------------------- 
+Usage: beagle <arguments>
+You can also pass -Xms or -Xmx arguments to control Java memory allocation.
+For example, to increase Java heap space to 10GB, run: beagle -Xms512m -Xmx10g
+<arguments> 
+------------------------------------------------------------------------------------------ 
+Exception in thread "main" java.lang.IllegalArgumentException: missing gt argument
+	at blbutil.Validate.stringArg(Validate.java:414)
+	at main.Par.<init>(Par.java:126)
+	at main.Main.parameters(Main.java:319)
+	at main.Main.main(Main.java:117)
+File: beast_kobu.xml seed: 777 threads: 8
+Loading package BEAST v2.6.3
+Loading package BEAST v2.6.3
+No date/time format provided, using default parsing: '12/15/2014' parsed as '2014.9842465753425'
+No date/time format provided, using default parsing: '07/15/2011' parsed as '2011.5622146118722'
+No date/time format provided, using default parsing: '03/17/2009' parsed as '2009.2334474885845'
+No date/time format provided, using default parsing: '04/15/2019' parsed as '2019.3183789954337'
+No date/time format provided, using default parsing: '02/07/2007' parsed as '2007.126712328767'
+No date/time format provided, using default parsing: '04/15/2012' parsed as '2012.3156392694063'
+No date/time format provided, using default parsing: '07/15/2011' parsed as '2011.5622146118722'
+No date/time format provided, using default parsing: '01/20/2003' parsed as '2003.0746575342466'
+No date/time format provided, using default parsing: '07/15/2012' parsed as '2012.5649543378995'
+No date/time format provided, using default parsing: '03/15/1989' parsed as '1989.214383561644'
+No date/time format provided, using default parsing: '07/27/2018' parsed as '2018.6005707762556'
+No date/time format provided, using default parsing: '04/15/2013' parsed as '2013.3156392694063'
+No date/time format provided, using default parsing: '07/31/2012' parsed as '2012.608789954338'
+No date/time format provided, using default parsing: '07/31/2017' parsed as '2017.6115296803653'
+Failed to load BEAGLE library: no hmsbeagle-jni in java.library.path
+Failed to load BEAGLE library: no hmsbeagle-jni in java.library.path
+Failed to load BEAGLE library: no hmsbeagle-jni in java.library.path
+Failed to load BEAGLE library: no hmsbeagle-jni in java.library.path
+Failed to load BEAGLE library: no hmsbeagle-jni in java.library.path
+Failed to load BEAGLE library: no hmsbeagle-jni in java.library.path
+Failed to load BEAGLE library: no hmsbeagle-jni in java.library.path
+Failed to load BEAGLE library: no hmsbeagle-jni in java.library.path
+End likelihood: -95533.06684474833

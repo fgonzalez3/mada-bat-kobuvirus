@@ -1,0 +1,35 @@
+<itsabeastystatewerein version='2.0' sample='100000000'>
+<statenode id='Tree.t:beast_alignment'>(((((0:649.9311538413458,7:660.016085348195)22:1329.9640713982335,(10:1213.384211413737,11:1218.5731383543762)16:764.404278666025)19:772.9036570400033,12:2758.5496813663403)14:386.27182150333147,((((1:763.386251482589,3:754.8986944049635)25:385.69174710419964,(6:1024.2366586858095,9:1000.8860879095539)15:125.84407962700652)17:346.1513345679002,13:1502.2676893190724)23:263.8311007736836,2:1759.0604339283725)20:1382.3390369778292)24:2050.7053997070807,(4:3451.1370051839835,(5:1938.3100721408387,8:1943.312811866866)18:1512.1200837280765)21:1742.721290086833)26:0.0</statenode>
+<statenode id='proportionInvariant.s:beast_alignment'>proportionInvariant.s:beast_alignment[1 1] (0.0,1.0): 0.13023256222454235 </statenode>
+<statenode id='gammaShape.s:beast_alignment'>gammaShape.s:beast_alignment[1 1] (0.001,1000.0): 1.2219614790176692 </statenode>
+<statenode id='freqParameter.s:beast_alignment'>freqParameter.s:beast_alignment[4 1] (0.0,1.0): 0.1940867003080702 0.32627919776044584 0.22451200799965146 0.2551220939318336 </statenode>
+<statenode id='rateAC.s:beast_alignment'>rateAC.s:beast_alignment[1 1] (0.0,Infinity): 0.5428969112282993 </statenode>
+<statenode id='rateAT.s:beast_alignment'>rateAT.s:beast_alignment[1 1] (0.0,Infinity): 0.482509198667627 </statenode>
+<statenode id='rateCG.s:beast_alignment'>rateCG.s:beast_alignment[1 1] (0.0,Infinity): 0.3483111771020955 </statenode>
+<statenode id='rateGT.s:beast_alignment'>rateGT.s:beast_alignment[1 1] (0.0,Infinity): 0.3472243826187218 </statenode>
+<statenode id='clockRate.c:beast_alignment'>clockRate.c:beast_alignment[1 1] (0.0,Infinity): 1.7584879327429577E-4 </statenode>
+<statenode id='bPopSizes.t:beast_alignment'>bPopSizes.t:beast_alignment[5 1] (0.0,Infinity): 36193.45691960209 14535.861913710278 3325.5200986221125 3715.6976068404506 1149.36179208002 </statenode>
+<statenode id='bGroupSizes.t:beast_alignment'>bGroupSizes.t:beast_alignment[5 1] (1,2147483647): 1 4 5 2 1 </statenode>
+</itsabeastystatewerein>
+<!--
+{"operators":[
+{"id":"proportionInvariantScaler.s:beast_alignment","p":0.7387847167363888,"accept":17934,"reject":82065,"acceptFC":17921,"rejectFC":82059,"rejectIv":0,"rejectOp":0},
+{"id":"gammaShapeScaler.s:beast_alignment","p":0.7807904593297522,"accept":17691,"reject":82517,"acceptFC":17689,"rejectFC":82494,"rejectIv":0,"rejectOp":0},
+{"id":"FrequenciesExchanger.s:beast_alignment","p":0.013127258614985165,"accept":23140,"reject":77149,"acceptFC":23130,"rejectFC":77138,"rejectIv":0,"rejectOp":0},
+{"id":"RateACScaler.s:beast_alignment","p":0.7435154456531738,"accept":14284,"reject":86454,"acceptFC":14282,"rejectFC":86441,"rejectIv":0,"rejectOp":0},
+{"id":"RateATScaler.s:beast_alignment","p":0.7323403941163208,"accept":17641,"reject":82773,"acceptFC":17637,"rejectFC":82760,"rejectIv":0,"rejectOp":0},
+{"id":"RateCGScaler.s:beast_alignment","p":0.7557432882322223,"accept":17776,"reject":81955,"acceptFC":17771,"rejectFC":81938,"rejectIv":0,"rejectOp":0},
+{"id":"RateGTScaler.s:beast_alignment","p":0.7366834248383608,"accept":20043,"reject":79959,"acceptFC":20038,"rejectFC":79943,"rejectIv":0,"rejectOp":0},
+{"id":"StrictClockRateScaler.c:beast_alignment","p":0.8981376093944381,"accept":630924,"reject":2377095,"acceptFC":630858,"rejectFC":2376518,"rejectIv":0,"rejectOp":0},
+{"id":"strictClockUpDownOperator.c:beast_alignment","p":0.30519775409279687,"accept":792851,"reject":2217557,"acceptFC":792498,"rejectFC":2217332,"rejectIv":0,"rejectOp":0},
+{"id":"BayesianSkylineTreeScaler.t:beast_alignment","p":0.8785613876868444,"accept":500895,"reject":2509167,"acceptFC":500873,"rejectFC":2508634,"rejectIv":0,"rejectOp":0},
+{"id":"BayesianSkylineTreeRootScaler.t:beast_alignment","p":0.8525771377464166,"accept":502313,"reject":2502955,"acceptFC":502289,"rejectFC":2502376,"rejectIv":117,"rejectOp":117},
+{"id":"BayesianSkylineUniformOperator.t:beast_alignment","p":"NaN","accept":2183336,"reject":27902293,"acceptFC":2182772,"rejectFC":27896726,"rejectIv":0,"rejectOp":0},
+{"id":"BayesianSkylineSubtreeSlide.t:beast_alignment","p":357.27294265522835,"accept":5010686,"reject":10042636,"acceptFC":5007779,"rejectFC":10042440,"rejectIv":240007,"rejectOp":240007},
+{"id":"BayesianSkylineNarrow.t:beast_alignment","p":"NaN","accept":642,"reject":15039162,"acceptFC":581,"rejectFC":15036070,"rejectIv":8,"rejectOp":8},
+{"id":"BayesianSkylineWide.t:beast_alignment","p":"NaN","accept":11,"reject":3012612,"acceptFC":8,"rejectFC":3012004,"rejectIv":1565858,"rejectOp":1565858},
+{"id":"BayesianSkylineWilsonBalding.t:beast_alignment","p":"NaN","accept":5,"reject":3006618,"acceptFC":0,"rejectFC":3006041,"rejectIv":697372,"rejectOp":697372},
+{"id":"popSizesScaler.t:beast_alignment","p":0.18746697282559857,"accept":3836279,"reject":11205650,"acceptFC":3833693,"rejectFC":11205119,"rejectIv":0,"rejectOp":0},
+{"id":"groupSizesDelta.t:beast_alignment","p":7.460458854801388,"accept":796412,"reject":5228521,"acceptFC":795861,"rejectFC":5227809,"rejectIv":4650024,"rejectOp":4650024}
+]}
+-->

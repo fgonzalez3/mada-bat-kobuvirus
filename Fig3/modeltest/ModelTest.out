@@ -1,0 +1,321 @@
+                             _      _ _            _      _   _  _____ 
+                            | |    | | |          | |    | \ | |/ ____|
+         _ __ ___   ___   __| | ___| | |_ ___  ___| |_   |  \| | |  __ 
+        | '_ ` _ \ / _ \ / _` |/ _ \ | __/ _ \/ __| __|  | . ` | | |_ |
+        | | | | | | (_) | (_| |  __/ | ||  __/\__ \ |_   | |\  | |__| |
+        |_| |_| |_|\___/ \__,_|\___|_|\__\___||___/\__|  |_| \_|\_____|
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7 released on 17.03.2021 by The Exelixis Lab.
+Written by Diego Darriba.
+Contributors: Tomas Flouri, Alexey Kozlov, Benoit Morel, David Posada, 
+              Alexandros Stamatakis.
+Latest version: https://github.com/ddarriba/modeltest
+--------------------------------------------------------------------------------
+
+Physical cores: 18
+Logical cores:  36
+Memory:         504GB
+Extensions:     AVX
+
+WARNING: MSA has not enough sites to infer reliable results
+Creating new checkpoint file: beast_alignment.fasta.ckp
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        beast_alignment.fasta
+  Tree:       Maximum likelihood
+    file:           -
+  #taxa:            14
+  #sites:           9023
+  #patterns:        5870
+  Max. thread mem:  37 MB
+
+Output:
+  Log:           beast_alignment.fasta.log
+  Starting tree: beast_alignment.fasta.tree
+  Results:       beast_alignment.fasta.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          8/18
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+modeltest-ng was called as follows: 
+>> modeltest-ng -d nt -i beast_alignment.fasta -t ml -p 8 
+
+
+Partition 1/1
+
+    7/88   TPM3uf+I+G4    0h:00:28   0h:00:28          -95497.5867  1.3192  0.1278
+    9/88   TPM1uf+I+G4    0h:00:28   0h:00:28          -95495.7117  1.3165  0.1281
+    4/88   TIM3+I+G4      0h:00:28   0h:00:28          -95497.3815  1.3191  0.1277
+    6/88   TIM1+I+G4      0h:00:29   0h:00:29          -95495.4441  1.3173  0.1282
+    8/88   TrN+I+G4       0h:00:29   0h:00:29          -95500.3671  1.3185  0.1282
+    5/88   TIM2+I+G4      0h:00:35   0h:00:35          -95445.6899  1.2100  0.1198
+    3/88   TVM+I+G4       0h:00:36   0h:00:36          -95441.5746  1.2100  0.1192
+    2/88   GTR+I+G4       0h:00:36   0h:00:36          -95441.5413  1.2100  0.1193
+   13/88   HKY+I+G4       0h:00:23   0h:00:52          -95500.6528  1.3181  0.1282
+   17/88   F81+I+G4       0h:00:17   0h:00:53          -96438.2215  1.2100  0.1151
+   14/88   TIM2ef+I+G4    0h:00:25   0h:00:54          -95911.1482  1.4534  0.1320
+   11/88   SYM+I+G4       0h:00:26   0h:00:54          -95876.0708  1.3310  0.1197
+   10/88   TPM2uf+I+G4    0h:00:26   0h:00:54          -95445.6939  1.2100  0.1198
+   12/88   TVMef+I+G4     0h:00:30   0h:00:58          -96019.3429  1.3310  0.1205
+   15/88   TIM1ef+I+G4    0h:00:24   0h:00:59          -95930.1941  1.5020  0.1350
+   16/88   TIM3ef+I+G4    0h:00:24   0h:01:00          -95896.8299  1.4408  0.1295
+   19/88   TPM2+I+G4      0h:00:16   0h:01:09          -96050.1417  1.4491  0.1328
+   23/88   JC+I+G4        0h:00:16   0h:01:14          -97250.0420  1.5640  0.1355
+   18/88   TPM3+I+G4      0h:00:24   0h:01:16          -96042.8440  1.4446  0.1310
+   21/88   TrNef+I+G4     0h:00:22   0h:01:16          -95932.7352  1.5027  0.1349
+   20/88   TPM1+I+G4      0h:00:23   0h:01:17          -96073.0312  1.3924  0.1269
+   22/88   K80+I+G4       0h:00:23   0h:01:17          -96075.7565  1.3924  0.1268
+   26/88   TIM3+G4        0h:00:21   0h:01:30          -95570.4585  0.7157       -
+   27/88   TIM2+G4        0h:00:20   0h:01:34          -95511.3123  0.7155       -
+   31/88   TPM1uf+G4      0h:00:19   0h:01:36          -95570.6419  0.7263       -
+   25/88   TVM+G4         0h:00:36   0h:01:36          -95505.3229  0.7197       -
+   28/88   TIM1+G4        0h:00:20   0h:01:36          -95570.5678  0.7271       -
+   30/88   TrN+G4         0h:00:20   0h:01:37          -95575.8823  0.7285       -
+   29/88   TPM3uf+G4      0h:00:22   0h:01:38          -95570.5839  0.7157       -
+   24/88   GTR+G4         0h:00:40   0h:01:39          -95504.4848  0.7191       -
+   32/88   TPM2uf+G4      0h:00:19   0h:01:49          -95512.0390  0.7151       -
+   33/88   SYM+G4         0h:00:18   0h:01:52          -95956.6763  0.8100       -
+   35/88   HKY+G4         0h:00:17   0h:01:53          -95575.9433  0.7276       -
+   36/88   TIM2ef+G4      0h:00:17   0h:01:53          -96002.3485  0.8100       -
+   34/88   TVMef+G4       0h:00:18   0h:01:54          -96099.1554  0.8100       -
+   38/88   TIM3ef+G4      0h:00:18   0h:01:56          -95980.7908  0.8100       -
+   39/88   F81+G4         0h:00:18   0h:01:57          -96501.2287  0.7504       -
+   37/88   TIM1ef+G4      0h:00:22   0h:01:59          -96023.9459  0.8100       -
+   41/88   TPM2+G4        0h:00:12   0h:02:04          -96139.4664  0.8100       -
+   40/88   TPM3+G4        0h:00:18   0h:02:07          -96127.0916  0.8100       -
+   45/88   JC+G4          0h:00:11   0h:02:07          -97342.5952  0.8100       -
+   46/88   GTR+I          0h:00:11   0h:02:08          -96628.7461       -  0.1922
+   47/88   TVM+I          0h:00:10   0h:02:09          -96648.4454       -  0.1923
+   42/88   TPM1+G4        0h:00:17   0h:02:10          -96164.7021  0.8100       -
+   43/88   TrNef+G4       0h:00:18   0h:02:11          -96026.6317  0.8100       -
+   44/88   K80+G4         0h:00:18   0h:02:12          -96167.5710  0.8100       -
+   49/88   TIM2+I         0h:00:08   0h:02:15          -96630.8585       -  0.1922
+   51/88   TPM3uf+I       0h:00:08   0h:02:16          -96667.0650       -  0.1925
+   48/88   TIM3+I         0h:00:12   0h:02:16          -96646.6218       -  0.1924
+   53/88   TPM1uf+I       0h:00:07   0h:02:17          -96665.7410       -  0.1924
+   50/88   TIM1+I         0h:00:11   0h:02:18          -96645.1227       -  0.1924
+   52/88   TrN+I          0h:00:10   0h:02:19          -96647.9634       -  0.1924
+   54/88   TPM2uf+I       0h:00:08   0h:02:19          -96650.9534       -  0.1923
+   55/88   SYM+I          0h:00:08   0h:02:20          -96955.9910       -  0.1909
+   58/88   TIM2ef+I       0h:00:06   0h:02:22          -96970.7342       -  0.1910
+   57/88   HKY+I          0h:00:07   0h:02:23          -96668.7186       -  0.1925
+   59/88   TIM1ef+I       0h:00:06   0h:02:23          -96979.7117       -  0.1911
+   56/88   TVMef+I        0h:00:09   0h:02:24          -97103.0824       -  0.1916
+   60/88   TIM3ef+I       0h:00:07   0h:02:25          -96966.9571       -  0.1909
+   61/88   F81+I          0h:00:06   0h:02:25          -97609.1711       -  0.1916
+   63/88   TPM2+I         0h:00:07   0h:02:27          -97119.6966       -  0.1918
+   62/88   TPM3+I         0h:00:09   0h:02:28          -97114.7658       -  0.1916
+   69/88   TVM            0h:00:04   0h:02:29          -99455.3392       -       -
+   64/88   TPM1+I         0h:00:07   0h:02:29          -97129.4871       -  0.1919
+   67/88   JC+I           0h:00:05   0h:02:29          -98237.0526       -  0.1912
+   65/88   TrNef+I        0h:00:07   0h:02:30          -96981.4395       -  0.1911
+   70/88   TIM3           0h:00:03   0h:02:30          -99470.2739       -       -
+   66/88   K80+I          0h:00:07   0h:02:30          -97131.1967       -  0.1919
+   75/88   TPM1uf         0h:00:01   0h:02:31          -99542.5414       -       -
+   71/88   TIM2           0h:00:03   0h:02:31          -99480.4467       -       -
+   74/88   TrN            0h:00:02   0h:02:31          -99518.1330       -       -
+   73/88   TPM3uf         0h:00:02   0h:02:31          -99495.4733       -       -
+   76/88   TPM2uf         0h:00:02   0h:02:32          -99505.7169       -       -
+   79/88   HKY            0h:00:01   0h:02:32          -99545.5920       -       -
+   80/88   TIM2ef         0h:00:01   0h:02:32          -99697.4870       -       -
+   83/88   F81            0h:00:00   0h:02:32         -100403.3291       -       -
+   82/88   TIM3ef         0h:00:00   0h:02:32          -99636.1116       -       -
+   81/88   TIM1ef         0h:00:02   0h:02:33          -99714.7399       -       -
+   78/88   TVMef          0h:00:02   0h:02:33          -99799.9615       -       -
+   84/88   TPM3           0h:00:01   0h:02:33          -99820.2634       -       -
+   87/88   TrNef          0h:00:00   0h:02:33          -99716.3061       -       -
+   88/88   K80            0h:00:01   0h:02:34          -99899.5339       -       -
+   89/88   JC             0h:00:01   0h:02:34         -100926.5710       -       -
+   85/88   TPM2           0h:00:02   0h:02:34          -99878.9651       -       -
+   86/88   TPM1           0h:00:02   0h:02:34          -99897.9962       -       -
+   68/88   GTR            0h:00:09   0h:02:34          -99398.5908       -       -
+   72/88   TIM1           0h:00:07   0h:02:36          -99481.2691       -       -
+   77/88   SYM            0h:00:09   0h:02:39          -99582.6202       -       -
+ ----ID---  ----MODEL---- ---Time--- -Elapsed--- -------LnL------- -Alpha- -P-inv-
+
+Computation of likelihood scores completed. It took 0h:02:39
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TPM2uf+I+G4        7    -95445.6939    191182.8289         0.0000    0.9828
+       2  TIM2+I+G4          8    -95445.6899    191191.9284         9.0995    0.0104
+       3  TVM+I+G4           9    -95441.5746    191192.8052         9.9763    0.0067
+       4  GTR+I+G4          10    -95441.5413    191201.8462        19.0173    0.0001
+       5  TPM1uf+I+G4        7    -95495.7117    191282.8645       100.0356    0.0000
+       6  HKY+I+G4           6    -95500.6528    191283.6390       100.8101    0.0000
+       7  TPM3uf+I+G4        7    -95497.5867    191286.6144       103.7855    0.0000
+       8  TIM1+I+G4          8    -95495.4441    191291.4367       108.6078    0.0000
+       9  TrN+I+G4           7    -95500.3671    191292.1753       109.3464    0.0000
+      10  TIM3+I+G4          8    -95497.3815    191295.3117       112.4827    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              TPM2uf+I+G4
+lnL:                -95445.6939
+Frequencies:        0.1922 0.3317 0.2219 0.2541
+Subst. Rates:       1.5069 2.9322 1.5069 1.0000 2.9322 1.0000 
+Inv. sites prop:    0.1198
+Gamma shape:        1.2100
+Score:              191182.8289
+Weight:             0.9828
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.7155
+Alpha-P.Inv:        1.2100
+P.Inv-Alpha:        0.1198
+Frequencies:        0.1922 0.3317 0.2219 0.2542 
+
+Commands:
+  > phyml  -i beast_alignment.fasta -m 010212 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s beast_alignment.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa beast_alignment.fasta --model TPM2uf+I+G4
+  > paup -s beast_alignment.fasta
+  > iqtree -s beast_alignment.fasta -m TPM2uf+I+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TVM+I+G4           9    -95441.5746    190951.1491         0.0000    0.6473
+       2  GTR+I+G4          10    -95441.5413    190953.0826         1.9335    0.2462
+       3  TPM2uf+I+G4        7    -95445.6939    190955.3879         4.2388    0.0777
+       4  TIM2+I+G4          8    -95445.6899    190957.3799         6.2307    0.0287
+       5  TPM1uf+I+G4        7    -95495.7117    191055.4235       104.2744    0.0000
+       6  TIM1+I+G4          8    -95495.4441    191056.8881       105.7390    0.0000
+       7  TPM3uf+I+G4        7    -95497.5867    191059.1733       108.0242    0.0000
+       8  TIM3+I+G4          8    -95497.3815    191060.7631       109.6140    0.0000
+       9  HKY+I+G4           6    -95500.6528    191063.3055       112.1564    0.0000
+      10  TrN+I+G4           7    -95500.3671    191064.7343       113.5851    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              TVM+I+G4
+lnL:                -95441.5746
+Frequencies:        0.1920 0.3292 0.2221 0.2567
+Subst. Rates:       1.6465 3.0184 1.4342 1.0537 3.0184 1.0000 
+Inv. sites prop:    0.1192
+Gamma shape:        1.2100
+Score:              190951.1491
+Weight:             0.6473
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.7194
+Alpha-P.Inv:        1.2100
+P.Inv-Alpha:        0.1193
+Frequencies:        0.1920 0.3295 0.2220 0.2565 
+
+Commands:
+  > phyml  -i beast_alignment.fasta -m 012314 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s beast_alignment.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa beast_alignment.fasta --model TVM+I+G4
+  > paup -s beast_alignment.fasta
+  > iqtree -s beast_alignment.fasta -m TVM+I+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  TVM+I+G4           9    -95441.5746    190951.1491         0.0000    0.6473
+       2  GTR+I+G4          10    -95441.5413    190953.0826         1.9335    0.2462
+       3  TPM2uf+I+G4        7    -95445.6939    190955.3879         4.2388    0.0777
+       4  TIM2+I+G4          8    -95445.6899    190957.3799         6.2307    0.0287
+       5  TPM1uf+I+G4        7    -95495.7117    191055.4235       104.2744    0.0000
+       6  TIM1+I+G4          8    -95495.4441    191056.8881       105.7390    0.0000
+       7  TPM3uf+I+G4        7    -95497.5867    191059.1733       108.0242    0.0000
+       8  TIM3+I+G4          8    -95497.3815    191060.7631       109.6140    0.0000
+       9  HKY+I+G4           6    -95500.6528    191063.3055       112.1564    0.0000
+      10  TrN+I+G4           7    -95500.3671    191064.7343       113.5851    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              TVM+I+G4
+lnL:                -95441.5746
+Frequencies:        0.1920 0.3292 0.2221 0.2567
+Subst. Rates:       1.6465 3.0184 1.4342 1.0537 3.0184 1.0000 
+Inv. sites prop:    0.1192
+Gamma shape:        1.2100
+Score:              190951.1491
+Weight:             0.6473
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.7194
+Alpha-P.Inv:        1.2100
+P.Inv-Alpha:        0.1193
+Frequencies:        0.1920 0.3295 0.2220 0.2565 
+
+Commands:
+  > phyml  -i beast_alignment.fasta -m 012314 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s beast_alignment.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa beast_alignment.fasta --model TVM+I+G4
+  > paup -s beast_alignment.fasta
+  > iqtree -s beast_alignment.fasta -m TVM+I+G4
+
+There are 3 different topologies
+Topologies written to beast_alignment.fasta.topos
+
+topo_id   models_count   bic_support   aic_support   aicc_support
+-----------------------------------------------------------------
+      1             43       1.00000       1.00000       1.00000
+      2             26       0.00000       0.00000       0.00000
+      3             19       0.00000       0.00000       0.00000
+
+extended majority-rule consensus: (((NC_023422 Caprine kobuvirus isolate 12Q108, complete genome,NC_011829 |Porcine kobuvirus swine/S-1-HUN/2007/Hungary, complete genome)[1.00000],(MN336260 |Bovine kobuvirus strain IL35164, complete genome,GU245693 Aichivirus B3 strain sheep/TB3/HUN/2009, complete genome)[1.00000])[1.00000],NC_027919 |Kobuvirus cattle/Kagoshima-1-22-KoV/2014/JPN genomic RNA, nearly complete genome, strain: Kagoshima-1-22-KoV/2014/JPN,((KT325852 Rabbit picornavirus strain Rabbit01/2013/HUN, complete genome,(MN602325 Bat picornavirus strain ITA/2017/189/18-155, complete genome,MF352427 |Miniopterus picornavirus 2 strain Henan-Ms56-2 polyprotein gene, complete cds)[1.00000])[1.00000],(KJ934637 Kobuvirus SZAL6-KoV/2011/HUN, complete genome,(OP287812 Madagascar Bat Kobuvirus,((KM068048 Canine kobuvirus 1 isolate DD2 polyprotein mRNA, complete cds,KF831027 Feline kobuvirus strain FK-13, complete genome)[1.00000],(NC_001918 |Aichi virus, complete genome,MF352432 Aichivirus A strain Wencheng-Rt386-2 polyprotein gene, complete cds)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000]);
+strict consensus: (NC_027919 |Kobuvirus cattle/Kagoshima-1-22-KoV/2014/JPN genomic RNA, nearly complete genome, strain: Kagoshima-1-22-KoV/2014/JPN,MN602325 Bat picornavirus strain ITA/2017/189/18-155, complete genome,MF352427 |Miniopterus picornavirus 2 strain Henan-Ms56-2 polyprotein gene, complete cds,KT325852 Rabbit picornavirus strain Rabbit01/2013/HUN, complete genome,OP287812 Madagascar Bat Kobuvirus,NC_001918 |Aichi virus, complete genome,MF352432 Aichivirus A strain Wencheng-Rt386-2 polyprotein gene, complete cds,KM068048 Canine kobuvirus 1 isolate DD2 polyprotein mRNA, complete cds,KF831027 Feline kobuvirus strain FK-13, complete genome,NC_023422 Caprine kobuvirus isolate 12Q108, complete genome,NC_011829 |Porcine kobuvirus swine/S-1-HUN/2007/Hungary, complete genome,MN336260 |Bovine kobuvirus strain IL35164, complete genome,GU245693 Aichivirus B3 strain sheep/TB3/HUN/2009, complete genome,KJ934637 Kobuvirus SZAL6-KoV/2011/HUN, complete genome);
+
+Summary:
+
+Partition 1/1:
+                         Model         Score        Weight
+----------------------------------------------------------
+       BIC         TPM2uf+I+G4   191182.8289        0.9828
+       AIC            TVM+I+G4   190951.1491        0.6473
+      AICc            TVM+I+G4   190951.1491        0.6473
+
+Execution results written to beast_alignment.fasta.out
+Starting tree written to beast_alignment.fasta.tree

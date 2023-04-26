@@ -1,0 +1,8 @@
+
+The following have been reloaded with a version change:
+  1) compiler/gcc/10 => compiler/gcc/9     2) openmpi/4.0 => openmpi/4.1
+
+
+The following have been reloaded with a version change:
+  1) python/3.8 => python/3.9
+
