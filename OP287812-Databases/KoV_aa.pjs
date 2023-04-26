@@ -1,0 +1,24 @@
+{
+  "version": "1.2",
+  "dbname": "KoV_aa",
+  "dbtype": "Protein",
+  "db-version": 5,
+  "description": "ref_aa.fasta",
+  "number-of-letters": 2754,
+  "number-of-sequences": 1,
+  "last-updated": "2023-02-17T16:00:00",
+  "number-of-volumes": 1,
+  "bytes-total": 52148,
+  "bytes-to-cache": 2860,
+  "files": [
+    "KoV_aa.pdb",
+    "KoV_aa.phr",
+    "KoV_aa.pin",
+    "KoV_aa.pog",
+    "KoV_aa.pos",
+    "KoV_aa.pot",
+    "KoV_aa.psq",
+    "KoV_aa.ptf",
+    "KoV_aa.pto"
+  ]
+}
