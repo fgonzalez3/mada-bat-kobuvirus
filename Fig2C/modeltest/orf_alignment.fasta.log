@@ -1,0 +1,312 @@
+Physical cores: 8
+Logical cores:  16
+Memory:         62.5GB
+Extensions:     AVX
+
+WARNING: Partition DATA: There are undetermined columns in the alignment (only gaps)
+WARNING: Partition DATA: There are undetermined columns in the alignment (only gaps)
+WARNING: MSA has not enough sites to infer reliable results
+Creating new checkpoint file: orf_alignment.fasta.ckp
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        orf_alignment.fasta
+  Tree:       Maximum likelihood
+    file:           -
+  #taxa:            100
+  #sites:           2966
+  #patterns:        2562
+  Max. thread mem:  619 MB
+
+Output:
+  Log:           orf_alignment.fasta.log
+  Starting tree: orf_alignment.fasta.tree
+  Results:       orf_alignment.fasta.out
+
+Selection options:
+  # protein matrices: 19
+  # protein models:   152
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: false
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          8/8
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+modeltest-ng was called as follows: 
+>> modeltest-ng -d aa -i orf_alignment.fasta -t ml -p 8 
+
+
+Partition 1/1
+
+ ----ID---  ----MODEL---- ---Time--- -Elapsed--- -------LnL------- -Alpha- -P-inv-
+
+Computation of likelihood scores completed. It took 4h:28:52
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  LG+G4+F           20    -81991.1149    165717.1382         0.0000    0.9967
+       2  LG+I+G4+F         21    -81992.8321    165728.5676        11.4294    0.0033
+       3  WAG+G4+F          20    -82244.0133    166222.9350       505.7967    0.0000
+       4  WAG+I+G4+F        21    -82245.2548    166233.4129       516.2747    0.0000
+       5  LG+G4              1    -82364.2119    166311.4278       594.2896    0.0000
+       6  LG+I+G4            2    -82366.2423    166323.4835       606.3453    0.0000
+       7  RTREV+G4+F        20    -82300.0629    166335.0341       617.8959    0.0000
+       8  RTREV+I+G4+F      21    -82300.7384    166344.3802       627.2420    0.0000
+       9  JTT-DCMUT+G4       1    -82467.2409    166517.4859       800.3476    0.0000
+      10  JTT-DCMUT+I+G4     2    -82468.7256    166528.4501       811.3119    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              LG+G4+F
+lnL:                -81991.1149
+Frequencies:        0.0885 0.0462 0.0401 0.0506 0.0148 0.0369 0.0396 0.0647 0.0229 0.0477 0.0902 0.0308 0.0160 0.0448 0.0845 0.0859 0.0758 0.0188 0.0351 0.0662
+Inv. sites prop:    -
+Gamma shape:        0.7805
+Score:              165717.1382
+Weight:             0.9967
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.9967
+Gamma-Inv:          0.0033
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.7805
+Alpha-P.Inv:        0.8550
+P.Inv-Alpha:        0.0219
+Frequencies:        0.0885 0.0462 0.0401 0.0506 0.0148 0.0369 0.0396 0.0647 0.0229 0.0477 0.0902 0.0308 0.0160 0.0448 0.0845 0.0859 0.0758 0.0188 0.0351 0.0662 
+
+Commands:
+  > phyml  -i orf_alignment.fasta -d aa -m LG -f e -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s orf_alignment.fasta -m PROTGAMMALGF -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa orf_alignment.fasta --model LG+G4+F
+  > paup -s orf_alignment.fasta
+  > iqtree -s orf_alignment.fasta -m LG+G4+F
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  LG+G4+F           20    -81991.1149    164416.2298         0.0000    0.9380
+       2  LG+I+G4+F         21    -81992.8321    164421.6643         5.4344    0.0620
+       3  WAG+G4+F          20    -82244.0133    164922.0266       505.7967    0.0000
+       4  WAG+I+G4+F        21    -82245.2548    164926.5096       510.2798    0.0000
+       5  RTREV+G4+F        20    -82300.0629    165034.1257       617.8959    0.0000
+       6  RTREV+I+G4+F      21    -82300.7384    165037.4769       621.2470    0.0000
+       7  LG+G4              1    -82364.2119    165124.4238       708.1940    0.0000
+       8  LG+I+G4            2    -82366.2423    165130.4845       714.2547    0.0000
+       9  VT+G4+F           20    -82398.4603    165230.9205       814.6907    0.0000
+      10  VT+I+G4+F         21    -82401.3392    165238.6784       822.4486    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              LG+G4+F
+lnL:                -81991.1149
+Frequencies:        0.0885 0.0462 0.0401 0.0506 0.0148 0.0369 0.0396 0.0647 0.0229 0.0477 0.0902 0.0308 0.0160 0.0448 0.0845 0.0859 0.0758 0.0188 0.0351 0.0662
+Inv. sites prop:    -
+Gamma shape:        0.7805
+Score:              164416.2298
+Weight:             0.9380
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.9380
+Gamma-Inv:          0.0620
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.7805
+Alpha-P.Inv:        0.8550
+P.Inv-Alpha:        0.0219
+Frequencies:        0.0885 0.0462 0.0401 0.0506 0.0148 0.0369 0.0396 0.0647 0.0229 0.0477 0.0902 0.0308 0.0160 0.0448 0.0845 0.0859 0.0758 0.0188 0.0351 0.0662 
+
+Commands:
+  > phyml  -i orf_alignment.fasta -d aa -m LG -f e -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s orf_alignment.fasta -m PROTGAMMALGF -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa orf_alignment.fasta --model LG+G4+F
+  > paup -s orf_alignment.fasta
+  > iqtree -s orf_alignment.fasta -m LG+G4+F
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  LG+G4+F           20    -81991.1149    164450.2298         0.0000    0.9380
+       2  LG+I+G4+F         21    -81992.8321    164455.6643         5.4344    0.0620
+       3  WAG+G4+F          20    -82244.0133    164956.0266       505.7967    0.0000
+       4  WAG+I+G4+F        21    -82245.2548    164960.5096       510.2798    0.0000
+       5  RTREV+G4+F        20    -82300.0629    165068.1257       617.8959    0.0000
+       6  RTREV+I+G4+F      21    -82300.7384    165071.4769       621.2470    0.0000
+       7  LG+G4              1    -82364.2119    165152.4238       702.1940    0.0000
+       8  LG+I+G4            2    -82366.2423    165158.4845       708.2547    0.0000
+       9  VT+G4+F           20    -82398.4603    165264.9205       814.6907    0.0000
+      10  VT+I+G4+F         21    -82401.3392    165272.6784       822.4486    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              LG+G4+F
+lnL:                -81991.1149
+Frequencies:        0.0885 0.0462 0.0401 0.0506 0.0148 0.0369 0.0396 0.0647 0.0229 0.0477 0.0902 0.0308 0.0160 0.0448 0.0845 0.0859 0.0758 0.0188 0.0351 0.0662
+Inv. sites prop:    -
+Gamma shape:        0.7805
+Score:              164450.2298
+Weight:             0.9380
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.9380
+Gamma-Inv:          0.0620
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.7805
+Alpha-P.Inv:        0.8550
+P.Inv-Alpha:        0.0219
+Frequencies:        0.0885 0.0462 0.0401 0.0506 0.0148 0.0369 0.0396 0.0647 0.0229 0.0477 0.0902 0.0308 0.0160 0.0448 0.0845 0.0859 0.0758 0.0188 0.0351 0.0662 
+
+Commands:
+  > phyml  -i orf_alignment.fasta -d aa -m LG -f e -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s orf_alignment.fasta -m PROTGAMMALGF -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa orf_alignment.fasta --model LG+G4+F
+  > paup -s orf_alignment.fasta
+  > iqtree -s orf_alignment.fasta -m LG+G4+F
+
+There are 97 different topologies
+Topologies written to orf_alignment.fasta.topos
+
+topo_id   models_count   bic_support   aic_support   aicc_support
+-----------------------------------------------------------------
+      3              2       1.00000       1.00000       1.00000
+      2              6       0.00000       0.00000       0.00000
+     31              5       0.00000       0.00000       0.00000
+     20              1       0.00000       0.00000       0.00000
+      6              1       0.00000       0.00000       0.00000
+     35              5       0.00000       0.00000       0.00000
+      8              2       0.00000       0.00000       0.00000
+     30              2       0.00000       0.00000       0.00000
+     34              6       0.00000       0.00000       0.00000
+     25              1       0.00000       0.00000       0.00000
+     15              4       0.00000       0.00000       0.00000
+      4              4       0.00000       0.00000       0.00000
+     24              2       0.00000       0.00000       0.00000
+      7              2       0.00000       0.00000       0.00000
+     57              2       0.00000       0.00000       0.00000
+     76              1       0.00000       0.00000       0.00000
+     75              1       0.00000       0.00000       0.00000
+     74              1       0.00000       0.00000       0.00000
+     73              1       0.00000       0.00000       0.00000
+     72              1       0.00000       0.00000       0.00000
+     71              1       0.00000       0.00000       0.00000
+     70              1       0.00000       0.00000       0.00000
+     69              1       0.00000       0.00000       0.00000
+     68              1       0.00000       0.00000       0.00000
+     97              1       0.00000       0.00000       0.00000
+     67              2       0.00000       0.00000       0.00000
+     66              1       0.00000       0.00000       0.00000
+     65              1       0.00000       0.00000       0.00000
+     64              1       0.00000       0.00000       0.00000
+     63              1       0.00000       0.00000       0.00000
+     62              1       0.00000       0.00000       0.00000
+     61              1       0.00000       0.00000       0.00000
+     60              2       0.00000       0.00000       0.00000
+     59              1       0.00000       0.00000       0.00000
+     58              1       0.00000       0.00000       0.00000
+     87              1       0.00000       0.00000       0.00000
+      1              2       0.00000       0.00000       0.00000
+     96              1       0.00000       0.00000       0.00000
+     95              1       0.00000       0.00000       0.00000
+     94              1       0.00000       0.00000       0.00000
+     93              1       0.00000       0.00000       0.00000
+     92              1       0.00000       0.00000       0.00000
+     91              2       0.00000       0.00000       0.00000
+     90              1       0.00000       0.00000       0.00000
+     89              1       0.00000       0.00000       0.00000
+     88              1       0.00000       0.00000       0.00000
+     77              1       0.00000       0.00000       0.00000
+     86              1       0.00000       0.00000       0.00000
+     85              2       0.00000       0.00000       0.00000
+     84              1       0.00000       0.00000       0.00000
+     83              1       0.00000       0.00000       0.00000
+     82              2       0.00000       0.00000       0.00000
+     81              1       0.00000       0.00000       0.00000
+     80              1       0.00000       0.00000       0.00000
+     79              1       0.00000       0.00000       0.00000
+     78              1       0.00000       0.00000       0.00000
+     18              1       0.00000       0.00000       0.00000
+     33              2       0.00000       0.00000       0.00000
+     32              2       0.00000       0.00000       0.00000
+     29              2       0.00000       0.00000       0.00000
+     28              2       0.00000       0.00000       0.00000
+     27              2       0.00000       0.00000       0.00000
+     26              1       0.00000       0.00000       0.00000
+     23              1       0.00000       0.00000       0.00000
+     22              4       0.00000       0.00000       0.00000
+     21              2       0.00000       0.00000       0.00000
+     19              1       0.00000       0.00000       0.00000
+     36              3       0.00000       0.00000       0.00000
+     17              1       0.00000       0.00000       0.00000
+     16              1       0.00000       0.00000       0.00000
+     14              2       0.00000       0.00000       0.00000
+     13              1       0.00000       0.00000       0.00000
+     12              2       0.00000       0.00000       0.00000
+     11              1       0.00000       0.00000       0.00000
+     10              2       0.00000       0.00000       0.00000
+      9              2       0.00000       0.00000       0.00000
+      5              2       0.00000       0.00000       0.00000
+     46              1       0.00000       0.00000       0.00000
+     55              2       0.00000       0.00000       0.00000
+     54              2       0.00000       0.00000       0.00000
+     53              1       0.00000       0.00000       0.00000
+     52              1       0.00000       0.00000       0.00000
+     51              1       0.00000       0.00000       0.00000
+     50              1       0.00000       0.00000       0.00000
+     49              1       0.00000       0.00000       0.00000
+     48              1       0.00000       0.00000       0.00000
+     47              1       0.00000       0.00000       0.00000
+     56              1       0.00000       0.00000       0.00000
+     45              1       0.00000       0.00000       0.00000
+     44              1       0.00000       0.00000       0.00000
+     43              1       0.00000       0.00000       0.00000
+     42              1       0.00000       0.00000       0.00000
+     41              1       0.00000       0.00000       0.00000
+     40              1       0.00000       0.00000       0.00000
+     39              1       0.00000       0.00000       0.00000
+     38              1       0.00000       0.00000       0.00000
+     37              2       0.00000       0.00000       0.00000
+
+extended majority-rule consensus: ((DQ028632_-_polyprotein_CDS Aichi virus isolate Goiania/GO/03/01/Brazil, complete genome,(MT766372.1_-_polyprotein_CDS |Kobuvirus sp. isolate CHN/XJ/env/2018/ht8-ctg1, complete genome,FJ890523_-_polyprotein_CDS Aichi virus isolate Chshc7, complete genome)[1.00000])[1.00000],(NC_001918_-_polyprotein_CDS Aichi virus, complete genome,AB040749_-_polyprotein_CDS Aichi virus genomic RNA, complete genome)[1.00000],((MN116647_-_polyprotein_CDS Aichivirus A strain rat08/rAiA/HUN, complete genome,(((((MN337880_-_polyprotein_CDS Canine kobuvirus strain S272/16, complete genome,KC161964_-_polyprotein_CDS Canine kobuvirus strain UK003, complete genome)[1.00000],(KM068048_-_polyprotein_CDS Canine kobuvirus 1 isolate DD2 polyprotein mRNA, complete cds,((KF924623_-_polyprotein_CDS Canine kobuvirus 1 isolate 12D049, complete genome,(JQ911763_-_polyprotein_CDS Canine kobuvirus CH-1, complete genome,(MN449341_-_polyprotein_CDS Canine kobuvirus isolate CaKoV AH-1/CHN/2019, complete genome,NC_034971_-_polyprotein_CDS Canine kobuvirus isolate SMCD-59, complete genome)[1.00000])[1.00000])[1.00000],(MH747478_-_polyprotein_CDS Canine kobuvirus strain CaKoV-26, complete genome,JN088541_-_polyprotein_CDS Canine kobuvirus US-PC0082, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(KM068051_-_polyprotein_CDS Canine kobuvirus 1 isolate B103 polyprotein mRNA, complete cds,(KM068049_-_polyprotein_CDS Canine kobuvirus 1 isolate 82 polyprotein mRNA, complete cds,KM068050_-_polyprotein_CDS Canine kobuvirus 1 isolate 75 polyprotein mRNA, complete cds)[1.00000])[1.00000])[1.00000],(KJ958930_-_polyprotein_CDS Feline kobuvirus isolate 12D240, complete genome,((MF598159_-_polyprotein_CDS Feline kobuvirus strain WHJ-1, complete genome,(MK671314_-_polyprotein_CDS Feline kobuvirus isolate FKV/18CC0503, complete genome,MK671315_-_polyprotein_CDS Feline kobuvirus isolate FKV/18CC0718, complete genome)[1.00000])[1.00000],(KM091960_-_polyprotein_CDS Feline kobuvirus strain FeKoV/TE/52/IT/13, complete genome,KF831027_-_polyprotein_CDS Feline kobuvirus strain FK-13, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(NC_015936_-_polyprotein_CDS Mouse kobuvirus M-5/USA/2010, complete genome,(OM140655_-_polyprotein_CDS Marmot kobuvirus strain MCKV/XJ3/CHN/2016, complete genome,KY855436_-_polyprotein_CDS Marmot kobuvirus strain HT9, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(NODE_4_-_polyprotein_CDS,(KJ934637_-_polyprotein_CDS Kobuvirus SZAL6-KoV/2011/HUN, complete genome,((((GU245693_-_polyprotein_CDS Aichivirus B3 strain sheep/TB3/HUN/2009, complete genome,(((MW605074_-_polyprotein_CDS Bovine kobuvirus strain 1043507, complete genome,MN336260_-_polyprotein_CDS Bovine kobuvirus strain IL35164, complete genome)[1.00000],(KY407744_-_polyprotein_CDS Bovine kobuvirus strain BKoV/EGY-1, complete genome,NC_004421_-_hypothetical_protein_CDS Aichivirus B genomic RNA, complete genome, strain:U-1)[1.00000])[1.00000],(ON075052_-_polyprotein_CDS Bovine kobuvirus isolate BKV3/2021/CHN, complete genome,(ON075053_-_polyprotein_CDS Bovine kobuvirus isolate BKV4/2021/CHN, complete genome,((ON075054_-_polyprotein_CDS Bovine kobuvirus isolate BKV6/2021/CHN, complete genome,ON075056_-_polyprotein_CDS Bovine kobuvirus isolate BKV8/2021/CHN, complete genome)[1.00000],(ON075051_-_polyprotein_CDS Bovine kobuvirus isolate BKV2/2021/CHN, complete genome,(ON075050_-_polyprotein_CDS Bovine kobuvirus isolate BKV1/2021/CHN, complete genome,(ON075055_-_polyprotein_CDS Bovine kobuvirus isolate BKV7/2021/CHN, complete genome,MZ603734_-_polyprotein_CDS Bovine kobuvirus isolate BKoV/CN/HB-SJZ/2021, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],((MT584793_-_polyprotein_CDS Caprine kobuvirus isolate CKoV-China/SWUN/F11/2019, complete genome,(MN604700_-_polyprotein_CDS Caprine kobuvirus isolate MN1/2018, complete genome,NC_023422_-_polyprotein_CDS Caprine kobuvirus isolate 12Q108, complete genome)[1.00000])[1.00000],((((LC210621_-_polyprotein_CDS Porcine kobuvirus genomic RNA, complete genome, strain: PoKoV/Tochigi-IO3/JPN/2014,KM977675_-_polyprotein_CDS Porcine kobuvirus isolate OH/RV50/2011, complete genome)[1.00000],(MN807751_-_polyprotein_CDS Porcine kobuvirus strain SZ1M-F/PKV/HUN/2013, complete genome,(((MT211964_-_polyprotein_CDS Porcine kobuvirus isolate EdoMex/2018/205, complete genome,MF506730_-_polyprotein_CDS Porcine kobuvirus isolate OH/RV11/2011, complete genome)[1.00000],(((GU292559_-_polyprotein_CDS Kobuvirus pig/JY-2010a/CHN isolate Y-1-CHI, complete genome,(KY234500_-_polyprotein_CDS Porcine kobuvirus isolate JXJC2015, complete genome,KC424640_-_polyprotein_CDS Porcine kobuvirus isolate GS-2/2012/CH, complete genome)[1.00000])[1.00000],(KC424638_-_polyprotein_CDS Porcine kobuvirus isolate K-4/2012/CH, complete genome,KC424639_-_polyprotein_CDS Porcine kobuvirus isolate GS-1/2012/CH, complete genome)[1.00000])[1.00000],(JQ692069_-_polyprotein_CDS Porcine kobuvirus strain WUH1, complete genome,((MZ334483_-_polyprotein_CDS Porcine kobuvirus strain FoPro-213.14/GER/2018, complete genome,LT898428_-_polyprotein_CDS Porcine kobuvirus isolate PKV_GER_L00919-K17_14-02_2014 genome assembly, complete genome: monopartite)[1.00000],(MT125685_-_polyprotein_CDS Porcine kobuvirus isolate swine/HBYT/2018/China, complete genome,OK315318_-_polyprotein_CDS Porcine kobuvirus isolate Wuhan2020, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(GQ249161_-_polyprotein_CDS Porcine kobuvirus swine/K-30-HUN/2008/HUN, complete genome,NC_011829_-_polyprotein_CDS Porcine kobuvirus swine/S-1-HUN/2007/Hungary, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(KC414936_-_polyprotein_CDS Porcine kobuvirus isolate K-11/2012/CH, complete genome,(((KP144318_-_polyprotein_CDS Porcine kobuvirus JS-01-CHN/2013/China, complete genome,NC_027054_-_polyprotein_CDS Porcine kobuvirus isolate JS-02a-CHN/2014/China, complete genome)[1.00000],((MT125684_-_polyprotein_CDS Porcine kobuvirus isolate swine/JX-3/2013/China, complete genome,(MT125683_-_polyprotein_CDS Porcine kobuvirus isolate swine/JX-2/2013/China, complete genome,(KJ452348.1_-_polyprotein_CDS |Porcine kobuvirus isolate CH/DX/2012, complete genome,MT125682_-_polyprotein_CDS Porcine kobuvirus isolate swine/JX-1/2013/China, complete genome)[1.00000])[1.00000])[1.00000],(NC_016769_-_polyprotein_CDS Porcine kobuvirus SH-W-CHN/2010/China, complete genome,(KM051987_-_polyprotein_CDS Porcine kobuvirus strain CH/KB-1/2014, complete genome,(JX401523_-_polyprotein_CDS Porcine kobuvirus isolate CH/HNXX-4/2012, complete genome,(KC204684_-_polyprotein_CDS Porcine kobuvirus isolate XX, complete genome,KF539763_-_polyprotein_CDS Porcine kobuvirus isolate swKoV CH441, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(KY234499_-_polyprotein_CDS Porcine kobuvirus isolate JXAT2015, complete genome,KF695124_-_polyprotein_CDS Porcine kobuvirus isolate ch-kobu/2008/China, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(MK962329_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P2B/2017, complete genome,((MK962327_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P259/2017, complete genome,MK962331_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P284/2017, complete genome)[1.00000],((MK962323_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P37/2017, complete genome,MK962320_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/C247/2017, complete genome)[1.00000],(((MK962330_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P452/2017, complete genome,MK962335_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/VC8/2017, complete genome)[1.00000],(MK962334_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/VC14/2017, complete genome,(MK962321_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P393/2017, complete genome,(MK962332_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/C375/2017, complete genome,(JX177612_-_polyprotein_CDS Porcine kobuvirus strain WB-1-HUN/2011/HUN, complete genome,(MK962324_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P437/2017, complete genome,MK962326_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/C429/2017, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(MK962333_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P461/2017, complete genome,(MK962328_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/B304/2017, complete genome,(MK962322_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/VC20B/2017, complete genome,MK962325_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/VT25C/2017, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(NC_027919_-_polyprotein_CDS Kobuvirus cattle/Kagoshima-1-22-KoV/2014/JPN genomic RNA, nearly complete genome, strain: Kagoshima-1-22-KoV/2014/JPN,(MW296158_-_polyprotein_CDS Ovine kobuvirus isolate SKoV-China/SWUN/AB18/2019, complete genome,NC_027918_-_polyprotein_CDS Kobuvirus cattle/Kagoshima-2-24-KoV/2015/JPN genomic RNA, complete genome, strain: Kagoshima-2-24-KoV/2015/JPN)[1.00000])[1.00000])[1.00000],(NC_026314_-_polyprotein_CDS Rabbit kobuvirus isolate Berlin/Jan2011/0572, complete genome,(KT325852_-_polyprotein_CDS Rabbit picornavirus strain Rabbit01/2013/HUN, complete genome,(MF352427.1_-_polyprotein_CDS |Miniopterus picornavirus 2 strain Henan-Ms56-2 polyprotein gene, complete cds,MN602325_-_polyprotein_CDS Bat picornavirus strain ITA/2017/189/18-155, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000]);
+strict consensus: ((DQ028632_-_polyprotein_CDS Aichi virus isolate Goiania/GO/03/01/Brazil, complete genome,(MT766372.1_-_polyprotein_CDS |Kobuvirus sp. isolate CHN/XJ/env/2018/ht8-ctg1, complete genome,FJ890523_-_polyprotein_CDS Aichi virus isolate Chshc7, complete genome)[1.00000])[1.00000],(NC_001918_-_polyprotein_CDS Aichi virus, complete genome,AB040749_-_polyprotein_CDS Aichi virus genomic RNA, complete genome)[1.00000],((MN116647_-_polyprotein_CDS Aichivirus A strain rat08/rAiA/HUN, complete genome,(((((MN337880_-_polyprotein_CDS Canine kobuvirus strain S272/16, complete genome,KC161964_-_polyprotein_CDS Canine kobuvirus strain UK003, complete genome)[1.00000],(KM068048_-_polyprotein_CDS Canine kobuvirus 1 isolate DD2 polyprotein mRNA, complete cds,((KF924623_-_polyprotein_CDS Canine kobuvirus 1 isolate 12D049, complete genome,(JQ911763_-_polyprotein_CDS Canine kobuvirus CH-1, complete genome,(MN449341_-_polyprotein_CDS Canine kobuvirus isolate CaKoV AH-1/CHN/2019, complete genome,NC_034971_-_polyprotein_CDS Canine kobuvirus isolate SMCD-59, complete genome)[1.00000])[1.00000])[1.00000],(MH747478_-_polyprotein_CDS Canine kobuvirus strain CaKoV-26, complete genome,JN088541_-_polyprotein_CDS Canine kobuvirus US-PC0082, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(KM068051_-_polyprotein_CDS Canine kobuvirus 1 isolate B103 polyprotein mRNA, complete cds,(KM068049_-_polyprotein_CDS Canine kobuvirus 1 isolate 82 polyprotein mRNA, complete cds,KM068050_-_polyprotein_CDS Canine kobuvirus 1 isolate 75 polyprotein mRNA, complete cds)[1.00000])[1.00000])[1.00000],(KJ958930_-_polyprotein_CDS Feline kobuvirus isolate 12D240, complete genome,((MF598159_-_polyprotein_CDS Feline kobuvirus strain WHJ-1, complete genome,(MK671314_-_polyprotein_CDS Feline kobuvirus isolate FKV/18CC0503, complete genome,MK671315_-_polyprotein_CDS Feline kobuvirus isolate FKV/18CC0718, complete genome)[1.00000])[1.00000],(KM091960_-_polyprotein_CDS Feline kobuvirus strain FeKoV/TE/52/IT/13, complete genome,KF831027_-_polyprotein_CDS Feline kobuvirus strain FK-13, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(NC_015936_-_polyprotein_CDS Mouse kobuvirus M-5/USA/2010, complete genome,(OM140655_-_polyprotein_CDS Marmot kobuvirus strain MCKV/XJ3/CHN/2016, complete genome,KY855436_-_polyprotein_CDS Marmot kobuvirus strain HT9, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(NODE_4_-_polyprotein_CDS,(KJ934637_-_polyprotein_CDS Kobuvirus SZAL6-KoV/2011/HUN, complete genome,((((GU245693_-_polyprotein_CDS Aichivirus B3 strain sheep/TB3/HUN/2009, complete genome,(((MW605074_-_polyprotein_CDS Bovine kobuvirus strain 1043507, complete genome,MN336260_-_polyprotein_CDS Bovine kobuvirus strain IL35164, complete genome)[1.00000],(KY407744_-_polyprotein_CDS Bovine kobuvirus strain BKoV/EGY-1, complete genome,NC_004421_-_hypothetical_protein_CDS Aichivirus B genomic RNA, complete genome, strain:U-1)[1.00000])[1.00000],(ON075052_-_polyprotein_CDS Bovine kobuvirus isolate BKV3/2021/CHN, complete genome,(ON075053_-_polyprotein_CDS Bovine kobuvirus isolate BKV4/2021/CHN, complete genome,((ON075054_-_polyprotein_CDS Bovine kobuvirus isolate BKV6/2021/CHN, complete genome,ON075056_-_polyprotein_CDS Bovine kobuvirus isolate BKV8/2021/CHN, complete genome)[1.00000],(ON075051_-_polyprotein_CDS Bovine kobuvirus isolate BKV2/2021/CHN, complete genome,(ON075050_-_polyprotein_CDS Bovine kobuvirus isolate BKV1/2021/CHN, complete genome,(ON075055_-_polyprotein_CDS Bovine kobuvirus isolate BKV7/2021/CHN, complete genome,MZ603734_-_polyprotein_CDS Bovine kobuvirus isolate BKoV/CN/HB-SJZ/2021, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],((MT584793_-_polyprotein_CDS Caprine kobuvirus isolate CKoV-China/SWUN/F11/2019, complete genome,(MN604700_-_polyprotein_CDS Caprine kobuvirus isolate MN1/2018, complete genome,NC_023422_-_polyprotein_CDS Caprine kobuvirus isolate 12Q108, complete genome)[1.00000])[1.00000],((((LC210621_-_polyprotein_CDS Porcine kobuvirus genomic RNA, complete genome, strain: PoKoV/Tochigi-IO3/JPN/2014,KM977675_-_polyprotein_CDS Porcine kobuvirus isolate OH/RV50/2011, complete genome)[1.00000],(MN807751_-_polyprotein_CDS Porcine kobuvirus strain SZ1M-F/PKV/HUN/2013, complete genome,(((MT211964_-_polyprotein_CDS Porcine kobuvirus isolate EdoMex/2018/205, complete genome,MF506730_-_polyprotein_CDS Porcine kobuvirus isolate OH/RV11/2011, complete genome)[1.00000],(((GU292559_-_polyprotein_CDS Kobuvirus pig/JY-2010a/CHN isolate Y-1-CHI, complete genome,(KY234500_-_polyprotein_CDS Porcine kobuvirus isolate JXJC2015, complete genome,KC424640_-_polyprotein_CDS Porcine kobuvirus isolate GS-2/2012/CH, complete genome)[1.00000])[1.00000],(KC424638_-_polyprotein_CDS Porcine kobuvirus isolate K-4/2012/CH, complete genome,KC424639_-_polyprotein_CDS Porcine kobuvirus isolate GS-1/2012/CH, complete genome)[1.00000])[1.00000],(JQ692069_-_polyprotein_CDS Porcine kobuvirus strain WUH1, complete genome,((MZ334483_-_polyprotein_CDS Porcine kobuvirus strain FoPro-213.14/GER/2018, complete genome,LT898428_-_polyprotein_CDS Porcine kobuvirus isolate PKV_GER_L00919-K17_14-02_2014 genome assembly, complete genome: monopartite)[1.00000],(MT125685_-_polyprotein_CDS Porcine kobuvirus isolate swine/HBYT/2018/China, complete genome,OK315318_-_polyprotein_CDS Porcine kobuvirus isolate Wuhan2020, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(GQ249161_-_polyprotein_CDS Porcine kobuvirus swine/K-30-HUN/2008/HUN, complete genome,NC_011829_-_polyprotein_CDS Porcine kobuvirus swine/S-1-HUN/2007/Hungary, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(KC414936_-_polyprotein_CDS Porcine kobuvirus isolate K-11/2012/CH, complete genome,(((KP144318_-_polyprotein_CDS Porcine kobuvirus JS-01-CHN/2013/China, complete genome,NC_027054_-_polyprotein_CDS Porcine kobuvirus isolate JS-02a-CHN/2014/China, complete genome)[1.00000],((MT125684_-_polyprotein_CDS Porcine kobuvirus isolate swine/JX-3/2013/China, complete genome,(MT125683_-_polyprotein_CDS Porcine kobuvirus isolate swine/JX-2/2013/China, complete genome,(KJ452348.1_-_polyprotein_CDS |Porcine kobuvirus isolate CH/DX/2012, complete genome,MT125682_-_polyprotein_CDS Porcine kobuvirus isolate swine/JX-1/2013/China, complete genome)[1.00000])[1.00000])[1.00000],(NC_016769_-_polyprotein_CDS Porcine kobuvirus SH-W-CHN/2010/China, complete genome,(KM051987_-_polyprotein_CDS Porcine kobuvirus strain CH/KB-1/2014, complete genome,(JX401523_-_polyprotein_CDS Porcine kobuvirus isolate CH/HNXX-4/2012, complete genome,(KC204684_-_polyprotein_CDS Porcine kobuvirus isolate XX, complete genome,KF539763_-_polyprotein_CDS Porcine kobuvirus isolate swKoV CH441, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(KY234499_-_polyprotein_CDS Porcine kobuvirus isolate JXAT2015, complete genome,KF695124_-_polyprotein_CDS Porcine kobuvirus isolate ch-kobu/2008/China, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(MK962329_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P2B/2017, complete genome,((MK962327_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P259/2017, complete genome,MK962331_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P284/2017, complete genome)[1.00000],((MK962323_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P37/2017, complete genome,MK962320_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/C247/2017, complete genome)[1.00000],(((MK962330_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P452/2017, complete genome,MK962335_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/VC8/2017, complete genome)[1.00000],(MK962334_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/VC14/2017, complete genome,(MK962321_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P393/2017, complete genome,(MK962332_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/C375/2017, complete genome,(JX177612_-_polyprotein_CDS Porcine kobuvirus strain WB-1-HUN/2011/HUN, complete genome,(MK962324_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P437/2017, complete genome,MK962326_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/C429/2017, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(MK962333_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P461/2017, complete genome,(MK962328_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/B304/2017, complete genome,(MK962322_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/VC20B/2017, complete genome,MK962325_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/VT25C/2017, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(NC_027919_-_polyprotein_CDS Kobuvirus cattle/Kagoshima-1-22-KoV/2014/JPN genomic RNA, nearly complete genome, strain: Kagoshima-1-22-KoV/2014/JPN,(MW296158_-_polyprotein_CDS Ovine kobuvirus isolate SKoV-China/SWUN/AB18/2019, complete genome,NC_027918_-_polyprotein_CDS Kobuvirus cattle/Kagoshima-2-24-KoV/2015/JPN genomic RNA, complete genome, strain: Kagoshima-2-24-KoV/2015/JPN)[1.00000])[1.00000])[1.00000],(NC_026314_-_polyprotein_CDS Rabbit kobuvirus isolate Berlin/Jan2011/0572, complete genome,(KT325852_-_polyprotein_CDS Rabbit picornavirus strain Rabbit01/2013/HUN, complete genome,(MF352427.1_-_polyprotein_CDS |Miniopterus picornavirus 2 strain Henan-Ms56-2 polyprotein gene, complete cds,MN602325_-_polyprotein_CDS Bat picornavirus strain ITA/2017/189/18-155, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000]);
+
+Summary:
+
+Partition 1/1:
+                         Model         Score        Weight
+----------------------------------------------------------
+       BIC             LG+G4+F   165717.1382        0.9967
+       AIC             LG+G4+F   164416.2298        0.9380
+      AICc             LG+G4+F   164450.2298        0.9380
+
+Execution results written to orf_alignment.fasta.out
+Starting tree written to orf_alignment.fasta.tree

@@ -1,0 +1,478 @@
+                             _      _ _            _      _   _  _____ 
+                            | |    | | |          | |    | \ | |/ ____|
+         _ __ ___   ___   __| | ___| | |_ ___  ___| |_   |  \| | |  __ 
+        | '_ ` _ \ / _ \ / _` |/ _ \ | __/ _ \/ __| __|  | . ` | | |_ |
+        | | | | | | (_) | (_| |  __/ | ||  __/\__ \ |_   | |\  | |__| |
+        |_| |_| |_|\___/ \__,_|\___|_|\__\___||___/\__|  |_| \_|\_____|
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7 released on 17.03.2021 by The Exelixis Lab.
+Written by Diego Darriba.
+Contributors: Tomas Flouri, Alexey Kozlov, Benoit Morel, David Posada, 
+              Alexandros Stamatakis.
+Latest version: https://github.com/ddarriba/modeltest
+--------------------------------------------------------------------------------
+
+Physical cores: 8
+Logical cores:  16
+Memory:         62.5GB
+Extensions:     AVX
+
+WARNING: Partition DATA: There are undetermined columns in the alignment (only gaps)
+WARNING: Partition DATA: There are undetermined columns in the alignment (only gaps)
+WARNING: MSA has not enough sites to infer reliable results
+Creating new checkpoint file: orf_alignment.fasta.ckp
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        orf_alignment.fasta
+  Tree:       Maximum likelihood
+    file:           -
+  #taxa:            100
+  #sites:           2966
+  #patterns:        2562
+  Max. thread mem:  619 MB
+
+Output:
+  Log:           orf_alignment.fasta.log
+  Starting tree: orf_alignment.fasta.tree
+  Results:       orf_alignment.fasta.out
+
+Selection options:
+  # protein matrices: 19
+  # protein models:   152
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: false
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          8/8
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+modeltest-ng was called as follows: 
+>> modeltest-ng -d aa -i orf_alignment.fasta -t ml -p 8 
+
+
+Partition 1/1
+
+    2/152  BLOSUM62+I+G4+F0h:20:06   0h:20:10          -82956.5916  0.9000  0.0216
+    7/152  MTREV+I+G4+F   0h:20:42   0h:20:46          -83303.3834  0.8100  0.0219
+    9/152  RTREV+I+G4+F   0h:21:25   0h:21:29          -82300.7384  0.8550  0.0219
+    8/152  WAG+I+G4+F     0h:23:57   0h:24:01          -82245.2548  0.9000  0.0215
+    5/152  DCMUT+I+G4+F   0h:25:14   0h:25:18          -83130.8117  0.8550  0.0214
+    3/152  DAYHOFF+I+G4+F 0h:25:33   0h:25:37          -83124.9054  0.8550  0.0214
+    4/152  LG+I+G4+F      0h:28:30   0h:28:34          -81992.8321  0.8550  0.0219
+    6/152  JTT+I+G4+F     0h:35:52   0h:35:56          -82497.7145  0.8550  0.0212
+   10/152  CPREV+I+G4+F   0h:23:18   0h:43:28          -82563.2170  0.9000  0.0215
+   11/152  VT+I+G4+F      0h:24:22   0h:45:08          -82401.3392  0.9000  0.0216
+   12/152  MTMAM+I+G4+F   0h:27:00   0h:48:29          -85286.7405  0.7070  0.0214
+   15/152  HIVW+I+G4+F    0h:25:34   0h:51:11          -86795.0712  0.8100  0.0261
+   16/152  STMTREV+I+G4+F 0h:23:57   0h:52:31          -86170.4504  0.8100  0.0328
+   13/152  MTART+I+G4+F   0h:31:18   0h:55:19          -84547.7540  0.7236  0.0216
+   14/152  MTZOA+I+G4+F   0h:32:02   0h:57:20          -83255.0810  0.7472  0.0220
+   20/152  PMB+I+G4+F     0h:28:53   1h:17:22          -82982.5290  0.9000  0.0216
+   19/152  HIVB+I+G4+F    0h:33:03   1h:18:11          -84271.8557  0.8100  0.0218
+   18/152  JTT-DCMUT+I+G4+F0h:34:57   1h:18:25          -82481.5774  0.8550  0.0222
+   23/152  STMTREV+G4+F   0h:23:09   1h:18:28          -86177.8745  0.7192       -
+   21/152  HIVB+G4+F      0h:28:52   1h:20:03          -84266.2820  0.7502       -
+   22/152  LG+G4+F        0h:30:33   1h:23:04          -81991.1149  0.7805       -
+   17/152  FLU+I+G4+F     0h:47:16   1h:23:12          -83577.2650  0.8100  0.0214
+   24/152  WAG+G4+F       0h:26:29   1h:23:49          -82244.0133  0.8613       -
+   27/152  MTREV+G4+F     0h:18:44   1h:37:09          -83301.5483  0.7783       -
+   30/152  BLOSUM62+G4+F  0h:17:09   1h:40:13          -82953.9367  0.8550       -
+   28/152  HIVW+G4+F      0h:23:24   1h:41:52          -86797.4441  0.7285       -
+   31/152  CPREV+G4+F     0h:19:06   1h:42:18          -82563.9325  0.8100       -
+   29/152  DAYHOFF+G4+F   0h:24:00   1h:44:03          -83126.2484  0.8255       -
+   32/152  PMB+G4+F       0h:20:15   1h:44:04          -82978.9441  0.8550       -
+   26/152  JTT-DCMUT+G4+F 0h:28:02   1h:46:13          -82480.0952  0.7914       -
+   25/152  FLU+G4+F       0h:32:32   1h:49:54          -83574.3137  0.7705       -
+   33/152  VT+G4+F        0h:17:53   1h:55:02          -82398.4603  0.8550       -
+   38/152  MTMAM+G4+F     0h:14:01   1h:58:05          -85283.4512  0.6650       -
+   39/152  RTREV+G4+F     0h:18:32   2h:04:45          -82300.0629  0.7964       -
+   34/152  MTZOA+G4+F     0h:27:19   2h:07:32          -83256.2983  0.7192       -
+   37/152  DCMUT+G4+F     0h:23:58   2h:08:01          -83132.1052  0.8262       -
+   36/152  MTART+G4+F     0h:31:03   2h:13:21          -84544.4052  0.6501       -
+   35/152  JTT+G4+F       0h:32:00   2h:13:52          -82496.6222  0.7890       -
+   40/152  MTMAM+I+G4     0h:25:10   2h:15:04          -88014.0160  0.7192  0.0218
+   41/152  CPREV+I+G4     0h:20:06   2h:15:08          -83115.0963  0.9000  0.0215
+   42/152  RTREV+I+G4     0h:26:29   2h:24:34          -82861.1731  0.8550  0.0212
+   45/152  BLOSUM62+I+G4  0h:17:45   2h:25:46          -83392.7367  0.9000  0.0216
+   43/152  VT+I+G4        0h:22:00   2h:26:45          -82594.2744  0.9000  0.0216
+   44/152  WAG+I+G4       0h:20:41   2h:28:13          -82514.4140  0.9000  0.0218
+   46/152  MTREV+I+G4     0h:18:23   2h:31:44          -85804.6006  0.7941  0.0216
+   48/152  MTZOA+I+G4     0h:17:37   2h:32:41          -85197.6854  0.7626  0.0214
+   47/152  MTART+I+G4     0h:26:46   2h:40:38          -87435.0717  0.7190  0.0216
+   50/152  PMB+I+G4       0h:16:11   2h:40:45          -83196.4986  0.9000  0.0216
+   52/152  HIVW+I+G4      0h:19:06   2h:45:51          -88021.6400  0.8100  0.0263
+   55/152  FLU+I+G4       0h:18:30   2h:51:11          -84235.4641  0.8100  0.0214
+   51/152  HIVB+I+G4      0h:26:19   2h:52:05          -84799.4182  0.8100  0.0216
+   53/152  DCMUT+I+G4     0h:28:29   2h:56:42          -83380.1271  0.9000  0.0216
+   60/152  STMTREV+I+F    0h:04:42   2h:56:47          -89773.6888       -  0.0798
+   59/152  DAYHOFF+I+F    0h:06:45   2h:57:56          -86173.7398       -  0.0735
+   49/152  JTT+I+G4       0h:43:12   2h:58:20          -82487.0749  0.8550  0.0211
+   56/152  STMTREV+I+G4   0h:19:31   3h:00:09          -86964.3240  0.8100  0.0318
+   61/152  FLU+I+F        0h:03:44   3h:00:26          -86949.6152       -  0.0717
+   57/152  LG+I+G4        0h:19:55   3h:00:40          -82366.2423  0.8550  0.0219
+   63/152  HIVW+I+F       0h:05:24   3h:03:20          -90601.7696       -  0.0748
+   62/152  JTT-DCMUT+I+F  0h:06:57   3h:03:44          -85449.5980       -  0.0744
+   65/152  PMB+I+F        0h:04:38   3h:04:47          -85606.0950       -  0.0747
+   64/152  HIVB+I+F       0h:06:56   3h:05:16          -87933.7339       -  0.0746
+   66/152  VT+I+F         0h:05:59   3h:06:25          -85026.8507       -  0.0748
+   67/152  MTREV+I+F      0h:06:38   3h:07:18          -86757.4501       -  0.0660
+   68/152  WAG+I+F        0h:04:41   3h:08:01          -84946.4714       -  0.0738
+   70/152  CPREV+I+F      0h:05:19   3h:10:06          -85451.6046       -  0.0679
+   54/152  JTT-DCMUT+I+G4 0h:38:29   3h:10:13          -82468.7256  0.8550  0.0221
+   74/152  MTMAM+I+F      0h:03:05   3h:11:06          -89824.1632       -  0.0624
+   69/152  RTREV+I+F      0h:07:38   3h:11:22          -85289.0419       -  0.0722
+   73/152  BLOSUM62+I+F   0h:04:39   3h:11:57          -85553.0644       -  0.0743
+   71/152  JTT+I+F        0h:06:54   3h:12:10          -85474.5217       -  0.0745
+   72/152  DCMUT+I+F      0h:06:44   3h:13:09          -86172.1432       -  0.0735
+   58/152  DAYHOFF+I+G4   0h:27:49   3h:13:40          -83373.7155  0.9000  0.0216
+   76/152  LG+I+F         0h:05:00   3h:15:13          -85035.4103       -  0.0735
+   75/152  MTART+I+F      0h:05:42   3h:15:48          -89060.9370       -  0.0620
+   77/152  MTZOA+I+F      0h:09:32   3h:20:38          -87166.7768       -  0.0659
+   82/152  FLU+G4         0h:15:42   3h:29:22          -84234.3592  0.7845       -
+   79/152  STMTREV+G4     0h:18:55   3h:30:52          -86974.7330  0.7273       -
+   80/152  CPREV+G4       0h:20:26   3h:32:36          -83115.9193  0.8100       -
+   81/152  VT+G4          0h:19:32   3h:32:41          -82591.6386  0.8550       -
+   83/152  BLOSUM62+G4    0h:17:43   3h:32:56          -83388.0526  0.8550       -
+   78/152  DAYHOFF+G4     0h:26:36   3h:37:58          -83376.1913  0.8047       -
+   85/152  MTMAM+G4       0h:19:50   3h:40:28          -88013.5340  0.6798       -
+   90/152  PMB+G4         0h:15:20   3h:48:16          -83192.7388  0.8550       -
+   86/152  HIVW+G4        0h:18:56   3h:48:18          -88026.1699  0.7277       -
+   89/152  MTZOA+G4       0h:15:44   3h:48:25          -85191.6583  0.7033       -
+   84/152  JTT-DCMUT+G4   0h:38:13   3h:54:01          -82467.2409  0.8075       -
+   88/152  HIVB+G4        0h:22:42   3h:55:18          -84800.6844  0.7755       -
+   87/152  MTART+G4       0h:26:07   3h:56:59          -87431.3213  0.6741       -
+   97/152  STMTREV+F      0h:01:46   3h:57:04          -90744.4868       -       -
+   92/152  MTREV+G4       0h:17:48   3h:58:16          -85800.1073  0.7528       -
+   98/152  DAYHOFF+F      0h:01:43   3h:58:42          -86863.5281       -       -
+   99/152  FLU+F          0h:01:38   3h:58:42          -87597.6872       -       -
+  100/152  JTT-DCMUT+F    0h:01:44   4h:00:00          -86116.0764       -       -
+  101/152  HIVW+F         0h:01:27   4h:00:09          -91479.8056       -       -
+  102/152  HIVB+F         0h:01:55   4h:00:37          -88684.0023       -       -
+  103/152  PMB+F          0h:01:26   4h:01:26          -86185.9146       -       -
+  104/152  MTZOA+F        0h:01:23   4h:01:32          -87827.9075       -       -
+  105/152  MTART+F        0h:01:25   4h:02:02          -89743.7351       -       -
+   95/152  LG+G4          0h:13:45   4h:02:10          -82364.2119  0.8228       -
+  106/152  MTMAM+F        0h:01:02   4h:02:28          -90536.1712       -       -
+  107/152  BLOSUM62+F     0h:01:41   4h:03:13          -86136.0307       -       -
+  109/152  CPREV+F        0h:01:14   4h:03:24          -86086.7491       -       -
+  108/152  VT+F           0h:01:54   4h:03:56          -85627.4722       -       -
+  110/152  RTREV+F        0h:01:36   4h:04:04          -85896.6714       -       -
+  111/152  WAG+F          0h:01:37   4h:04:50          -85546.7229       -       -
+  112/152  MTREV+F        0h:01:39   4h:05:03          -87403.5158       -       -
+  113/152  JTT+F          0h:01:41   4h:05:37          -86146.7411       -       -
+  114/152  DCMUT+F        0h:01:38   4h:05:42          -86861.6643       -       -
+  115/152  LG+F           0h:01:26   4h:06:16          -85622.4326       -       -
+   91/152  WAG+G4         0h:28:18   4h:06:17          -82498.8984  0.8609       -
+  117/152  STMTREV+I      0h:03:14   4h:08:51          -90583.9058       -  0.0799
+  116/152  LG+I           0h:03:58   4h:09:01          -85328.0725       -  0.0724
+  118/152  FLU+I          0h:05:29   4h:11:11          -87630.7856       -  0.0684
+  120/152  HIVW+I         0h:05:34   4h:11:51          -91794.1015       -  0.0744
+  119/152  JTT-DCMUT+I    0h:06:49   4h:13:05          -85357.4264       -  0.0742
+  122/152  PMB+I          0h:05:01   4h:14:02          -85810.8673       -  0.0744
+   94/152  DCMUT+G4       0h:26:23   4h:14:41          -83382.5467  0.8061       -
+   96/152  RTREV+G4       0h:21:38   4h:15:39          -82864.6314  0.8100       -
+  123/152  MTZOA+I        0h:05:00   4h:16:11          -89600.5002       -  0.0618
+  124/152  MTART+I        0h:04:21   4h:16:12          -92544.7956       -  0.0596
+  121/152  HIVB+I         0h:08:40   4h:17:31          -88330.6155       -  0.0744
+  126/152  BLOSUM62+I     0h:04:14   4h:18:16          -86015.0278       -  0.0739
+  125/152  MTMAM+I        0h:06:02   4h:19:07          -93120.0090       -  0.0589
+  130/152  DAYHOFF+I      0h:03:31   4h:19:43          -86404.4258       -  0.0724
+  127/152  VT+I           0h:06:25   4h:21:06          -85196.9854       -  0.0747
+  132/152  DCMUT+I        0h:03:30   4h:21:46          -86403.1753       -  0.0725
+  128/152  CPREV+I        0h:06:08   4h:21:47          -85966.8240       -  0.0666
+  135/152  JTT-DCMUT      0h:01:37   4h:22:43          -86032.9326       -       -
+  136/152  DAYHOFF        0h:01:25   4h:23:11          -87083.7826       -       -
+  137/152  LG             0h:01:40   4h:23:27          -85952.0402       -       -
+  133/152  MTREV+I        0h:04:39   4h:23:46          -89580.8518       -  0.0609
+  138/152  DCMUT          0h:01:25   4h:24:08          -87082.1616       -       -
+  139/152  STMTREV        0h:01:11   4h:24:22          -91577.3522       -       -
+  129/152  RTREV+I        0h:08:36   4h:24:47          -85768.9875       -  0.0675
+  140/152  JTT            0h:01:50   4h:25:17          -86068.6519       -       -
+  142/152  FLU            0h:01:24   4h:25:32          -88317.5504       -       -
+  141/152  MTREV          0h:01:51   4h:25:37          -90169.3369       -       -
+  143/152  WAG            0h:01:22   4h:25:44          -85836.3080       -       -
+  131/152  WAG+I          0h:08:38   4h:26:09          -85191.5695       -  0.0735
+  145/152  PMB            0h:00:58   4h:26:15          -86401.0498       -       -
+  144/152  RTREV          0h:01:36   4h:26:23          -86385.1176       -       -
+  134/152  JTT+I          0h:06:54   4h:26:37          -85382.8964       -  0.0744
+  146/152  CPREV          0h:01:10   4h:26:42          -86605.3884       -       -
+  147/152  VT             0h:01:24   4h:27:01          -85813.0085       -       -
+  148/152  HIVW           0h:01:20   4h:27:04          -92703.0584       -       -
+  149/152  BLOSUM62       0h:01:11   4h:27:20          -86589.5234       -       -
+  152/152  MTART          0h:01:11   4h:27:48          -93230.9131       -       -
+  150/152  MTMAM          0h:01:54   4h:28:09          -93817.4906       -       -
+  153/152  MTZOA          0h:01:38   4h:28:20          -90241.8879       -       -
+  151/152  HIVB           0h:02:23   4h:28:46          -89091.9951       -       -
+   93/152  JTT+G4         0h:40:36   4h:28:52          -82485.9645  0.8046       -
+ ----ID---  ----MODEL---- ---Time--- -Elapsed--- -------LnL------- -Alpha- -P-inv-
+
+Computation of likelihood scores completed. It took 4h:28:52
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  LG+G4+F           20    -81991.1149    165717.1382         0.0000    0.9967
+       2  LG+I+G4+F         21    -81992.8321    165728.5676        11.4294    0.0033
+       3  WAG+G4+F          20    -82244.0133    166222.9350       505.7967    0.0000
+       4  WAG+I+G4+F        21    -82245.2548    166233.4129       516.2747    0.0000
+       5  LG+G4              1    -82364.2119    166311.4278       594.2896    0.0000
+       6  LG+I+G4            2    -82366.2423    166323.4835       606.3453    0.0000
+       7  RTREV+G4+F        20    -82300.0629    166335.0341       617.8959    0.0000
+       8  RTREV+I+G4+F      21    -82300.7384    166344.3802       627.2420    0.0000
+       9  JTT-DCMUT+G4       1    -82467.2409    166517.4859       800.3476    0.0000
+      10  JTT-DCMUT+I+G4     2    -82468.7256    166528.4501       811.3119    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              LG+G4+F
+lnL:                -81991.1149
+Frequencies:        0.0885 0.0462 0.0401 0.0506 0.0148 0.0369 0.0396 0.0647 0.0229 0.0477 0.0902 0.0308 0.0160 0.0448 0.0845 0.0859 0.0758 0.0188 0.0351 0.0662
+Inv. sites prop:    -
+Gamma shape:        0.7805
+Score:              165717.1382
+Weight:             0.9967
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.9967
+Gamma-Inv:          0.0033
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.7805
+Alpha-P.Inv:        0.8550
+P.Inv-Alpha:        0.0219
+Frequencies:        0.0885 0.0462 0.0401 0.0506 0.0148 0.0369 0.0396 0.0647 0.0229 0.0477 0.0902 0.0308 0.0160 0.0448 0.0845 0.0859 0.0758 0.0188 0.0351 0.0662 
+
+Commands:
+  > phyml  -i orf_alignment.fasta -d aa -m LG -f e -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s orf_alignment.fasta -m PROTGAMMALGF -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa orf_alignment.fasta --model LG+G4+F
+  > paup -s orf_alignment.fasta
+  > iqtree -s orf_alignment.fasta -m LG+G4+F
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  LG+G4+F           20    -81991.1149    164416.2298         0.0000    0.9380
+       2  LG+I+G4+F         21    -81992.8321    164421.6643         5.4344    0.0620
+       3  WAG+G4+F          20    -82244.0133    164922.0266       505.7967    0.0000
+       4  WAG+I+G4+F        21    -82245.2548    164926.5096       510.2798    0.0000
+       5  RTREV+G4+F        20    -82300.0629    165034.1257       617.8959    0.0000
+       6  RTREV+I+G4+F      21    -82300.7384    165037.4769       621.2470    0.0000
+       7  LG+G4              1    -82364.2119    165124.4238       708.1940    0.0000
+       8  LG+I+G4            2    -82366.2423    165130.4845       714.2547    0.0000
+       9  VT+G4+F           20    -82398.4603    165230.9205       814.6907    0.0000
+      10  VT+I+G4+F         21    -82401.3392    165238.6784       822.4486    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              LG+G4+F
+lnL:                -81991.1149
+Frequencies:        0.0885 0.0462 0.0401 0.0506 0.0148 0.0369 0.0396 0.0647 0.0229 0.0477 0.0902 0.0308 0.0160 0.0448 0.0845 0.0859 0.0758 0.0188 0.0351 0.0662
+Inv. sites prop:    -
+Gamma shape:        0.7805
+Score:              164416.2298
+Weight:             0.9380
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.9380
+Gamma-Inv:          0.0620
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.7805
+Alpha-P.Inv:        0.8550
+P.Inv-Alpha:        0.0219
+Frequencies:        0.0885 0.0462 0.0401 0.0506 0.0148 0.0369 0.0396 0.0647 0.0229 0.0477 0.0902 0.0308 0.0160 0.0448 0.0845 0.0859 0.0758 0.0188 0.0351 0.0662 
+
+Commands:
+  > phyml  -i orf_alignment.fasta -d aa -m LG -f e -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s orf_alignment.fasta -m PROTGAMMALGF -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa orf_alignment.fasta --model LG+G4+F
+  > paup -s orf_alignment.fasta
+  > iqtree -s orf_alignment.fasta -m LG+G4+F
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  LG+G4+F           20    -81991.1149    164450.2298         0.0000    0.9380
+       2  LG+I+G4+F         21    -81992.8321    164455.6643         5.4344    0.0620
+       3  WAG+G4+F          20    -82244.0133    164956.0266       505.7967    0.0000
+       4  WAG+I+G4+F        21    -82245.2548    164960.5096       510.2798    0.0000
+       5  RTREV+G4+F        20    -82300.0629    165068.1257       617.8959    0.0000
+       6  RTREV+I+G4+F      21    -82300.7384    165071.4769       621.2470    0.0000
+       7  LG+G4              1    -82364.2119    165152.4238       702.1940    0.0000
+       8  LG+I+G4            2    -82366.2423    165158.4845       708.2547    0.0000
+       9  VT+G4+F           20    -82398.4603    165264.9205       814.6907    0.0000
+      10  VT+I+G4+F         21    -82401.3392    165272.6784       822.4486    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              LG+G4+F
+lnL:                -81991.1149
+Frequencies:        0.0885 0.0462 0.0401 0.0506 0.0148 0.0369 0.0396 0.0647 0.0229 0.0477 0.0902 0.0308 0.0160 0.0448 0.0845 0.0859 0.0758 0.0188 0.0351 0.0662
+Inv. sites prop:    -
+Gamma shape:        0.7805
+Score:              164450.2298
+Weight:             0.9380
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.9380
+Gamma-Inv:          0.0620
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.7805
+Alpha-P.Inv:        0.8550
+P.Inv-Alpha:        0.0219
+Frequencies:        0.0885 0.0462 0.0401 0.0506 0.0148 0.0369 0.0396 0.0647 0.0229 0.0477 0.0902 0.0308 0.0160 0.0448 0.0845 0.0859 0.0758 0.0188 0.0351 0.0662 
+
+Commands:
+  > phyml  -i orf_alignment.fasta -d aa -m LG -f e -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s orf_alignment.fasta -m PROTGAMMALGF -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa orf_alignment.fasta --model LG+G4+F
+  > paup -s orf_alignment.fasta
+  > iqtree -s orf_alignment.fasta -m LG+G4+F
+
+There are 97 different topologies
+Topologies written to orf_alignment.fasta.topos
+
+topo_id   models_count   bic_support   aic_support   aicc_support
+-----------------------------------------------------------------
+      3              2       1.00000       1.00000       1.00000
+      2              6       0.00000       0.00000       0.00000
+     31              5       0.00000       0.00000       0.00000
+     20              1       0.00000       0.00000       0.00000
+      6              1       0.00000       0.00000       0.00000
+     35              5       0.00000       0.00000       0.00000
+      8              2       0.00000       0.00000       0.00000
+     30              2       0.00000       0.00000       0.00000
+     34              6       0.00000       0.00000       0.00000
+     25              1       0.00000       0.00000       0.00000
+     15              4       0.00000       0.00000       0.00000
+      4              4       0.00000       0.00000       0.00000
+     24              2       0.00000       0.00000       0.00000
+      7              2       0.00000       0.00000       0.00000
+     57              2       0.00000       0.00000       0.00000
+     76              1       0.00000       0.00000       0.00000
+     75              1       0.00000       0.00000       0.00000
+     74              1       0.00000       0.00000       0.00000
+     73              1       0.00000       0.00000       0.00000
+     72              1       0.00000       0.00000       0.00000
+     71              1       0.00000       0.00000       0.00000
+     70              1       0.00000       0.00000       0.00000
+     69              1       0.00000       0.00000       0.00000
+     68              1       0.00000       0.00000       0.00000
+     97              1       0.00000       0.00000       0.00000
+     67              2       0.00000       0.00000       0.00000
+     66              1       0.00000       0.00000       0.00000
+     65              1       0.00000       0.00000       0.00000
+     64              1       0.00000       0.00000       0.00000
+     63              1       0.00000       0.00000       0.00000
+     62              1       0.00000       0.00000       0.00000
+     61              1       0.00000       0.00000       0.00000
+     60              2       0.00000       0.00000       0.00000
+     59              1       0.00000       0.00000       0.00000
+     58              1       0.00000       0.00000       0.00000
+     87              1       0.00000       0.00000       0.00000
+      1              2       0.00000       0.00000       0.00000
+     96              1       0.00000       0.00000       0.00000
+     95              1       0.00000       0.00000       0.00000
+     94              1       0.00000       0.00000       0.00000
+     93              1       0.00000       0.00000       0.00000
+     92              1       0.00000       0.00000       0.00000
+     91              2       0.00000       0.00000       0.00000
+     90              1       0.00000       0.00000       0.00000
+     89              1       0.00000       0.00000       0.00000
+     88              1       0.00000       0.00000       0.00000
+     77              1       0.00000       0.00000       0.00000
+     86              1       0.00000       0.00000       0.00000
+     85              2       0.00000       0.00000       0.00000
+     84              1       0.00000       0.00000       0.00000
+     83              1       0.00000       0.00000       0.00000
+     82              2       0.00000       0.00000       0.00000
+     81              1       0.00000       0.00000       0.00000
+     80              1       0.00000       0.00000       0.00000
+     79              1       0.00000       0.00000       0.00000
+     78              1       0.00000       0.00000       0.00000
+     18              1       0.00000       0.00000       0.00000
+     33              2       0.00000       0.00000       0.00000
+     32              2       0.00000       0.00000       0.00000
+     29              2       0.00000       0.00000       0.00000
+     28              2       0.00000       0.00000       0.00000
+     27              2       0.00000       0.00000       0.00000
+     26              1       0.00000       0.00000       0.00000
+     23              1       0.00000       0.00000       0.00000
+     22              4       0.00000       0.00000       0.00000
+     21              2       0.00000       0.00000       0.00000
+     19              1       0.00000       0.00000       0.00000
+     36              3       0.00000       0.00000       0.00000
+     17              1       0.00000       0.00000       0.00000
+     16              1       0.00000       0.00000       0.00000
+     14              2       0.00000       0.00000       0.00000
+     13              1       0.00000       0.00000       0.00000
+     12              2       0.00000       0.00000       0.00000
+     11              1       0.00000       0.00000       0.00000
+     10              2       0.00000       0.00000       0.00000
+      9              2       0.00000       0.00000       0.00000
+      5              2       0.00000       0.00000       0.00000
+     46              1       0.00000       0.00000       0.00000
+     55              2       0.00000       0.00000       0.00000
+     54              2       0.00000       0.00000       0.00000
+     53              1       0.00000       0.00000       0.00000
+     52              1       0.00000       0.00000       0.00000
+     51              1       0.00000       0.00000       0.00000
+     50              1       0.00000       0.00000       0.00000
+     49              1       0.00000       0.00000       0.00000
+     48              1       0.00000       0.00000       0.00000
+     47              1       0.00000       0.00000       0.00000
+     56              1       0.00000       0.00000       0.00000
+     45              1       0.00000       0.00000       0.00000
+     44              1       0.00000       0.00000       0.00000
+     43              1       0.00000       0.00000       0.00000
+     42              1       0.00000       0.00000       0.00000
+     41              1       0.00000       0.00000       0.00000
+     40              1       0.00000       0.00000       0.00000
+     39              1       0.00000       0.00000       0.00000
+     38              1       0.00000       0.00000       0.00000
+     37              2       0.00000       0.00000       0.00000
+
+extended majority-rule consensus: ((DQ028632_-_polyprotein_CDS Aichi virus isolate Goiania/GO/03/01/Brazil, complete genome,(MT766372.1_-_polyprotein_CDS |Kobuvirus sp. isolate CHN/XJ/env/2018/ht8-ctg1, complete genome,FJ890523_-_polyprotein_CDS Aichi virus isolate Chshc7, complete genome)[1.00000])[1.00000],(NC_001918_-_polyprotein_CDS Aichi virus, complete genome,AB040749_-_polyprotein_CDS Aichi virus genomic RNA, complete genome)[1.00000],((MN116647_-_polyprotein_CDS Aichivirus A strain rat08/rAiA/HUN, complete genome,(((((MN337880_-_polyprotein_CDS Canine kobuvirus strain S272/16, complete genome,KC161964_-_polyprotein_CDS Canine kobuvirus strain UK003, complete genome)[1.00000],(KM068048_-_polyprotein_CDS Canine kobuvirus 1 isolate DD2 polyprotein mRNA, complete cds,((KF924623_-_polyprotein_CDS Canine kobuvirus 1 isolate 12D049, complete genome,(JQ911763_-_polyprotein_CDS Canine kobuvirus CH-1, complete genome,(MN449341_-_polyprotein_CDS Canine kobuvirus isolate CaKoV AH-1/CHN/2019, complete genome,NC_034971_-_polyprotein_CDS Canine kobuvirus isolate SMCD-59, complete genome)[1.00000])[1.00000])[1.00000],(MH747478_-_polyprotein_CDS Canine kobuvirus strain CaKoV-26, complete genome,JN088541_-_polyprotein_CDS Canine kobuvirus US-PC0082, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(KM068051_-_polyprotein_CDS Canine kobuvirus 1 isolate B103 polyprotein mRNA, complete cds,(KM068049_-_polyprotein_CDS Canine kobuvirus 1 isolate 82 polyprotein mRNA, complete cds,KM068050_-_polyprotein_CDS Canine kobuvirus 1 isolate 75 polyprotein mRNA, complete cds)[1.00000])[1.00000])[1.00000],(KJ958930_-_polyprotein_CDS Feline kobuvirus isolate 12D240, complete genome,((MF598159_-_polyprotein_CDS Feline kobuvirus strain WHJ-1, complete genome,(MK671314_-_polyprotein_CDS Feline kobuvirus isolate FKV/18CC0503, complete genome,MK671315_-_polyprotein_CDS Feline kobuvirus isolate FKV/18CC0718, complete genome)[1.00000])[1.00000],(KM091960_-_polyprotein_CDS Feline kobuvirus strain FeKoV/TE/52/IT/13, complete genome,KF831027_-_polyprotein_CDS Feline kobuvirus strain FK-13, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(NC_015936_-_polyprotein_CDS Mouse kobuvirus M-5/USA/2010, complete genome,(OM140655_-_polyprotein_CDS Marmot kobuvirus strain MCKV/XJ3/CHN/2016, complete genome,KY855436_-_polyprotein_CDS Marmot kobuvirus strain HT9, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(NODE_4_-_polyprotein_CDS,(KJ934637_-_polyprotein_CDS Kobuvirus SZAL6-KoV/2011/HUN, complete genome,((((GU245693_-_polyprotein_CDS Aichivirus B3 strain sheep/TB3/HUN/2009, complete genome,(((MW605074_-_polyprotein_CDS Bovine kobuvirus strain 1043507, complete genome,MN336260_-_polyprotein_CDS Bovine kobuvirus strain IL35164, complete genome)[1.00000],(KY407744_-_polyprotein_CDS Bovine kobuvirus strain BKoV/EGY-1, complete genome,NC_004421_-_hypothetical_protein_CDS Aichivirus B genomic RNA, complete genome, strain:U-1)[1.00000])[1.00000],(ON075052_-_polyprotein_CDS Bovine kobuvirus isolate BKV3/2021/CHN, complete genome,(ON075053_-_polyprotein_CDS Bovine kobuvirus isolate BKV4/2021/CHN, complete genome,((ON075054_-_polyprotein_CDS Bovine kobuvirus isolate BKV6/2021/CHN, complete genome,ON075056_-_polyprotein_CDS Bovine kobuvirus isolate BKV8/2021/CHN, complete genome)[1.00000],(ON075051_-_polyprotein_CDS Bovine kobuvirus isolate BKV2/2021/CHN, complete genome,(ON075050_-_polyprotein_CDS Bovine kobuvirus isolate BKV1/2021/CHN, complete genome,(ON075055_-_polyprotein_CDS Bovine kobuvirus isolate BKV7/2021/CHN, complete genome,MZ603734_-_polyprotein_CDS Bovine kobuvirus isolate BKoV/CN/HB-SJZ/2021, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],((MT584793_-_polyprotein_CDS Caprine kobuvirus isolate CKoV-China/SWUN/F11/2019, complete genome,(MN604700_-_polyprotein_CDS Caprine kobuvirus isolate MN1/2018, complete genome,NC_023422_-_polyprotein_CDS Caprine kobuvirus isolate 12Q108, complete genome)[1.00000])[1.00000],((((LC210621_-_polyprotein_CDS Porcine kobuvirus genomic RNA, complete genome, strain: PoKoV/Tochigi-IO3/JPN/2014,KM977675_-_polyprotein_CDS Porcine kobuvirus isolate OH/RV50/2011, complete genome)[1.00000],(MN807751_-_polyprotein_CDS Porcine kobuvirus strain SZ1M-F/PKV/HUN/2013, complete genome,(((MT211964_-_polyprotein_CDS Porcine kobuvirus isolate EdoMex/2018/205, complete genome,MF506730_-_polyprotein_CDS Porcine kobuvirus isolate OH/RV11/2011, complete genome)[1.00000],(((GU292559_-_polyprotein_CDS Kobuvirus pig/JY-2010a/CHN isolate Y-1-CHI, complete genome,(KY234500_-_polyprotein_CDS Porcine kobuvirus isolate JXJC2015, complete genome,KC424640_-_polyprotein_CDS Porcine kobuvirus isolate GS-2/2012/CH, complete genome)[1.00000])[1.00000],(KC424638_-_polyprotein_CDS Porcine kobuvirus isolate K-4/2012/CH, complete genome,KC424639_-_polyprotein_CDS Porcine kobuvirus isolate GS-1/2012/CH, complete genome)[1.00000])[1.00000],(JQ692069_-_polyprotein_CDS Porcine kobuvirus strain WUH1, complete genome,((MZ334483_-_polyprotein_CDS Porcine kobuvirus strain FoPro-213.14/GER/2018, complete genome,LT898428_-_polyprotein_CDS Porcine kobuvirus isolate PKV_GER_L00919-K17_14-02_2014 genome assembly, complete genome: monopartite)[1.00000],(MT125685_-_polyprotein_CDS Porcine kobuvirus isolate swine/HBYT/2018/China, complete genome,OK315318_-_polyprotein_CDS Porcine kobuvirus isolate Wuhan2020, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(GQ249161_-_polyprotein_CDS Porcine kobuvirus swine/K-30-HUN/2008/HUN, complete genome,NC_011829_-_polyprotein_CDS Porcine kobuvirus swine/S-1-HUN/2007/Hungary, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(KC414936_-_polyprotein_CDS Porcine kobuvirus isolate K-11/2012/CH, complete genome,(((KP144318_-_polyprotein_CDS Porcine kobuvirus JS-01-CHN/2013/China, complete genome,NC_027054_-_polyprotein_CDS Porcine kobuvirus isolate JS-02a-CHN/2014/China, complete genome)[1.00000],((MT125684_-_polyprotein_CDS Porcine kobuvirus isolate swine/JX-3/2013/China, complete genome,(MT125683_-_polyprotein_CDS Porcine kobuvirus isolate swine/JX-2/2013/China, complete genome,(KJ452348.1_-_polyprotein_CDS |Porcine kobuvirus isolate CH/DX/2012, complete genome,MT125682_-_polyprotein_CDS Porcine kobuvirus isolate swine/JX-1/2013/China, complete genome)[1.00000])[1.00000])[1.00000],(NC_016769_-_polyprotein_CDS Porcine kobuvirus SH-W-CHN/2010/China, complete genome,(KM051987_-_polyprotein_CDS Porcine kobuvirus strain CH/KB-1/2014, complete genome,(JX401523_-_polyprotein_CDS Porcine kobuvirus isolate CH/HNXX-4/2012, complete genome,(KC204684_-_polyprotein_CDS Porcine kobuvirus isolate XX, complete genome,KF539763_-_polyprotein_CDS Porcine kobuvirus isolate swKoV CH441, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(KY234499_-_polyprotein_CDS Porcine kobuvirus isolate JXAT2015, complete genome,KF695124_-_polyprotein_CDS Porcine kobuvirus isolate ch-kobu/2008/China, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(MK962329_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P2B/2017, complete genome,((MK962327_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P259/2017, complete genome,MK962331_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P284/2017, complete genome)[1.00000],((MK962323_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P37/2017, complete genome,MK962320_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/C247/2017, complete genome)[1.00000],(((MK962330_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P452/2017, complete genome,MK962335_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/VC8/2017, complete genome)[1.00000],(MK962334_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/VC14/2017, complete genome,(MK962321_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P393/2017, complete genome,(MK962332_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/C375/2017, complete genome,(JX177612_-_polyprotein_CDS Porcine kobuvirus strain WB-1-HUN/2011/HUN, complete genome,(MK962324_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P437/2017, complete genome,MK962326_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/C429/2017, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(MK962333_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P461/2017, complete genome,(MK962328_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/B304/2017, complete genome,(MK962322_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/VC20B/2017, complete genome,MK962325_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/VT25C/2017, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(NC_027919_-_polyprotein_CDS Kobuvirus cattle/Kagoshima-1-22-KoV/2014/JPN genomic RNA, nearly complete genome, strain: Kagoshima-1-22-KoV/2014/JPN,(MW296158_-_polyprotein_CDS Ovine kobuvirus isolate SKoV-China/SWUN/AB18/2019, complete genome,NC_027918_-_polyprotein_CDS Kobuvirus cattle/Kagoshima-2-24-KoV/2015/JPN genomic RNA, complete genome, strain: Kagoshima-2-24-KoV/2015/JPN)[1.00000])[1.00000])[1.00000],(NC_026314_-_polyprotein_CDS Rabbit kobuvirus isolate Berlin/Jan2011/0572, complete genome,(KT325852_-_polyprotein_CDS Rabbit picornavirus strain Rabbit01/2013/HUN, complete genome,(MF352427.1_-_polyprotein_CDS |Miniopterus picornavirus 2 strain Henan-Ms56-2 polyprotein gene, complete cds,MN602325_-_polyprotein_CDS Bat picornavirus strain ITA/2017/189/18-155, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000]);
+strict consensus: ((DQ028632_-_polyprotein_CDS Aichi virus isolate Goiania/GO/03/01/Brazil, complete genome,(MT766372.1_-_polyprotein_CDS |Kobuvirus sp. isolate CHN/XJ/env/2018/ht8-ctg1, complete genome,FJ890523_-_polyprotein_CDS Aichi virus isolate Chshc7, complete genome)[1.00000])[1.00000],(NC_001918_-_polyprotein_CDS Aichi virus, complete genome,AB040749_-_polyprotein_CDS Aichi virus genomic RNA, complete genome)[1.00000],((MN116647_-_polyprotein_CDS Aichivirus A strain rat08/rAiA/HUN, complete genome,(((((MN337880_-_polyprotein_CDS Canine kobuvirus strain S272/16, complete genome,KC161964_-_polyprotein_CDS Canine kobuvirus strain UK003, complete genome)[1.00000],(KM068048_-_polyprotein_CDS Canine kobuvirus 1 isolate DD2 polyprotein mRNA, complete cds,((KF924623_-_polyprotein_CDS Canine kobuvirus 1 isolate 12D049, complete genome,(JQ911763_-_polyprotein_CDS Canine kobuvirus CH-1, complete genome,(MN449341_-_polyprotein_CDS Canine kobuvirus isolate CaKoV AH-1/CHN/2019, complete genome,NC_034971_-_polyprotein_CDS Canine kobuvirus isolate SMCD-59, complete genome)[1.00000])[1.00000])[1.00000],(MH747478_-_polyprotein_CDS Canine kobuvirus strain CaKoV-26, complete genome,JN088541_-_polyprotein_CDS Canine kobuvirus US-PC0082, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(KM068051_-_polyprotein_CDS Canine kobuvirus 1 isolate B103 polyprotein mRNA, complete cds,(KM068049_-_polyprotein_CDS Canine kobuvirus 1 isolate 82 polyprotein mRNA, complete cds,KM068050_-_polyprotein_CDS Canine kobuvirus 1 isolate 75 polyprotein mRNA, complete cds)[1.00000])[1.00000])[1.00000],(KJ958930_-_polyprotein_CDS Feline kobuvirus isolate 12D240, complete genome,((MF598159_-_polyprotein_CDS Feline kobuvirus strain WHJ-1, complete genome,(MK671314_-_polyprotein_CDS Feline kobuvirus isolate FKV/18CC0503, complete genome,MK671315_-_polyprotein_CDS Feline kobuvirus isolate FKV/18CC0718, complete genome)[1.00000])[1.00000],(KM091960_-_polyprotein_CDS Feline kobuvirus strain FeKoV/TE/52/IT/13, complete genome,KF831027_-_polyprotein_CDS Feline kobuvirus strain FK-13, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(NC_015936_-_polyprotein_CDS Mouse kobuvirus M-5/USA/2010, complete genome,(OM140655_-_polyprotein_CDS Marmot kobuvirus strain MCKV/XJ3/CHN/2016, complete genome,KY855436_-_polyprotein_CDS Marmot kobuvirus strain HT9, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(NODE_4_-_polyprotein_CDS,(KJ934637_-_polyprotein_CDS Kobuvirus SZAL6-KoV/2011/HUN, complete genome,((((GU245693_-_polyprotein_CDS Aichivirus B3 strain sheep/TB3/HUN/2009, complete genome,(((MW605074_-_polyprotein_CDS Bovine kobuvirus strain 1043507, complete genome,MN336260_-_polyprotein_CDS Bovine kobuvirus strain IL35164, complete genome)[1.00000],(KY407744_-_polyprotein_CDS Bovine kobuvirus strain BKoV/EGY-1, complete genome,NC_004421_-_hypothetical_protein_CDS Aichivirus B genomic RNA, complete genome, strain:U-1)[1.00000])[1.00000],(ON075052_-_polyprotein_CDS Bovine kobuvirus isolate BKV3/2021/CHN, complete genome,(ON075053_-_polyprotein_CDS Bovine kobuvirus isolate BKV4/2021/CHN, complete genome,((ON075054_-_polyprotein_CDS Bovine kobuvirus isolate BKV6/2021/CHN, complete genome,ON075056_-_polyprotein_CDS Bovine kobuvirus isolate BKV8/2021/CHN, complete genome)[1.00000],(ON075051_-_polyprotein_CDS Bovine kobuvirus isolate BKV2/2021/CHN, complete genome,(ON075050_-_polyprotein_CDS Bovine kobuvirus isolate BKV1/2021/CHN, complete genome,(ON075055_-_polyprotein_CDS Bovine kobuvirus isolate BKV7/2021/CHN, complete genome,MZ603734_-_polyprotein_CDS Bovine kobuvirus isolate BKoV/CN/HB-SJZ/2021, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],((MT584793_-_polyprotein_CDS Caprine kobuvirus isolate CKoV-China/SWUN/F11/2019, complete genome,(MN604700_-_polyprotein_CDS Caprine kobuvirus isolate MN1/2018, complete genome,NC_023422_-_polyprotein_CDS Caprine kobuvirus isolate 12Q108, complete genome)[1.00000])[1.00000],((((LC210621_-_polyprotein_CDS Porcine kobuvirus genomic RNA, complete genome, strain: PoKoV/Tochigi-IO3/JPN/2014,KM977675_-_polyprotein_CDS Porcine kobuvirus isolate OH/RV50/2011, complete genome)[1.00000],(MN807751_-_polyprotein_CDS Porcine kobuvirus strain SZ1M-F/PKV/HUN/2013, complete genome,(((MT211964_-_polyprotein_CDS Porcine kobuvirus isolate EdoMex/2018/205, complete genome,MF506730_-_polyprotein_CDS Porcine kobuvirus isolate OH/RV11/2011, complete genome)[1.00000],(((GU292559_-_polyprotein_CDS Kobuvirus pig/JY-2010a/CHN isolate Y-1-CHI, complete genome,(KY234500_-_polyprotein_CDS Porcine kobuvirus isolate JXJC2015, complete genome,KC424640_-_polyprotein_CDS Porcine kobuvirus isolate GS-2/2012/CH, complete genome)[1.00000])[1.00000],(KC424638_-_polyprotein_CDS Porcine kobuvirus isolate K-4/2012/CH, complete genome,KC424639_-_polyprotein_CDS Porcine kobuvirus isolate GS-1/2012/CH, complete genome)[1.00000])[1.00000],(JQ692069_-_polyprotein_CDS Porcine kobuvirus strain WUH1, complete genome,((MZ334483_-_polyprotein_CDS Porcine kobuvirus strain FoPro-213.14/GER/2018, complete genome,LT898428_-_polyprotein_CDS Porcine kobuvirus isolate PKV_GER_L00919-K17_14-02_2014 genome assembly, complete genome: monopartite)[1.00000],(MT125685_-_polyprotein_CDS Porcine kobuvirus isolate swine/HBYT/2018/China, complete genome,OK315318_-_polyprotein_CDS Porcine kobuvirus isolate Wuhan2020, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(GQ249161_-_polyprotein_CDS Porcine kobuvirus swine/K-30-HUN/2008/HUN, complete genome,NC_011829_-_polyprotein_CDS Porcine kobuvirus swine/S-1-HUN/2007/Hungary, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(KC414936_-_polyprotein_CDS Porcine kobuvirus isolate K-11/2012/CH, complete genome,(((KP144318_-_polyprotein_CDS Porcine kobuvirus JS-01-CHN/2013/China, complete genome,NC_027054_-_polyprotein_CDS Porcine kobuvirus isolate JS-02a-CHN/2014/China, complete genome)[1.00000],((MT125684_-_polyprotein_CDS Porcine kobuvirus isolate swine/JX-3/2013/China, complete genome,(MT125683_-_polyprotein_CDS Porcine kobuvirus isolate swine/JX-2/2013/China, complete genome,(KJ452348.1_-_polyprotein_CDS |Porcine kobuvirus isolate CH/DX/2012, complete genome,MT125682_-_polyprotein_CDS Porcine kobuvirus isolate swine/JX-1/2013/China, complete genome)[1.00000])[1.00000])[1.00000],(NC_016769_-_polyprotein_CDS Porcine kobuvirus SH-W-CHN/2010/China, complete genome,(KM051987_-_polyprotein_CDS Porcine kobuvirus strain CH/KB-1/2014, complete genome,(JX401523_-_polyprotein_CDS Porcine kobuvirus isolate CH/HNXX-4/2012, complete genome,(KC204684_-_polyprotein_CDS Porcine kobuvirus isolate XX, complete genome,KF539763_-_polyprotein_CDS Porcine kobuvirus isolate swKoV CH441, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(KY234499_-_polyprotein_CDS Porcine kobuvirus isolate JXAT2015, complete genome,KF695124_-_polyprotein_CDS Porcine kobuvirus isolate ch-kobu/2008/China, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(MK962329_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P2B/2017, complete genome,((MK962327_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P259/2017, complete genome,MK962331_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P284/2017, complete genome)[1.00000],((MK962323_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P37/2017, complete genome,MK962320_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/C247/2017, complete genome)[1.00000],(((MK962330_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P452/2017, complete genome,MK962335_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/VC8/2017, complete genome)[1.00000],(MK962334_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/VC14/2017, complete genome,(MK962321_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P393/2017, complete genome,(MK962332_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/C375/2017, complete genome,(JX177612_-_polyprotein_CDS Porcine kobuvirus strain WB-1-HUN/2011/HUN, complete genome,(MK962324_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P437/2017, complete genome,MK962326_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/C429/2017, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(MK962333_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/P461/2017, complete genome,(MK962328_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/B304/2017, complete genome,(MK962322_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/VC20B/2017, complete genome,MK962325_-_polyprotein_CDS Porcine kobuvirus strain KobuV/Pig-wt/ESP/VT25C/2017, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(NC_027919_-_polyprotein_CDS Kobuvirus cattle/Kagoshima-1-22-KoV/2014/JPN genomic RNA, nearly complete genome, strain: Kagoshima-1-22-KoV/2014/JPN,(MW296158_-_polyprotein_CDS Ovine kobuvirus isolate SKoV-China/SWUN/AB18/2019, complete genome,NC_027918_-_polyprotein_CDS Kobuvirus cattle/Kagoshima-2-24-KoV/2015/JPN genomic RNA, complete genome, strain: Kagoshima-2-24-KoV/2015/JPN)[1.00000])[1.00000])[1.00000],(NC_026314_-_polyprotein_CDS Rabbit kobuvirus isolate Berlin/Jan2011/0572, complete genome,(KT325852_-_polyprotein_CDS Rabbit picornavirus strain Rabbit01/2013/HUN, complete genome,(MF352427.1_-_polyprotein_CDS |Miniopterus picornavirus 2 strain Henan-Ms56-2 polyprotein gene, complete cds,MN602325_-_polyprotein_CDS Bat picornavirus strain ITA/2017/189/18-155, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000]);
+
+Summary:
+
+Partition 1/1:
+                         Model         Score        Weight
+----------------------------------------------------------
+       BIC             LG+G4+F   165717.1382        0.9967
+       AIC             LG+G4+F   164416.2298        0.9380
+      AICc             LG+G4+F   164450.2298        0.9380
+
+Execution results written to orf_alignment.fasta.out
+Starting tree written to orf_alignment.fasta.tree

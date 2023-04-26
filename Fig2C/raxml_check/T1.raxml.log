@@ -1,0 +1,47 @@
+
+RAxML-NG v. 1.1 released on 29.11.2021 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Intel(R) Xeon(R) Gold 6248 CPU @ 2.50GHz, 40 cores, 1511 GB RAM
+
+RAxML-NG was called at 24-Aug-2022 17:56:50 as follows:
+
+raxml-ng-mpi --check --msa orf_raxml.fasta --model LG+G4+F --prefix T1
+
+Analysis options:
+  run mode: Alignment validation
+  start tree(s): 
+  random seed: 1661381811
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+[00:00:01] Reading alignment from file: orf_raxml.fasta
+[00:00:01] Loaded alignment with 100 taxa and 2966 sites
+
+WARNING: Fully undetermined columns found: 1
+
+NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
+NOTE: was saved to: /lustre/work/cresslerlab/fgonzalez3/BrookLab/final_trees/orf_tree/rabovirus_outgroup/raxml_check/T1.raxml.reduced.phy
+
+Alignment comprises 1 partitions and 2965 sites
+
+Partition 0: noname
+Model: LG+FC+G4m
+Alignment sites: 2965
+Gaps: 16.90 %
+Invariant sites: 17.74 %
+
+
+
+Alignment can be successfully read by RAxML-NG.
+
+
+Execution log saved to: /lustre/work/cresslerlab/fgonzalez3/BrookLab/final_trees/orf_tree/rabovirus_outgroup/raxml_check/T1.raxml.log
+
+Analysis started: 24-Aug-2022 17:56:50 / finished: 24-Aug-2022 17:56:51
+
+Elapsed time: 1.029 seconds
+

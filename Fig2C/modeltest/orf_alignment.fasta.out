@@ -1,0 +1,177 @@
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        orf_alignment.fasta
+  Tree:       Maximum likelihood
+    file:           -
+  #taxa:            100
+  #sites:           2966
+  #patterns:        2562
+  Max. thread mem:  619 MB
+
+Output:
+  Log:           orf_alignment.fasta.log
+  Starting tree: orf_alignment.fasta.tree
+  Results:       orf_alignment.fasta.out
+
+Selection options:
+  # protein matrices: 19
+  # protein models:   152
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: false
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          8/8
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  LG+G4+F           20    -81991.1149    165717.1382         0.0000    0.9967
+       2  LG+I+G4+F         21    -81992.8321    165728.5676        11.4294    0.0033
+       3  WAG+G4+F          20    -82244.0133    166222.9350       505.7967    0.0000
+       4  WAG+I+G4+F        21    -82245.2548    166233.4129       516.2747    0.0000
+       5  LG+G4              1    -82364.2119    166311.4278       594.2896    0.0000
+       6  LG+I+G4            2    -82366.2423    166323.4835       606.3453    0.0000
+       7  RTREV+G4+F        20    -82300.0629    166335.0341       617.8959    0.0000
+       8  RTREV+I+G4+F      21    -82300.7384    166344.3802       627.2420    0.0000
+       9  JTT-DCMUT+G4       1    -82467.2409    166517.4859       800.3476    0.0000
+      10  JTT-DCMUT+I+G4     2    -82468.7256    166528.4501       811.3119    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              LG+G4+F
+lnL:                -81991.1149
+Frequencies:        0.0885 0.0462 0.0401 0.0506 0.0148 0.0369 0.0396 0.0647 0.0229 0.0477 0.0902 0.0308 0.0160 0.0448 0.0845 0.0859 0.0758 0.0188 0.0351 0.0662
+Inv. sites prop:    -
+Gamma shape:        0.7805
+Score:              165717.1382
+Weight:             0.9967
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.9967
+Gamma-Inv:          0.0033
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.7805
+Alpha-P.Inv:        0.8550
+P.Inv-Alpha:        0.0219
+Frequencies:        0.0885 0.0462 0.0401 0.0506 0.0148 0.0369 0.0396 0.0647 0.0229 0.0477 0.0902 0.0308 0.0160 0.0448 0.0845 0.0859 0.0758 0.0188 0.0351 0.0662 
+
+Commands:
+  > phyml  -i orf_alignment.fasta -d aa -m LG -f e -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s orf_alignment.fasta -m PROTGAMMALGF -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa orf_alignment.fasta --model LG+G4+F
+  > paup -s orf_alignment.fasta
+  > iqtree -s orf_alignment.fasta -m LG+G4+F
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  LG+G4+F           20    -81991.1149    164416.2298         0.0000    0.9380
+       2  LG+I+G4+F         21    -81992.8321    164421.6643         5.4344    0.0620
+       3  WAG+G4+F          20    -82244.0133    164922.0266       505.7967    0.0000
+       4  WAG+I+G4+F        21    -82245.2548    164926.5096       510.2798    0.0000
+       5  RTREV+G4+F        20    -82300.0629    165034.1257       617.8959    0.0000
+       6  RTREV+I+G4+F      21    -82300.7384    165037.4769       621.2470    0.0000
+       7  LG+G4              1    -82364.2119    165124.4238       708.1940    0.0000
+       8  LG+I+G4            2    -82366.2423    165130.4845       714.2547    0.0000
+       9  VT+G4+F           20    -82398.4603    165230.9205       814.6907    0.0000
+      10  VT+I+G4+F         21    -82401.3392    165238.6784       822.4486    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              LG+G4+F
+lnL:                -81991.1149
+Frequencies:        0.0885 0.0462 0.0401 0.0506 0.0148 0.0369 0.0396 0.0647 0.0229 0.0477 0.0902 0.0308 0.0160 0.0448 0.0845 0.0859 0.0758 0.0188 0.0351 0.0662
+Inv. sites prop:    -
+Gamma shape:        0.7805
+Score:              164416.2298
+Weight:             0.9380
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.9380
+Gamma-Inv:          0.0620
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.7805
+Alpha-P.Inv:        0.8550
+P.Inv-Alpha:        0.0219
+Frequencies:        0.0885 0.0462 0.0401 0.0506 0.0148 0.0369 0.0396 0.0647 0.0229 0.0477 0.0902 0.0308 0.0160 0.0448 0.0845 0.0859 0.0758 0.0188 0.0351 0.0662 
+
+Commands:
+  > phyml  -i orf_alignment.fasta -d aa -m LG -f e -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s orf_alignment.fasta -m PROTGAMMALGF -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa orf_alignment.fasta --model LG+G4+F
+  > paup -s orf_alignment.fasta
+  > iqtree -s orf_alignment.fasta -m LG+G4+F
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  LG+G4+F           20    -81991.1149    164450.2298         0.0000    0.9380
+       2  LG+I+G4+F         21    -81992.8321    164455.6643         5.4344    0.0620
+       3  WAG+G4+F          20    -82244.0133    164956.0266       505.7967    0.0000
+       4  WAG+I+G4+F        21    -82245.2548    164960.5096       510.2798    0.0000
+       5  RTREV+G4+F        20    -82300.0629    165068.1257       617.8959    0.0000
+       6  RTREV+I+G4+F      21    -82300.7384    165071.4769       621.2470    0.0000
+       7  LG+G4              1    -82364.2119    165152.4238       702.1940    0.0000
+       8  LG+I+G4            2    -82366.2423    165158.4845       708.2547    0.0000
+       9  VT+G4+F           20    -82398.4603    165264.9205       814.6907    0.0000
+      10  VT+I+G4+F         21    -82401.3392    165272.6784       822.4486    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              LG+G4+F
+lnL:                -81991.1149
+Frequencies:        0.0885 0.0462 0.0401 0.0506 0.0148 0.0369 0.0396 0.0647 0.0229 0.0477 0.0902 0.0308 0.0160 0.0448 0.0845 0.0859 0.0758 0.0188 0.0351 0.0662
+Inv. sites prop:    -
+Gamma shape:        0.7805
+Score:              164450.2298
+Weight:             0.9380
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.9380
+Gamma-Inv:          0.0620
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.7805
+Alpha-P.Inv:        0.8550
+P.Inv-Alpha:        0.0219
+Frequencies:        0.0885 0.0462 0.0401 0.0506 0.0148 0.0369 0.0396 0.0647 0.0229 0.0477 0.0902 0.0308 0.0160 0.0448 0.0845 0.0859 0.0758 0.0188 0.0351 0.0662 
+
+Commands:
+  > phyml  -i orf_alignment.fasta -d aa -m LG -f e -v 0 -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s orf_alignment.fasta -m PROTGAMMALGF -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa orf_alignment.fasta --model LG+G4+F
+  > paup -s orf_alignment.fasta
+  > iqtree -s orf_alignment.fasta -m LG+G4+F
+Done
