@@ -1,0 +1,2 @@
+contig_id	contig_length	viral_length	aai_expected_length	aai_completeness	aai_confidence	aai_error	aai_num_hits	aai_top_hit	aai_id	aai_af	hmm_completeness_lower	hmm_completeness_upper	hmm_num_hits	kmer_freq
+OP287812.1	8263	NA	8067.78777287002	100.0	high	1.84402975541952	25	CheckV-058788	79.5	100.0	91.56	100.0	1	1.0
