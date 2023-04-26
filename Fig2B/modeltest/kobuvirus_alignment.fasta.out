@@ -1,0 +1,180 @@
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        kobuvirus_alignment.fasta
+  Tree:       Maximum likelihood
+    file:           -
+  #taxa:            103
+  #sites:           7933
+  #patterns:        5804
+  Max. thread mem:  292 MB
+
+Output:
+  Log:           kobuvirus_alignment.fasta.log
+  Starting tree: kobuvirus_alignment.fasta.tree
+  Results:       kobuvirus_alignment.fasta.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          8/20
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10   -231313.3702    464539.2220         0.0000    0.9943
+       2  TVM+I+G4           9   -231323.0257    464549.5542        10.3322    0.0057
+       3  GTR+G4             9   -231392.3836    464688.2699       149.0479    0.0000
+       4  TVM+G4             8   -231398.3847    464691.2933       152.0714    0.0000
+       5  TIM2+I+G4          8   -231449.6738    464793.8716       254.6496    0.0000
+       6  TPM2uf+I+G4        7   -231455.3353    464796.2158       256.9938    0.0000
+       7  TPM2uf+G4          6   -231521.8588    464920.2839       381.0620    0.0000
+       8  TIM2+G4            7   -231518.7645    464923.0743       383.8523    0.0000
+       9  TIM3+I+G4          8   -231752.9248    465400.3735       861.1516    0.0000
+      10  TPM3uf+I+G4        7   -231770.0391    465425.6234       886.4014    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              GTR+I+G4
+lnL:                -231313.3702
+Frequencies:        0.1809 0.3587 0.2075 0.2529
+Subst. Rates:       1.4891 6.4270 2.4208 0.7611 7.2159 1.0000 
+Inv. sites prop:    0.0859
+Gamma shape:        0.6103
+Score:              464539.2220
+Weight:             0.9943
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.4815
+Alpha-P.Inv:        0.6103
+P.Inv-Alpha:        0.0859
+Frequencies:        0.1809 0.3588 0.2074 0.2529 
+
+Commands:
+  > phyml  -i kobuvirus_alignment.fasta -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s kobuvirus_alignment.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa kobuvirus_alignment.fasta --model GTR+I+G4
+  > paup -s kobuvirus_alignment.fasta
+  > iqtree -s kobuvirus_alignment.fasta -m GTR+I+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10   -231313.3702    463052.7404         0.0000    0.9998
+       2  TVM+I+G4           9   -231323.0257    463070.0515        17.3110    0.0002
+       3  GTR+G4             9   -231392.3836    463208.7671       156.0267    0.0000
+       4  TVM+G4             8   -231398.3847    463218.7694       166.0289    0.0000
+       5  TIM2+I+G4          8   -231449.6738    463321.3476       268.6072    0.0000
+       6  TPM2uf+I+G4        7   -231455.3353    463330.6706       277.9302    0.0000
+       7  TIM2+G4            7   -231518.7645    463457.5291       404.7887    0.0000
+       8  TPM2uf+G4          6   -231521.8588    463461.7175       408.9771    0.0000
+       9  TIM3+I+G4          8   -231752.9248    463927.8496       875.1091    0.0000
+      10  TPM3uf+I+G4        7   -231770.0391    463960.0782       907.3378    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              GTR+I+G4
+lnL:                -231313.3702
+Frequencies:        0.1809 0.3587 0.2075 0.2529
+Subst. Rates:       1.4891 6.4270 2.4208 0.7611 7.2159 1.0000 
+Inv. sites prop:    0.0859
+Gamma shape:        0.6103
+Score:              463052.7404
+Weight:             0.9998
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.4815
+Alpha-P.Inv:        0.6103
+P.Inv-Alpha:        0.0859
+Frequencies:        0.1809 0.3587 0.2075 0.2529 
+
+Commands:
+  > phyml  -i kobuvirus_alignment.fasta -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s kobuvirus_alignment.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa kobuvirus_alignment.fasta --model GTR+I+G4
+  > paup -s kobuvirus_alignment.fasta
+  > iqtree -s kobuvirus_alignment.fasta -m GTR+I+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10   -231313.3702    463063.7404         0.0000    0.9998
+       2  TVM+I+G4           9   -231323.0257    463081.0515        17.3110    0.0002
+       3  GTR+G4             9   -231392.3836    463219.7671       156.0267    0.0000
+       4  TVM+G4             8   -231398.3847    463229.7694       166.0289    0.0000
+       5  TIM2+I+G4          8   -231449.6738    463332.3476       268.6072    0.0000
+       6  TPM2uf+I+G4        7   -231455.3353    463341.6706       277.9302    0.0000
+       7  TIM2+G4            7   -231518.7645    463468.5291       404.7887    0.0000
+       8  TPM2uf+G4          6   -231521.8588    463472.7175       408.9771    0.0000
+       9  TIM3+I+G4          8   -231752.9248    463938.8496       875.1091    0.0000
+      10  TPM3uf+I+G4        7   -231770.0391    463971.0782       907.3378    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              GTR+I+G4
+lnL:                -231313.3702
+Frequencies:        0.1809 0.3587 0.2075 0.2529
+Subst. Rates:       1.4891 6.4270 2.4208 0.7611 7.2159 1.0000 
+Inv. sites prop:    0.0859
+Gamma shape:        0.6103
+Score:              463063.7404
+Weight:             0.9998
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.4815
+Alpha-P.Inv:        0.6103
+P.Inv-Alpha:        0.0859
+Frequencies:        0.1809 0.3587 0.2075 0.2529 
+
+Commands:
+  > phyml  -i kobuvirus_alignment.fasta -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s kobuvirus_alignment.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa kobuvirus_alignment.fasta --model GTR+I+G4
+  > paup -s kobuvirus_alignment.fasta
+  > iqtree -s kobuvirus_alignment.fasta -m GTR+I+G4
+Done

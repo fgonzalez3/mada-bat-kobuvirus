@@ -1,0 +1,266 @@
+Physical cores: 20
+Logical cores:  40
+Memory:         1.51e+03GB
+Extensions:     AVX
+
+WARNING: MSA has not enough sites to infer reliable results
+Creating new checkpoint file: kobuvirus_alignment.fasta.ckp
+--------------------------------------------------------------------------------
+ModelTest-NG v0.1.7
+
+Input data:
+  MSA:        kobuvirus_alignment.fasta
+  Tree:       Maximum likelihood
+    file:           -
+  #taxa:            103
+  #sites:           7933
+  #patterns:        5804
+  Max. thread mem:  292 MB
+
+Output:
+  Log:           kobuvirus_alignment.fasta.log
+  Starting tree: kobuvirus_alignment.fasta.tree
+  Results:       kobuvirus_alignment.fasta.out
+
+Selection options:
+  # dna schemes:      11
+  # dna models:       88
+  include model parameters:
+    Uniform:         true
+    p-inv (+I):      true
+    gamma (+G):      true
+    both (+I+G):     true
+    free rates (+R): false
+    fixed freqs:     true
+    estimated freqs: true
+    #categories:     4
+  gamma rates mode:   mean
+  asc bias:           none
+  epsilon (opt):      0.01
+  epsilon (par):      0.05
+  keep branches:      false
+
+Additional options:
+  verbosity:        very low
+  threads:          8/20
+  RNG seed:         12345
+  subtree repeats:  enabled
+--------------------------------------------------------------------------------
+modeltest-ng was called as follows: 
+>> modeltest-ng -d nt -i kobuvirus_alignment.fasta -t ml -p 8 
+
+
+Partition 1/1
+
+ ----ID---  ----MODEL---- ---Time--- -Elapsed--- -------LnL------- -Alpha- -P-inv-
+
+Computation of likelihood scores completed. It took 0h:53:10
+
+BIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10   -231313.3702    464539.2220         0.0000    0.9943
+       2  TVM+I+G4           9   -231323.0257    464549.5542        10.3322    0.0057
+       3  GTR+G4             9   -231392.3836    464688.2699       149.0479    0.0000
+       4  TVM+G4             8   -231398.3847    464691.2933       152.0714    0.0000
+       5  TIM2+I+G4          8   -231449.6738    464793.8716       254.6496    0.0000
+       6  TPM2uf+I+G4        7   -231455.3353    464796.2158       256.9938    0.0000
+       7  TPM2uf+G4          6   -231521.8588    464920.2839       381.0620    0.0000
+       8  TIM2+G4            7   -231518.7645    464923.0743       383.8523    0.0000
+       9  TIM3+I+G4          8   -231752.9248    465400.3735       861.1516    0.0000
+      10  TPM3uf+I+G4        7   -231770.0391    465425.6234       886.4014    0.0000
+--------------------------------------------------------------------------------
+Best model according to BIC
+---------------------------
+Model:              GTR+I+G4
+lnL:                -231313.3702
+Frequencies:        0.1809 0.3587 0.2075 0.2529
+Subst. Rates:       1.4891 6.4270 2.4208 0.7611 7.2159 1.0000 
+Inv. sites prop:    0.0859
+Gamma shape:        0.6103
+Score:              464539.2220
+Weight:             0.9943
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.4815
+Alpha-P.Inv:        0.6103
+P.Inv-Alpha:        0.0859
+Frequencies:        0.1809 0.3588 0.2074 0.2529 
+
+Commands:
+  > phyml  -i kobuvirus_alignment.fasta -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s kobuvirus_alignment.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa kobuvirus_alignment.fasta --model GTR+I+G4
+  > paup -s kobuvirus_alignment.fasta
+  > iqtree -s kobuvirus_alignment.fasta -m GTR+I+G4
+
+AIC       model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10   -231313.3702    463052.7404         0.0000    0.9998
+       2  TVM+I+G4           9   -231323.0257    463070.0515        17.3110    0.0002
+       3  GTR+G4             9   -231392.3836    463208.7671       156.0267    0.0000
+       4  TVM+G4             8   -231398.3847    463218.7694       166.0289    0.0000
+       5  TIM2+I+G4          8   -231449.6738    463321.3476       268.6072    0.0000
+       6  TPM2uf+I+G4        7   -231455.3353    463330.6706       277.9302    0.0000
+       7  TIM2+G4            7   -231518.7645    463457.5291       404.7887    0.0000
+       8  TPM2uf+G4          6   -231521.8588    463461.7175       408.9771    0.0000
+       9  TIM3+I+G4          8   -231752.9248    463927.8496       875.1091    0.0000
+      10  TPM3uf+I+G4        7   -231770.0391    463960.0782       907.3378    0.0000
+--------------------------------------------------------------------------------
+Best model according to AIC
+---------------------------
+Model:              GTR+I+G4
+lnL:                -231313.3702
+Frequencies:        0.1809 0.3587 0.2075 0.2529
+Subst. Rates:       1.4891 6.4270 2.4208 0.7611 7.2159 1.0000 
+Inv. sites prop:    0.0859
+Gamma shape:        0.6103
+Score:              463052.7404
+Weight:             0.9998
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.4815
+Alpha-P.Inv:        0.6103
+P.Inv-Alpha:        0.0859
+Frequencies:        0.1809 0.3587 0.2075 0.2529 
+
+Commands:
+  > phyml  -i kobuvirus_alignment.fasta -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s kobuvirus_alignment.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa kobuvirus_alignment.fasta --model GTR+I+G4
+  > paup -s kobuvirus_alignment.fasta
+  > iqtree -s kobuvirus_alignment.fasta -m GTR+I+G4
+
+AICc      model              K            lnL          score          delta    weight
+--------------------------------------------------------------------------------
+       1  GTR+I+G4          10   -231313.3702    463063.7404         0.0000    0.9998
+       2  TVM+I+G4           9   -231323.0257    463081.0515        17.3110    0.0002
+       3  GTR+G4             9   -231392.3836    463219.7671       156.0267    0.0000
+       4  TVM+G4             8   -231398.3847    463229.7694       166.0289    0.0000
+       5  TIM2+I+G4          8   -231449.6738    463332.3476       268.6072    0.0000
+       6  TPM2uf+I+G4        7   -231455.3353    463341.6706       277.9302    0.0000
+       7  TIM2+G4            7   -231518.7645    463468.5291       404.7887    0.0000
+       8  TPM2uf+G4          6   -231521.8588    463472.7175       408.9771    0.0000
+       9  TIM3+I+G4          8   -231752.9248    463938.8496       875.1091    0.0000
+      10  TPM3uf+I+G4        7   -231770.0391    463971.0782       907.3378    0.0000
+--------------------------------------------------------------------------------
+Best model according to AICc
+---------------------------
+Model:              GTR+I+G4
+lnL:                -231313.3702
+Frequencies:        0.1809 0.3587 0.2075 0.2529
+Subst. Rates:       1.4891 6.4270 2.4208 0.7611 7.2159 1.0000 
+Inv. sites prop:    0.0859
+Gamma shape:        0.6103
+Score:              463063.7404
+Weight:             0.9998
+---------------------------
+Parameter importances
+---------------------------
+P.Inv:              -
+Gamma:              0.0000
+Gamma-Inv:          1.0000
+Frequencies:        1.0000
+---------------------------
+Model averaged estimates
+---------------------------
+P.Inv:              -
+Alpha:              0.4815
+Alpha-P.Inv:        0.6103
+P.Inv-Alpha:        0.0859
+Frequencies:        0.1809 0.3587 0.2075 0.2529 
+
+Commands:
+  > phyml  -i kobuvirus_alignment.fasta -m 012345 -f m -v e -a e -c 4 -o tlr
+  > raxmlHPC-SSE3 -s kobuvirus_alignment.fasta -m GTRGAMMAIX -n EXEC_NAME -p PARSIMONY_SEED
+  > raxml-ng --msa kobuvirus_alignment.fasta --model GTR+I+G4
+  > paup -s kobuvirus_alignment.fasta
+  > iqtree -s kobuvirus_alignment.fasta -m GTR+I+G4
+
+There are 50 different topologies
+Topologies written to kobuvirus_alignment.fasta.topos
+
+topo_id   models_count   bic_support   aic_support   aicc_support
+-----------------------------------------------------------------
+      1              2       1.00000       1.00000       1.00000
+     15              2       0.00000       0.00000       0.00000
+      3              1       0.00000       0.00000       0.00000
+      6              5       0.00000       0.00000       0.00000
+      2              1       0.00000       0.00000       0.00000
+      5              1       0.00000       0.00000       0.00000
+     16              2       0.00000       0.00000       0.00000
+      4              2       0.00000       0.00000       0.00000
+     17              2       0.00000       0.00000       0.00000
+     18              2       0.00000       0.00000       0.00000
+     42              1       0.00000       0.00000       0.00000
+     31              1       0.00000       0.00000       0.00000
+     32              1       0.00000       0.00000       0.00000
+     33              1       0.00000       0.00000       0.00000
+     34              3       0.00000       0.00000       0.00000
+     35              1       0.00000       0.00000       0.00000
+     36              3       0.00000       0.00000       0.00000
+     37              1       0.00000       0.00000       0.00000
+     38              1       0.00000       0.00000       0.00000
+     39              1       0.00000       0.00000       0.00000
+     40              1       0.00000       0.00000       0.00000
+     41              1       0.00000       0.00000       0.00000
+     49              3       0.00000       0.00000       0.00000
+     50              1       0.00000       0.00000       0.00000
+     43              3       0.00000       0.00000       0.00000
+     44              3       0.00000       0.00000       0.00000
+     45              1       0.00000       0.00000       0.00000
+     46              2       0.00000       0.00000       0.00000
+     47              2       0.00000       0.00000       0.00000
+     48              1       0.00000       0.00000       0.00000
+     20              2       0.00000       0.00000       0.00000
+      7              2       0.00000       0.00000       0.00000
+      8              1       0.00000       0.00000       0.00000
+      9              3       0.00000       0.00000       0.00000
+     10              1       0.00000       0.00000       0.00000
+     11              2       0.00000       0.00000       0.00000
+     12              1       0.00000       0.00000       0.00000
+     13              2       0.00000       0.00000       0.00000
+     14              1       0.00000       0.00000       0.00000
+     19              2       0.00000       0.00000       0.00000
+     30              2       0.00000       0.00000       0.00000
+     21              3       0.00000       0.00000       0.00000
+     22              1       0.00000       0.00000       0.00000
+     23              2       0.00000       0.00000       0.00000
+     24              1       0.00000       0.00000       0.00000
+     25              1       0.00000       0.00000       0.00000
+     26              2       0.00000       0.00000       0.00000
+     27              3       0.00000       0.00000       0.00000
+     28              1       0.00000       0.00000       0.00000
+     29              3       0.00000       0.00000       0.00000
+
+extended majority-rule consensus: ((KY407744 Bovine kobuvirus strain BKoV/EGY-1, complete genome,(MW605074 Bovine kobuvirus strain 1043507, complete genome,(MN336260 Bovine kobuvirus strain IL35164, complete genome,NC_004421 Aichivirus B genomic RNA, complete genome, strain:U-1)[1.00000])[1.00000])[1.00000],(GU245693 Aichivirus B3 strain sheep/TB3/HUN/2009, complete genome,(((NC_027919 Kobuvirus cattle/Kagoshima-1-22-KoV/2014/JPN genomic RNA, nearly complete genome, strain: Kagoshima-1-22-KoV/2014/JPN,(MW296158 Ovine kobuvirus isolate SKoV-China/SWUN/AB18/2019, complete genome,NC_027918 Kobuvirus cattle/Kagoshima-2-24-KoV/2015/JPN genomic RNA, complete genome, strain: Kagoshima-2-24-KoV/2015/JPN)[1.00000])[1.00000],((KJ934637 Kobuvirus SZAL6-KoV/2011/HUN, complete genome,(NODE_4,(((AB040749 Aichi virus genomic RNA, complete genome,NC_001918 Aichi virus, complete genome)[1.00000],(DQ028632 Aichi virus isolate Goiania/GO/03/01/Brazil, complete genome,(FJ890523 Aichi virus isolate Chshc7, complete genome,MT766372.1 |Kobuvirus sp. isolate CHN/XJ/env/2018/ht8-ctg1, complete genome)[1.00000])[1.00000])[1.00000],(((MH747478 Canine kobuvirus strain CaKoV-26, complete genome,(((KM068048 Canine kobuvirus 1 isolate DD2 polyprotein mRNA, complete cds,(KM068049 Canine kobuvirus 1 isolate 82 polyprotein mRNA, complete cds,(KM068050 Canine kobuvirus 1 isolate 75 polyprotein mRNA, complete cds,KM068051 Canine kobuvirus 1 isolate B103 polyprotein mRNA, complete cds)[1.00000])[1.00000])[1.00000],(KC161964 Canine kobuvirus strain UK003, complete genome,MN337880 Canine kobuvirus strain S272/16, complete genome)[1.00000])[1.00000],(JN088541 Canine kobuvirus US-PC0082, complete genome,(KF924623 Canine kobuvirus 1 isolate 12D049, complete genome,(JQ911763 Canine kobuvirus CH-1, complete genome,(MN449341 Canine kobuvirus isolate CaKoV AH-1/CHN/2019, complete genome,NC_034971 Canine kobuvirus isolate SMCD-59, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(KM091960 Feline kobuvirus strain FeKoV/TE/52/IT/13, complete genome,((KF831027 Feline kobuvirus strain FK-13, complete genome,KJ958930 Feline kobuvirus isolate 12D240, complete genome)[1.00000],(MF598159 Feline kobuvirus strain WHJ-1, complete genome,(MK671314 Feline kobuvirus isolate FKV/18CC0503, complete genome,MK671315 Feline kobuvirus isolate FKV/18CC0718, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],((MN116647 Aichivirus A strain rat08/rAiA/HUN, complete genome,JQ898342.1 |Kobuvirus sewage Kathmandu isolate KoV-SewKTM, complete genome)[1.00000],(NC_015936 Mouse kobuvirus M-5/USA/2010, complete genome,(KY855436 Marmot kobuvirus strain HT9, complete genome,OM140655 Marmot kobuvirus strain MCKV/XJ3/CHN/2016, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(NC_026314 Rabbit kobuvirus isolate Berlin/Jan2011/0572, complete genome,(KT325852 Rabbit picornavirus strain Rabbit01/2013/HUN, complete genome,(KJ641686 |Bat kobuvirus 1 isolate BtMr-PicoV/JX2010 polyprotein gene, partial cds,(MN602325 Bat picornavirus strain ITA/2017/189/18-155, complete genome,(KJ641691 |Aichivirus F2 isolate BtMf-PicoV-2/GD2012 polyprotein gene, partial cds,MF352427.1 |Miniopterus picornavirus 2 strain Henan-Ms56-2 polyprotein gene, complete cds)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],((KY234500 Porcine kobuvirus isolate JXJC2015, complete genome,(((MF506730 Porcine kobuvirus isolate OH/RV11/2011, complete genome,(MT211964 Porcine kobuvirus isolate EdoMex/2018/205, complete genome,(GQ249161 Porcine kobuvirus swine/K-30-HUN/2008/HUN, complete genome,NC_011829 Porcine kobuvirus swine/S-1-HUN/2007/Hungary, complete genome)[1.00000])[1.00000])[1.00000],((MZ334483 Porcine kobuvirus strain FoPro-213.14/GER/2018, complete genome,(LT898428 Porcine kobuvirus isolate PKV_GER_L00919-K17_14-02_2014 genome assembly, complete genome: monopartite,OK315318 Porcine kobuvirus isolate Wuhan2020, complete genome)[1.00000])[1.00000],(JQ692069 Porcine kobuvirus strain WUH1, complete genome,(GU292559 Kobuvirus pig/JY-2010a/CHN isolate Y-1-CHI, complete genome,(KC424638 Porcine kobuvirus isolate K-4/2012/CH, complete genome,(KC424639 Porcine kobuvirus isolate GS-1/2012/CH, complete genome,KC424640 Porcine kobuvirus isolate GS-2/2012/CH, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],((MT125685 Porcine kobuvirus isolate swine/HBYT/2018/China, complete genome,(KF695124 Porcine kobuvirus isolate ch-kobu/2008/China, complete genome,KY234499 Porcine kobuvirus isolate JXAT2015, complete genome)[1.00000])[1.00000],(((KC414936 Porcine kobuvirus isolate K-11/2012/CH, complete genome,MN807751 Porcine kobuvirus strain SZ1M-F/PKV/HUN/2013, complete genome)[1.00000],((KM977675 Porcine kobuvirus isolate OH/RV50/2011, complete genome,LC210621 Porcine kobuvirus genomic RNA, complete genome, strain: PoKoV/Tochigi-IO3/JPN/2014)[1.00000],(((((MK962321 Porcine kobuvirus strain KobuV/Pig-wt/ESP/P393/2017, complete genome,MK962330 Porcine kobuvirus strain KobuV/Pig-wt/ESP/P452/2017, complete genome)[1.00000],(MK962333 Porcine kobuvirus strain KobuV/Pig-wt/ESP/P461/2017, complete genome,MK962334 Porcine kobuvirus strain KobuV/Pig-wt/ESP/VC14/2017, complete genome)[1.00000])[1.00000],(MK962332 Porcine kobuvirus strain KobuV/Pig-wt/ESP/C375/2017, complete genome,(MK962323 Porcine kobuvirus strain KobuV/Pig-wt/ESP/P37/2017, complete genome,(MK962320 Porcine kobuvirus strain KobuV/Pig-wt/ESP/C247/2017, complete genome,MK962335 Porcine kobuvirus strain KobuV/Pig-wt/ESP/VC8/2017, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(JX177612 Porcine kobuvirus strain WB-1-HUN/2011/HUN, complete genome,((MK962324 Porcine kobuvirus strain KobuV/Pig-wt/ESP/P437/2017, complete genome,MK962326 Porcine kobuvirus strain KobuV/Pig-wt/ESP/C429/2017, complete genome)[1.00000],(MK962325 Porcine kobuvirus strain KobuV/Pig-wt/ESP/VT25C/2017, complete genome,(MK962322 Porcine kobuvirus strain KobuV/Pig-wt/ESP/VC20B/2017, complete genome,MK962328 Porcine kobuvirus strain KobuV/Pig-wt/ESP/B304/2017, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(MK962327 Porcine kobuvirus strain KobuV/Pig-wt/ESP/P259/2017, complete genome,(MK962329 Porcine kobuvirus strain KobuV/Pig-wt/ESP/P2B/2017, complete genome,MK962331 Porcine kobuvirus strain KobuV/Pig-wt/ESP/P284/2017, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(((KC204684 Porcine kobuvirus isolate XX, complete genome,(KF539763 Porcine kobuvirus isolate swKoV CH441, complete genome,(KM051987 Porcine kobuvirus strain CH/KB-1/2014, complete genome,(JX401523 Porcine kobuvirus isolate CH/HNXX-4/2012, complete genome,NC_016769 Porcine kobuvirus SH-W-CHN/2010/China, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(MT125683 Porcine kobuvirus isolate swine/JX-2/2013/China, complete genome,(KJ452348.1 |Porcine kobuvirus isolate CH/DX/2012, complete genome,(MT125682 Porcine kobuvirus isolate swine/JX-1/2013/China, complete genome,MT125684 Porcine kobuvirus isolate swine/JX-3/2013/China, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(KP144318 Porcine kobuvirus JS-01-CHN/2013/China, complete genome,NC_027054 Porcine kobuvirus isolate JS-02a-CHN/2014/China, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(MT584793 Caprine kobuvirus isolate CKoV-China/SWUN/F11/2019, complete genome,(MN604700 Caprine kobuvirus isolate MN1/2018, complete genome,NC_023422 Caprine kobuvirus isolate 12Q108, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(ON075052 Bovine kobuvirus isolate BKV3/2021/CHN, complete genome,(ON075053 Bovine kobuvirus isolate BKV4/2021/CHN, complete genome,((ON075050 Bovine kobuvirus isolate BKV1/2021/CHN, complete genome,(ON075055 Bovine kobuvirus isolate BKV7/2021/CHN, complete genome,(ON075051 Bovine kobuvirus isolate BKV2/2021/CHN, complete genome,MZ603734 Bovine kobuvirus isolate BKoV/CN/HB-SJZ/2021, complete genome)[1.00000])[1.00000])[1.00000],(ON075054 Bovine kobuvirus isolate BKV6/2021/CHN, complete genome,ON075056 Bovine kobuvirus isolate BKV8/2021/CHN, complete genome)[1.00000])[1.00000])[1.00000])[1.00000]);
+strict consensus: ((KY407744 Bovine kobuvirus strain BKoV/EGY-1, complete genome,(MW605074 Bovine kobuvirus strain 1043507, complete genome,(MN336260 Bovine kobuvirus strain IL35164, complete genome,NC_004421 Aichivirus B genomic RNA, complete genome, strain:U-1)[1.00000])[1.00000])[1.00000],(GU245693 Aichivirus B3 strain sheep/TB3/HUN/2009, complete genome,(((NC_027919 Kobuvirus cattle/Kagoshima-1-22-KoV/2014/JPN genomic RNA, nearly complete genome, strain: Kagoshima-1-22-KoV/2014/JPN,(MW296158 Ovine kobuvirus isolate SKoV-China/SWUN/AB18/2019, complete genome,NC_027918 Kobuvirus cattle/Kagoshima-2-24-KoV/2015/JPN genomic RNA, complete genome, strain: Kagoshima-2-24-KoV/2015/JPN)[1.00000])[1.00000],((KJ934637 Kobuvirus SZAL6-KoV/2011/HUN, complete genome,(NODE_4,(((AB040749 Aichi virus genomic RNA, complete genome,NC_001918 Aichi virus, complete genome)[1.00000],(DQ028632 Aichi virus isolate Goiania/GO/03/01/Brazil, complete genome,(FJ890523 Aichi virus isolate Chshc7, complete genome,MT766372.1 |Kobuvirus sp. isolate CHN/XJ/env/2018/ht8-ctg1, complete genome)[1.00000])[1.00000])[1.00000],(((MH747478 Canine kobuvirus strain CaKoV-26, complete genome,(((KM068048 Canine kobuvirus 1 isolate DD2 polyprotein mRNA, complete cds,(KM068049 Canine kobuvirus 1 isolate 82 polyprotein mRNA, complete cds,(KM068050 Canine kobuvirus 1 isolate 75 polyprotein mRNA, complete cds,KM068051 Canine kobuvirus 1 isolate B103 polyprotein mRNA, complete cds)[1.00000])[1.00000])[1.00000],(KC161964 Canine kobuvirus strain UK003, complete genome,MN337880 Canine kobuvirus strain S272/16, complete genome)[1.00000])[1.00000],(JN088541 Canine kobuvirus US-PC0082, complete genome,(KF924623 Canine kobuvirus 1 isolate 12D049, complete genome,(JQ911763 Canine kobuvirus CH-1, complete genome,(MN449341 Canine kobuvirus isolate CaKoV AH-1/CHN/2019, complete genome,NC_034971 Canine kobuvirus isolate SMCD-59, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(KM091960 Feline kobuvirus strain FeKoV/TE/52/IT/13, complete genome,((KF831027 Feline kobuvirus strain FK-13, complete genome,KJ958930 Feline kobuvirus isolate 12D240, complete genome)[1.00000],(MF598159 Feline kobuvirus strain WHJ-1, complete genome,(MK671314 Feline kobuvirus isolate FKV/18CC0503, complete genome,MK671315 Feline kobuvirus isolate FKV/18CC0718, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],((MN116647 Aichivirus A strain rat08/rAiA/HUN, complete genome,JQ898342.1 |Kobuvirus sewage Kathmandu isolate KoV-SewKTM, complete genome)[1.00000],(NC_015936 Mouse kobuvirus M-5/USA/2010, complete genome,(KY855436 Marmot kobuvirus strain HT9, complete genome,OM140655 Marmot kobuvirus strain MCKV/XJ3/CHN/2016, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(NC_026314 Rabbit kobuvirus isolate Berlin/Jan2011/0572, complete genome,(KT325852 Rabbit picornavirus strain Rabbit01/2013/HUN, complete genome,(KJ641686 |Bat kobuvirus 1 isolate BtMr-PicoV/JX2010 polyprotein gene, partial cds,(MN602325 Bat picornavirus strain ITA/2017/189/18-155, complete genome,(KJ641691 |Aichivirus F2 isolate BtMf-PicoV-2/GD2012 polyprotein gene, partial cds,MF352427.1 |Miniopterus picornavirus 2 strain Henan-Ms56-2 polyprotein gene, complete cds)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],((KY234500 Porcine kobuvirus isolate JXJC2015, complete genome,(((MF506730 Porcine kobuvirus isolate OH/RV11/2011, complete genome,(MT211964 Porcine kobuvirus isolate EdoMex/2018/205, complete genome,(GQ249161 Porcine kobuvirus swine/K-30-HUN/2008/HUN, complete genome,NC_011829 Porcine kobuvirus swine/S-1-HUN/2007/Hungary, complete genome)[1.00000])[1.00000])[1.00000],((MZ334483 Porcine kobuvirus strain FoPro-213.14/GER/2018, complete genome,(LT898428 Porcine kobuvirus isolate PKV_GER_L00919-K17_14-02_2014 genome assembly, complete genome: monopartite,OK315318 Porcine kobuvirus isolate Wuhan2020, complete genome)[1.00000])[1.00000],(JQ692069 Porcine kobuvirus strain WUH1, complete genome,(GU292559 Kobuvirus pig/JY-2010a/CHN isolate Y-1-CHI, complete genome,(KC424638 Porcine kobuvirus isolate K-4/2012/CH, complete genome,(KC424639 Porcine kobuvirus isolate GS-1/2012/CH, complete genome,KC424640 Porcine kobuvirus isolate GS-2/2012/CH, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],((MT125685 Porcine kobuvirus isolate swine/HBYT/2018/China, complete genome,(KF695124 Porcine kobuvirus isolate ch-kobu/2008/China, complete genome,KY234499 Porcine kobuvirus isolate JXAT2015, complete genome)[1.00000])[1.00000],(((KC414936 Porcine kobuvirus isolate K-11/2012/CH, complete genome,MN807751 Porcine kobuvirus strain SZ1M-F/PKV/HUN/2013, complete genome)[1.00000],((KM977675 Porcine kobuvirus isolate OH/RV50/2011, complete genome,LC210621 Porcine kobuvirus genomic RNA, complete genome, strain: PoKoV/Tochigi-IO3/JPN/2014)[1.00000],(((((MK962321 Porcine kobuvirus strain KobuV/Pig-wt/ESP/P393/2017, complete genome,MK962330 Porcine kobuvirus strain KobuV/Pig-wt/ESP/P452/2017, complete genome)[1.00000],(MK962333 Porcine kobuvirus strain KobuV/Pig-wt/ESP/P461/2017, complete genome,MK962334 Porcine kobuvirus strain KobuV/Pig-wt/ESP/VC14/2017, complete genome)[1.00000])[1.00000],(MK962332 Porcine kobuvirus strain KobuV/Pig-wt/ESP/C375/2017, complete genome,(MK962323 Porcine kobuvirus strain KobuV/Pig-wt/ESP/P37/2017, complete genome,(MK962320 Porcine kobuvirus strain KobuV/Pig-wt/ESP/C247/2017, complete genome,MK962335 Porcine kobuvirus strain KobuV/Pig-wt/ESP/VC8/2017, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(JX177612 Porcine kobuvirus strain WB-1-HUN/2011/HUN, complete genome,((MK962324 Porcine kobuvirus strain KobuV/Pig-wt/ESP/P437/2017, complete genome,MK962326 Porcine kobuvirus strain KobuV/Pig-wt/ESP/C429/2017, complete genome)[1.00000],(MK962325 Porcine kobuvirus strain KobuV/Pig-wt/ESP/VT25C/2017, complete genome,(MK962322 Porcine kobuvirus strain KobuV/Pig-wt/ESP/VC20B/2017, complete genome,MK962328 Porcine kobuvirus strain KobuV/Pig-wt/ESP/B304/2017, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(MK962327 Porcine kobuvirus strain KobuV/Pig-wt/ESP/P259/2017, complete genome,(MK962329 Porcine kobuvirus strain KobuV/Pig-wt/ESP/P2B/2017, complete genome,MK962331 Porcine kobuvirus strain KobuV/Pig-wt/ESP/P284/2017, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(((KC204684 Porcine kobuvirus isolate XX, complete genome,(KF539763 Porcine kobuvirus isolate swKoV CH441, complete genome,(KM051987 Porcine kobuvirus strain CH/KB-1/2014, complete genome,(JX401523 Porcine kobuvirus isolate CH/HNXX-4/2012, complete genome,NC_016769 Porcine kobuvirus SH-W-CHN/2010/China, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(MT125683 Porcine kobuvirus isolate swine/JX-2/2013/China, complete genome,(KJ452348.1 |Porcine kobuvirus isolate CH/DX/2012, complete genome,(MT125682 Porcine kobuvirus isolate swine/JX-1/2013/China, complete genome,MT125684 Porcine kobuvirus isolate swine/JX-3/2013/China, complete genome)[1.00000])[1.00000])[1.00000])[1.00000],(KP144318 Porcine kobuvirus JS-01-CHN/2013/China, complete genome,NC_027054 Porcine kobuvirus isolate JS-02a-CHN/2014/China, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(MT584793 Caprine kobuvirus isolate CKoV-China/SWUN/F11/2019, complete genome,(MN604700 Caprine kobuvirus isolate MN1/2018, complete genome,NC_023422 Caprine kobuvirus isolate 12Q108, complete genome)[1.00000])[1.00000])[1.00000])[1.00000])[1.00000],(ON075052 Bovine kobuvirus isolate BKV3/2021/CHN, complete genome,(ON075053 Bovine kobuvirus isolate BKV4/2021/CHN, complete genome,((ON075050 Bovine kobuvirus isolate BKV1/2021/CHN, complete genome,(ON075055 Bovine kobuvirus isolate BKV7/2021/CHN, complete genome,(ON075051 Bovine kobuvirus isolate BKV2/2021/CHN, complete genome,MZ603734 Bovine kobuvirus isolate BKoV/CN/HB-SJZ/2021, complete genome)[1.00000])[1.00000])[1.00000],(ON075054 Bovine kobuvirus isolate BKV6/2021/CHN, complete genome,ON075056 Bovine kobuvirus isolate BKV8/2021/CHN, complete genome)[1.00000])[1.00000])[1.00000])[1.00000]);
+
+Summary:
+
+Partition 1/1:
+                         Model         Score        Weight
+----------------------------------------------------------
+       BIC            GTR+I+G4   464539.2220        0.9943
+       AIC            GTR+I+G4   463052.7404        0.9998
+      AICc            GTR+I+G4   463063.7404        0.9998
+
+Execution results written to kobuvirus_alignment.fasta.out
+Starting tree written to kobuvirus_alignment.fasta.tree
