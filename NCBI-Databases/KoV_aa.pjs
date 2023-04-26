@@ -1,0 +1,24 @@
+{
+  "version": "1.2",
+  "dbname": "KoV_aa",
+  "dbtype": "Protein",
+  "db-version": 5,
+  "description": "kobu_NCBI_prot_seq.fasta",
+  "number-of-letters": 1216052,
+  "number-of-sequences": 3740,
+  "last-updated": "2023-04-20T13:37:00",
+  "number-of-volumes": 1,
+  "bytes-total": 1987303,
+  "bytes-to-cache": 1249817,
+  "files": [
+    "KoV_aa.pdb",
+    "KoV_aa.phr",
+    "KoV_aa.pin",
+    "KoV_aa.pog",
+    "KoV_aa.pos",
+    "KoV_aa.pot",
+    "KoV_aa.psq",
+    "KoV_aa.ptf",
+    "KoV_aa.pto"
+  ]
+}
