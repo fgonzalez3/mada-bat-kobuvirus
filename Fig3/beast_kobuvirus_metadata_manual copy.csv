@@ -1,0 +1,15 @@
+﻿tip_label,accession_num,type ,host ,bat_host,country,collection_date,collection_year,title ,specific_date
+NC_001918,NC_001918,AiVA,homo_sapien,0,Japan,1989-03-15,1989,Human Kobuvirus,no
+KJ934637,KJ934637,AiVA,coracias_garrulus,0,Hungary,2011-07-15,2011,Avian Kobuvirus,no
+MF352432,MF352432,AiVA,rattus_tanezumi,0,China,2012-07-15,2012,Rodent Kobuvirus,no
+KF831027,KF831027,AiVA,feline ,0,South Korea ,2011-07-15,2011,Feline Kobuvirus,no
+KM068048,KM068048,AiVA,canine,0,Tanzania,2003-01-20,2003,Canine Kobuvirus,yes
+MN336260,MN336260,AiVB,bos_taurus,0,USA,2019-04-15,2019,Bovine Kobuvirus,no
+GU245693,GU245693,AiVB,ovine,0,Hungary,2009-03-17,2017,Ovine Kobuvirus,yes
+NC_011829,NC_011829,AiVC,sus_scrofa,0,Hungary,2007-02-07,2007,Porcine Kobuvirus,no
+NC_023422,NC_023422,AiVC,caprine,0,South Korea ,2012-04-15,2012,Caprine Kobuvirus,no
+NC_027919,NC_027919,AiVD,bos_taurus,0,Japan,2014-12-15,2014,Bovine Kobuvirus,no
+KT325852,KT325852,AiVE,oryctolagus_cuniculus,0,Hungary,2013-04-15,2013,Rabbit Kobuvirus,no
+MN602325,MN602325,Picornavirus,pipistrellus_pipistrellus,1,Italy,2017-07-31,2017,Bat Picornavirus,no
+MF352427,MF352427,Picornavirus,miniopterus_schreibersii,1,China ,2012-07-31,2012,Bat Picornavirus,no
+OP287812,OP287812,unclassifed,eidolon_dupreanum,1,Madagascar,2018-07-27,2018,Bat Kobuvirus,yes
