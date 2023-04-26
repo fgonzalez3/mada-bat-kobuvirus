@@ -1,4 +1,4 @@
-### Plotting seroprevalence using using full genome Kobuvirus as reference
+### Finding Kobuvirus hits using full genome Kobuvirus as reference
 
 1.First, I downloaded all non-host contigs derived from fecal samples, mapping to ANY taxon from IDseq in the 'RR034B1_feces' project. (Note that we did not take contigs from HeLa controls or water). This is done in bulk, manually, on IDseq.net in the top right-hand corner. 
 
