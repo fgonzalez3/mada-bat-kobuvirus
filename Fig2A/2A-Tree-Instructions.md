@@ -63,7 +63,7 @@ modeltest-ng -d nt -i picornavirus_alignment.fasta -t ml -p 8
 
 After some pruning and figuring out that we really only had one full genome Kobuvirus, the sequences found [here](https://github.com/fgonzalez3/mada-bat-kobuvirus/blob/main/Fig2A/picorna_manual.csv) made the final cut. ModelTest-NG results for Fig2A can be found [here](https://github.com/fgonzalez3/mada-bat-kobuvirus/tree/main/Fig2A/modeltest). 
 
-6. Once ModelTest-NG finished, a maximum liklihood tree using [RAxML](https://cme.h-its.org/exelixis/web/software/raxml/) was built. ModelTest-NG support recovered a TVM+G4 nucleotide substitution model. This was ran using the following script on the HCC: 
+6. Once ModelTest-NG finished, a maximum liklihood tree using [RAxML](https://cme.h-its.org/exelixis/web/software/raxml/) was built. ModelTest-NG support recovered a TVM+I+G4 nucleotide substitution model. This was ran using the following script on the HCC: 
 
 ```
 
