@@ -8,7 +8,9 @@ Pipeline for Kobuvirus [NCBI reference based detection](https://github.com/fgonz
 
 Besides the above, broadly followed the [Mada-Bat-CoV pipeline](https://github.com/brooklabteam/Mada-Bat-CoV). 
 
-Within Fig2A [sub-directory](https://github.com/fgonzalez3/mada-bat-kobuvirus/blob/main/Fig2A/2A-Tree-Instructions.md), details on how to build our full genome Picornaviridae ML tree. 
+Within [Fig2A sub-directory](https://github.com/fgonzalez3/mada-bat-kobuvirus/blob/main/Fig2A/2A-Tree-Instructions.md), details on how to build our nucloetide full-genome length Picornaviridae ML tree. 
+
+Within [Fig2B sub-directory](https://github.com/fgonzalez3/mada-bat-kobuvirus/blob/main/Fig2B/Fig2B-Tree-Instructions.md), details on how to build our nucleotide full-genome length Kobuvirus ML tree. 
 
 Within Fig. __ sub-directory, details on how to build a phylogenetic tree are contained. These scripts outline how to build Fig __ and __, as well as amino acid tree Fig. ___ . 
 
