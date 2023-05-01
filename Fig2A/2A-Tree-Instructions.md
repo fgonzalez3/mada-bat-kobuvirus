@@ -12,7 +12,7 @@ This tutorial outlines methods for building a maximum-likliehood phylogenetic tr
 
 At the time, our smallest postulated Kobuvirus sequence was 7202bp (later found to be a bacterial sequence). Choosing this minimum would eliminate any sequences smaller than ours, and make alignment steps easier later on. 
 
-According to [ICTV](https://ictv.global/report/chapter/picornaviridae/picornaviridae), Picornaviruses cap out around 10kb while Kobuviruses cap out around 8.5kb. 9kb was a good cutoff. 
+According to [ICTV](https://ictv.global/report/chapter/picornaviridae/picornaviridae), Picornaviruses cap out around 10kb while Kobuviruses cap out around 8.5kb. 9kb was a good cutoff for all our tree analyses. 
 
 2. I then went back and did a non-refernece sequence search, selecting for those greater than 7.2kb. 17 unique hits were found in this manner, accounted for in the below TaxID's: 
 
