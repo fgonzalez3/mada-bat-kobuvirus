@@ -18,5 +18,17 @@ After model selection, we built a Bayesian phylogenetic tree for the Kobuvirus p
 
 To prepare the .xml file, we used the following parameters in the tab inputs at the top of the screen in BEAUTi:
 
-- **Tip Dates**: We used the date of the sample collection as the "Tip Date". For any sample from GenBank which only listed year of collection, we set the tip date to July 15 of the year of collection. Each alignment was uplodaed to BEAUTi with sequence names arranged so as to easily decipher the date. 
+- **Tip Dates**: We used the date of the sample collection as the "Tip Date". For any sample from GenBank which only listed year of collection, we set the tip date to July 15 of the year of collection. Each alignment was uplodated to BEAUTi with sequence names arranged so as to easily decipher the date.
+- **Site Model**: Following outputs from ModelTest-NG, we selected a 'Gamma Site Model' with Gamma Category 4 and estimated the proportion of invariate sites. 
+- **Clock Model**: We built phylogenies using a strict molecular clock, secified within a non-parametric Bayesian Skyline Coalescent model, following previous approaches for bat coronaviruses analyses, [Lau et al.2020](https://journals.asm.org/doi/full/10.1128/JVI.02219-09). 
+- **Priors**: We used a Bayesian Skyline Coalescent model. The clock rate prior was set to a lognormal distribution with a mean of 0.001, following published vales for RNA viruses [Jenkins et al.2014](https://link.springer.com/article/10.1007/s00239-001-0064-3). All other priors were left at default values specified in BEAUTi. 
+- **MCMC**: We used an MCMC chain of 100,000,000 iterations and set tracelog and treelog every 10,000 iterations. All other MCMC metrics were left at default. 
+- **Population Size**: The Bayesian Skyline Coalescent model by default assumes that the population size of the dataset will change 5 times space evenly across the course of this sampling period. Because our available samples were limited and spanned a large geographic area, we edited this parameter to permit only one population size. You can make this edit in BEAUTi by clicking 'View' in the top panel, selecting 'Show Initialization Panel', and specifying the dimension of 'bPopSizes' and 'GroupSizes' both to 1 instead of 5. 
+
+.xml files for our strict molecular clock are available in our [Fig3 sub-directory](https://github.com/fgonzalez3/mada-bat-kobuvirus/tree/main/Fig3/beast_run). 
+
+#Visualizing Bayesian TimeTree
+
+Output from BEAST is available in the above sub-folder. The initial 10% of MCMC iterations were removed as burn-in. Parameter convergence was assessed visually using [Tracer](https://www.beast2.org/tracer-2/). We used TreeAnnotator to average across the BEAST2 tree output, and visualized the resulting tree in FigTree. After checking for basic alignment with parametric phylogenies generated from RAxML, we converted the Bayesian tree which is output in Nexus format to Newick format by exporting from FigTree. We then imported the resulting Newick file of the average tree in R and visualized it. 
+
 
