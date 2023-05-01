@@ -2,7 +2,7 @@
 
 This repo contains analyses for the Madagascar bat Kobuvirus paper. This repo is designed to document which samples from fecal metagenomes have detectable Kobuvirus. 
 
-Sub-directories within this repo contain pipeline directions used to determine which samples are positive for Kobuviruses, as well as data used to make each figure. 
+Sub-directories within this repo contain pipeline directions used to determine which samples are positive for Kobuviruses, as well as data used to make phylogenies. 
 
 Pipeline for Kobuvirus [NCBI reference based detection](https://github.com/fgonzalez3/mada-bat-kobuvirus/blob/main/Finding-Initial-Kobuvirus-Positives.md) and [our whole genome reference based](https://github.com/fgonzalez3/mada-bat-kobuvirus/blob/main/BLAST_OP287812.md) detection following Kobuvirus full genome discovery. 
 
