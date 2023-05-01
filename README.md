@@ -4,9 +4,9 @@ This repo contains analyses for the Madagascar bat Kobuvirus paper. This repo is
 
 Sub-directories within this repo contain pipeline directions used to determine which samples are positive for Kobuviruses, as well as data used to make each figure. 
 
-Pipeline for Kobuvirus [initial](https://github.com/fgonzalez3/mada-bat-kobuvirus/blob/main/Finding-Initial-Kobuvirus-Positives.md) and more in depth detection found here. 
+Pipeline for Kobuvirus [NCBI reference based detection](https://github.com/fgonzalez3/mada-bat-kobuvirus/blob/main/Finding-Initial-Kobuvirus-Positives.md) and [our whole genome reference based](https://github.com/fgonzalez3/mada-bat-kobuvirus/blob/main/BLAST_OP287812.md) detection found in the following links. 
 
-
+Besides the above, broadly followed the [Mada-Bat-CoV pipeline](https://github.com/brooklabteam/Mada-Bat-CoV). 
 
 
 Within Fig. __ sub-directory, details on how to build a phylogenetic tree are contained. These scripts outline how to build Fig __ and __, as well as amino acid tree Fig. ___ . 
