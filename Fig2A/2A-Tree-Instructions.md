@@ -1,6 +1,6 @@
-# Full Genome Picornavirus Phylogeny
+# Full Genome Picornavirus Phylogeny (nt)
 
-This tutorial outlines methods for building a maximum-likliehood phylogenetic tree using RAxML. Here, we'll build a full genome phylogeny of Picornaviruses on [NCBI Virus](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/) while fitting our new Madagascar whole genome sequence in. 
+This tutorial outlines methods for building a maximum-likliehood phylogenetic tree using RAxML. Here, we'll build a full-genome length phylogeny of Picornaviruses on [NCBI Virus](https://www.ncbi.nlm.nih.gov/labs/virus/vssi/#/) while fitting our new Madagascar whole genome sequence in. 
 
 # Full Genome Picornavirus NCBI Virus Downloads (Last Access 6/23/2022)
 
@@ -31,9 +31,9 @@ I downloaded the above hits, in addition to our full genome hit (OP287812), as a
 
 3. Finally, I included a full-genome bat Coronavirus (Accession: NC_048212) as an outgroup. Coronaviruses and Picornaviruses are taxonomically in the same Class, distant enough to act as outgroups to one another. 
 
-4. All .fasta files were  imported into Geneious Prime, trimmed to 7.2kb, and aligned using MAFFT under default parameters. Our alignment file was further trimmed to encompass a consesnus regions within all sequences, excluding gaps at either end which might interfere with tree analysis. This alignment file can be found under [Fig2A-RAxML](https://github.com/fgonzalez3/mada-bat-kobuvirus/tree/main/Fig2A/raxml) as 'picorna_raxml.fasta'. I used R to edit the names of each sequence in MSA. RAxML won't accept spaces, periods, dashes, slashes, colon, semicolons, or parentheses in sequence names. Rscripts for this can be found [here](https://github.com/fgonzalez3/mada-bat-kobuvirus/tree/main/TreePrep). 
+4. All .fasta files were  imported into Geneious Prime and aligned using MAFFT under default parameters. Our alignment file was further trimmed to encompass a consensus region within all sequences, excluding gaps at either end which might interfere with tree analysis. This ultimately led to a full genome alignment, excluding the 3' and 5' UTRs. This alignment file can be found under [Fig2A-RAxML](https://github.com/fgonzalez3/mada-bat-kobuvirus/tree/main/Fig2A/raxml) as 'picorna_raxml.fasta'. I used R to edit the names of each sequence in MSA. RAxML won't accept spaces, periods, dashes, slashes, colon, semicolons, or parentheses in sequence names. Rscripts for this can be found [TreePrep subfolder](https://github.com/fgonzalez3/mada-bat-kobuvirus/tree/main/TreePrep). 
 
-5. I submitted the aligned .fasta file to HCC to kick off [ModelTest-NG](https://github.com/ddarriba/modeltest), simultaneously de-duplicating sequences and comparing nucleotide substition models. The following shellscript was used, though yours might differ: 
+5. I submitted the aligned .fasta file to HCC to kick off [ModelTest-NG](https://github.com/ddarriba/modeltest), simultaneously flagging duplicated sequences and comparing nucleotide substition models. The following shellscript was used, though yours might differ: 
 
 ```
 
