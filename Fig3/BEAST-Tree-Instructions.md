@@ -27,7 +27,7 @@ To prepare the .xml file, we used the following parameters in the tab inputs at 
 
 .xml files for our strict molecular clock are available in our [Fig3 sub-directory](https://github.com/fgonzalez3/mada-bat-kobuvirus/tree/main/Fig3/beast_run). 
 
-#Visualizing Bayesian TimeTree
+# Visualizing Bayesian TimeTree
 
 Output from BEAST is available in the above sub-folder. The initial 10% of MCMC iterations were removed as burn-in. Parameter convergence was assessed visually using [Tracer](https://www.beast2.org/tracer-2/). We used TreeAnnotator to average across the BEAST2 tree output, and visualized the resulting tree in FigTree. After checking for basic alignment with parametric phylogenies generated from RAxML, we converted the Bayesian tree which is output in Nexus format to Newick format by exporting from FigTree. We then imported the resulting Newick file of the average tree in R and visualized it. 
 
