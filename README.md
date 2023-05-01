@@ -12,7 +12,7 @@ Within [Fig2A sub-directory](https://github.com/fgonzalez3/mada-bat-kobuvirus/bl
 
 Within [Fig2B sub-directory](https://github.com/fgonzalez3/mada-bat-kobuvirus/blob/main/Fig2B/Fig2B-Tree-Instructions.md), details on how to build our nucleotide full-genome length Kobuvirus ML tree. 
 
-Within Fig. __ sub-directory, details on how to build a phylogenetic tree are contained. These scripts outline how to build Fig __ and __, as well as amino acid tree Fig. ___ . 
+Within [Fig2C sub-directory](https://github.com/fgonzalez3/mada-bat-kobuvirus/blob/main/Fig2C/Fig2C-Tree-Instructions.md), details on how to build our amino acid Open Reading Frame (ORF) Kobuvirus Tree. 
 
 Details on how to build a Bayesian phylogenetic tree using BEAST2 within the subfolder for Fig. ___ or linked here. This analysis was used to estimate time to MRCA for kobuvirus broadly and the newly-defined Madagascar lineage. 
 
