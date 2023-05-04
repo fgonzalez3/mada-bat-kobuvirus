@@ -14,5 +14,5 @@ Within [Fig2C sub-directory](https://github.com/fgonzalez3/mada-bat-kobuvirus/bl
 
 Details on how to build a Bayesian phylogenetic tree using [BEAST2](http://www.beast2.org/) linked [here](https://github.com/fgonzalez3/mada-bat-kobuvirus/blob/main/Fig3/BEAST-Tree-Instructions.md). 
 
-Beyond the details listed above, all scripts to produce each figure should be self-contained and output results to the "final-figures" folder. Besides the above, broadly followed the [Mada-Bat-CoV pipeline](https://github.com/brooklabteam/Mada-Bat-CoV). 
+Beyond the details listed above, all scripts to produce each figure should be self-contained. Besides the above, broadly followed the [Mada-Bat-CoV pipeline](https://github.com/brooklabteam/Mada-Bat-CoV). 
 
