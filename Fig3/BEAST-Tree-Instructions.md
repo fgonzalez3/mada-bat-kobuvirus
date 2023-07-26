@@ -30,6 +30,6 @@ To prepare the .xml file, we used the following parameters in the tab inputs at 
 
 # Visualizing Bayesian TimeTree
 
-Output from BEAST is available in the above sub-folder. The initial 10% of MCMC iterations were removed as burn-in. Parameter convergence was assessed visually using [Tracer](https://www.beast2.org/tracer-2/). We used TreeAnnotator to average across the BEAST2 tree output, and visualized the resulting tree in FigTree. After checking for basic alignment with parametric phylogenies generated from RAxML, we converted the Bayesian tree which is output in Nexus format to Newick format by exporting from FigTree. We then imported the resulting Newick file of the average tree in R and visualized it. 
+Output from BEAST is available in the above sub-folder. The initial 10% of MCMC iterations were removed as burn-in. Parameter convergence was assessed visually using [Tracer](https://www.beast2.org/tracer-2/). We used TreeAnnotator to average across the BEAST2 tree output by (a) setting the burn-in to 10% to discard the first 10% of trees in the log file, (b) posterior probability limit at default, (c) leaving target tree type at default maximum clade credibility, and (d) selecting mean heights for node height. This was then visualized in FigTree. After checking for basic alignment with parametric phylogenies generated from RAxML, we converted the Bayesian tree which is output in Nexus format to Newick format by exporting from FigTree. We then imported the resulting Newick file of the average tree in R and visualized it. 
 
 
