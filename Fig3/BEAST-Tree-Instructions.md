@@ -18,7 +18,7 @@ After model selection, we built a Bayesian phylogenetic tree for the Kobuvirus p
 
 To prepare the .xml file, we used the following parameters in the tab inputs at the top of the screen in BEAUTi:
 
-- **Tip Dates**: We used the date of the sample collection as the "Tip Date". For any sample from GenBank which only listed year of collection, we set the tip date to July 15 of the year of collection. Each alignment was uplodated to BEAUTi with sequence names arranged so as to easily decipher the date.
+- **Tip Dates**: We used the date of the sample collection as the "Tip Date". For any sample from GenBank which only listed year of collection, we set the tip date to July 15 of the year of collection. Each alignment was uploaded to BEAUTi with sequence names arranged so as to easily decipher the date. To specify the date, click "as dates with format" and leave as YYYY-MM-DD. 
 - **Site Model**: Following outputs from ModelTest-NG, we selected a 'Gamma Site Model' with Gamma Category 4 and estimated the proportion of invariate sites.
 - **Substitution Model**: To create a TPM2 model, we linked AC-AT, CG-GT, & AG-CT. For the frequencies, keep them as 'estimated' and select the 'estimate' box next to shape parameter to completely specify TPM2uf+G4.
 - **Clock Model**: We built phylogenies using a strict molecular clock, secified within a non-parametric Bayesian Skyline Coalescent model, following previous approaches for bat coronaviruses analyses, [Lau et al.2020](https://journals.asm.org/doi/full/10.1128/JVI.02219-09). 
