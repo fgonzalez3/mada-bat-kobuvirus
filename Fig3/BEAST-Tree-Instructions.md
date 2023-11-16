@@ -2,7 +2,7 @@
 
 # Gathering Background Sequences From GenBank
 
-The goal of this analysis was to estimate the timing of the most recent common ancestor (MRCA) of all Kobuviruses, as well as to estimate the time of divergence of the Madagascar bat Kobuvirus from other Aichivirus A lineages defined in our paper. To do this, we compiled Kobuviruses from each Aichivirus sub-clade, according to their known hosts. Reference sequences were prioritized, though we opted for non-reference sequences if none existed. We also included two additional Picornaviridae sequences found in Fig2B-2C. A summary table can be found [here](https://github.com/fgonzalez3/mada-bat-kobuvirus/blob/main/Fig3/beast_kobuvirus_metadata_manual%20copy.csv). To estimate the MRCA of all Kobuviruses, we opted to construct a Bayesian TimeTree.
+The goal of this analysis was to estimate the timing of the most recent common ancestor (MRCA) of all Kobuviruses, as well as to estimate the time of divergence of the Madagascar bat Kobuvirus from other Aichivirus A lineages defined in our paper. To do this, we compiled Kobuviruses from each Aichivirus sub-clade, according to their known hosts. Reference sequences were prioritized (taxid: 194960), though we opted for non-reference sequences if none existed. We also included two additional Picornaviridae sequences found in Fig2B-2C. A summary table can be found [here](https://github.com/fgonzalez3/mada-bat-kobuvirus/blob/main/Fig3/beast_kobuvirus_metadata_manual%20copy.csv). To estimate the MRCA of all Kobuviruses, we opted to construct a Bayesian TimeTree.
 
 # Alignment and Model Selection
 
